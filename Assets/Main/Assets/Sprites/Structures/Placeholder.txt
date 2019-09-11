@@ -1,0 +1,1 @@
+So it doesn't get deleted when commiting and cloning. Delete when possible and when there are assets in the respective folder.
