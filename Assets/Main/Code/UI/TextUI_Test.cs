@@ -15,6 +15,9 @@ public class TextUI_Test : MonoBehaviour
     public ResourcesList resourcesList;
 
     public TextMeshPro Text_FoodSupply;
+
+    public TextMeshPro Text_VillagerCount;
+    public TextMeshPro Text_VillagerHappiness;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,5 +60,10 @@ public class TextUI_Test : MonoBehaviour
         Text_RawGameCount.text = "Raw Game:"+ resourcesList.Game_Raw.ToString();
 
         Text_FoodSupply.text = resourcesList.FoodSupply.ToString();
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        /// Villagers
+        Text_VillagerCount.text = "0"; 
+        
     }
 }
