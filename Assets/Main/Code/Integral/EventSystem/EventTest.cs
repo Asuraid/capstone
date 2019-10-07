@@ -7,11 +7,13 @@ public class EventTest : MonoBehaviour
     /// <summary>
     ///isSeason checks whether a new season has started
     ///Day is the current day numner
+    //////Hour is the amount of hours used up. There are 10 hours in a day
     ///NONseason events_days are what day the non season minor events will happen.
     ///EventTitle_Minor_Name is the name that is assigned to the event
     /// </summary>
     public bool isSeason = true;
     public int Day = 1;
+    public int hour = 0;
 
     /////////////////////////////////
     /// NON SEASON RELATED
@@ -41,7 +43,7 @@ public class EventTest : MonoBehaviour
 
 
     //Seasons go in order. Start with Summer (1), then Autumn (2) then Winter (3) then Spring (4).
-    int SeasonNumber = 1;
+    public int SeasonNumber = 1;
 
 
     /////////////////////////////////
@@ -62,7 +64,7 @@ public class EventTest : MonoBehaviour
     SeasonNumber = 1;
         PrintSeasonName();
         //print the current day which is 1
-        print(Day);
+        print("Day: " + Day);
     }
 
     // Update is called once per frame
@@ -76,12 +78,19 @@ public class EventTest : MonoBehaviour
             Day = 1;
             print(Day);
         }
-    //You click to add a day
-        if (Input.GetMouseButtonDown(0))
+    //You click to add a day // GOT RID OF THIS
+      //  if (Input.GetMouseButtonDown(0))
+      //  {
+            //THERE IS NOW A FUNCTION FOR ADDING A DAY
+
+        //This changes the day if the hours are used up
+        if (hour >= 10)
         {
-            
-            Day = Day + 1;
-            print(Day);
+            hour = 0;
+            AddaDay();
+        }
+
+
             //if the day matches one of the randomly chosen event days, the event will happen
 
             ///////////////////////////////////////////////////////////////////////////////////
@@ -211,7 +220,7 @@ public class EventTest : MonoBehaviour
                 print(UNIQUE_EventTitle_Name);
             }
 
-        }
+       // }
         if (isSeason)
         {
             //if the season changes, reset all the values
@@ -579,5 +588,11 @@ public class EventTest : MonoBehaviour
                 break;
         }
 
+    }
+   public void AddaDay()
+    {
+        hour = 0;
+        Day = Day + 1;
+        print(Day);
     }
 }
