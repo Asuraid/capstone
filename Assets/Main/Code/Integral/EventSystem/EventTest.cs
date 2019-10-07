@@ -14,6 +14,8 @@ public class EventTest : MonoBehaviour
     public bool isSeason = true;
     public int Day = 1;
     public int hour = 0;
+    public int Day_Total = 25;
+
 
     /////////////////////////////////
     /// NON SEASON RELATED
@@ -67,160 +69,44 @@ public class EventTest : MonoBehaviour
         print("Day: " + Day);
     }
 
+    
+    
+    
+   public  void Action()
+    {
+        CallEvent();
+    }
+    
     // Update is called once per frame
+
+
+
+
     void Update()
+
+
+
+
+
         //is the day has reached the end of the season, reset the season
-    { if (Day > 90)
-        {
-            isSeason = true;
-            SeasonNumber = SeasonNumber + 1;
-            PrintSeasonName();
-            Day = 1;
-            print(Day);
-        }
-    //You click to add a day // GOT RID OF THIS
-      //  if (Input.GetMouseButtonDown(0))
-      //  {
-            //THERE IS NOW A FUNCTION FOR ADDING A DAY
+    {
+
 
         //This changes the day if the hours are used up
         if (hour >= 10)
         {
             hour = 0;
-            AddaDay();
+            ChangeDay();
         }
 
 
-            //if the day matches one of the randomly chosen event days, the event will happen
 
-            ///////////////////////////////////////////////////////////////////////////////////
-            /// NON SEASON RELATED
-            ///////////////////////////////////////////////////////////////////////////////////
 
-            //////////////////////////////////////
-            //THIS IS ONLY FOR MINOR EVENTS. 1-4
-            /////////////////////////////////////
-            if (Day == NONSEASON_Event_day[0])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                NONSEASON_ChooseEvent_Minor();
-                print(NONSEASON_EventTitle_Minor_Name);
-            }
-            if (Day == NONSEASON_Event_day[1])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                NONSEASON_ChooseEvent_Minor();
-                print(NONSEASON_EventTitle_Minor_Name);
-            }
-            if (Day == NONSEASON_Event_day[2])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                NONSEASON_ChooseEvent_Minor();
-                print(NONSEASON_EventTitle_Minor_Name);
-            }
-            if (Day == NONSEASON_Event_day[3])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                NONSEASON_ChooseEvent_Minor();
-                print(NONSEASON_EventTitle_Minor_Name);
-            }
 
-            /////////////////////////////////////////////////////
-            //THIS IS ONLY FOR MAJOR EVENTS. ONLY ONE PER SEASON
-            /////////////////////////////////////////////////////
-            if (Day == NONSEASON_Event_01_MAJOR_Day)
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MAJOR EVENT");
-                NONSEASON_ChooseEvent_Major();
-                print(NONSEASON_EventTitle_Major_Name);
-            }
 
-            ///////////////////////////////////////////////////////////////////////////////////
-            /// SEASON RELATED
-            ///////////////////////////////////////////////////////////////////////////////////
 
-            //////////////////////////////////////
-            //THIS IS ONLY FOR MINOR EVENTS. 1-4
-            /////////////////////////////////////
-            if (Day == SEASON_Event_day[0])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                SEASON_ChooseEvent_Minor();
-                print(SEASON_EventTitle_Minor_Name);
-            }
-            if (Day == SEASON_Event_day[1])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                SEASON_ChooseEvent_Minor();
-                print(SEASON_EventTitle_Minor_Name);
-            }
-            if (Day == NONSEASON_Event_day[2])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                SEASON_ChooseEvent_Minor();
-                print(SEASON_EventTitle_Minor_Name);
-            }
-            if (Day == NONSEASON_Event_day[3])
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                SEASON_ChooseEvent_Minor();
-                print(SEASON_EventTitle_Minor_Name);
-            }
 
-            /////////////////////////////////////////////////////
-            //THIS IS ONLY FOR MAJOR EVENTS. ONLY ONE PER SEASON
-            /////////////////////////////////////////////////////
-            if (Day == NONSEASON_Event_01_MAJOR_Day)
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MAJOR EVENT");
-                SEASON_ChooseEvent_Major();
-                print(SEASON_EventTitle_Major_Name);
-            }
 
-            ///////////////////////////////////////////////////////////////////////////////////
-            /// UNIQUE EVENTS
-            ///////////////////////////////////////////////////////////////////////////////////
-
-            if (Day == UNIQUE_Event_01_Day)
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                UNIQUE_ChooseEvent_Minor();
-                print(UNIQUE_EventTitle_Name);
-            }
-            if (Day == UNIQUE_Event_01_Day)
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                UNIQUE_ChooseEvent_Minor();
-                print(UNIQUE_EventTitle_Name);
-            }
-            if (Day == UNIQUE_Event_01_Day)
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                UNIQUE_ChooseEvent_Minor();
-                print(UNIQUE_EventTitle_Name);
-            }
-            if (Day == UNIQUE_Event_01_Day)
-            {
-                //This is where it calls the function that choosen a random minor event
-                print("MINOR EVENT");
-                UNIQUE_ChooseEvent_Minor();
-                print(UNIQUE_EventTitle_Name);
-            }
-
-       // }
         if (isSeason)
         {
             //if the season changes, reset all the values
@@ -248,6 +134,160 @@ public class EventTest : MonoBehaviour
         }
     }
 
+    void ChangeDay()
+    {
+        Day = Day + 1;
+        if (Day > Day_Total)
+        {
+            isSeason = true;
+            SeasonNumber = SeasonNumber + 1;
+            PrintSeasonName();
+            Day = 1;
+            print(Day);
+        }
+
+
+        //You click to add a day // GOT RID OF THIS
+        //  if (Input.GetMouseButtonDown(0))
+        //  {
+        //THERE IS NOW A FUNCTION FOR ADDING A DAY
+
+ 
+    }
+
+    void CallEvent()
+    {
+
+        //if the day matches one of the randomly chosen event days, the event will happen
+
+        ///////////////////////////////////////////////////////////////////////////////////
+        /// NON SEASON RELATED
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////
+        //THIS IS ONLY FOR MINOR EVENTS. 1-4
+        /////////////////////////////////////
+        if (Day == NONSEASON_Event_day[0])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            NONSEASON_ChooseEvent_Minor();
+            print(NONSEASON_EventTitle_Minor_Name);
+        }
+        if (Day == NONSEASON_Event_day[1])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            NONSEASON_ChooseEvent_Minor();
+            print(NONSEASON_EventTitle_Minor_Name);
+        }
+        if (Day == NONSEASON_Event_day[2])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            NONSEASON_ChooseEvent_Minor();
+            print(NONSEASON_EventTitle_Minor_Name);
+        }
+        if (Day == NONSEASON_Event_day[3])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            NONSEASON_ChooseEvent_Minor();
+            print(NONSEASON_EventTitle_Minor_Name);
+        }
+
+        /////////////////////////////////////////////////////
+        //THIS IS ONLY FOR MAJOR EVENTS. ONLY ONE PER SEASON
+        /////////////////////////////////////////////////////
+        if (Day == NONSEASON_Event_01_MAJOR_Day)
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MAJOR EVENT");
+            NONSEASON_ChooseEvent_Major();
+            print(NONSEASON_EventTitle_Major_Name);
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////
+        /// SEASON RELATED
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////
+        //THIS IS ONLY FOR MINOR EVENTS. 1-4
+        /////////////////////////////////////
+        if (Day == SEASON_Event_day[0])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            SEASON_ChooseEvent_Minor();
+            print(SEASON_EventTitle_Minor_Name);
+        }
+        if (Day == SEASON_Event_day[1])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            SEASON_ChooseEvent_Minor();
+            print(SEASON_EventTitle_Minor_Name);
+        }
+        if (Day == NONSEASON_Event_day[2])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            SEASON_ChooseEvent_Minor();
+            print(SEASON_EventTitle_Minor_Name);
+        }
+        if (Day == NONSEASON_Event_day[3])
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            SEASON_ChooseEvent_Minor();
+            print(SEASON_EventTitle_Minor_Name);
+        }
+
+        /////////////////////////////////////////////////////
+        //THIS IS ONLY FOR MAJOR EVENTS. ONLY ONE PER SEASON
+        /////////////////////////////////////////////////////
+        if (Day == NONSEASON_Event_01_MAJOR_Day)
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MAJOR EVENT");
+            SEASON_ChooseEvent_Major();
+            print(SEASON_EventTitle_Major_Name);
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////
+        /// UNIQUE EVENTS
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        if (Day == UNIQUE_Event_01_Day)
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            UNIQUE_ChooseEvent_Minor();
+            print(UNIQUE_EventTitle_Name);
+        }
+        if (Day == UNIQUE_Event_01_Day)
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            UNIQUE_ChooseEvent_Minor();
+            print(UNIQUE_EventTitle_Name);
+        }
+        if (Day == UNIQUE_Event_01_Day)
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            UNIQUE_ChooseEvent_Minor();
+            print(UNIQUE_EventTitle_Name);
+        }
+        if (Day == UNIQUE_Event_01_Day)
+        {
+            //This is where it calls the function that choosen a random minor event
+            print("MINOR EVENT");
+            UNIQUE_ChooseEvent_Minor();
+            print(UNIQUE_EventTitle_Name);
+        }
+    }
+
 
     //this only happens at the start of each season
     void InstantiateEventValues()
@@ -267,27 +307,27 @@ public class EventTest : MonoBehaviour
         ///NON SEASON RELATED
         for (int i = 0; i < howmanyNONSEASON_MinorEvents; i++)
         {
-            NONSEASON_Event_day[i] = (int)Random.Range(1, 90);
+            NONSEASON_Event_day[i] = (int)Random.Range(1, Day_Total);
         }
         
         //randomly chooses a major event
-        NONSEASON_Event_01_MAJOR_Day = (int)Random.Range(1, 90);
+        NONSEASON_Event_01_MAJOR_Day = (int)Random.Range(1, Day_Total);
 
         //SEASON RELATED
         for (int i = 0; i < howmanySEASON_MinorEvents; i++)
         {
-            SEASON_Event_day[i] = (int)Random.Range(1, 90);
+            SEASON_Event_day[i] = (int)Random.Range(1, Day_Total);
         }
 
         //randomly chooses a major event
-        SEASON_Event_01_MAJOR_Day = (int)Random.Range(1, 90);
+        SEASON_Event_01_MAJOR_Day = (int)Random.Range(1, Day_Total);
 
         //Decides if there will be a unique event
 
         int randomuniqueeventdecider = (int)(Random.Range(1, 2.99f));
         if (randomuniqueeventdecider == 1)
         {
-            UNIQUE_Event_01_Day = (int)Random.Range(1, 90);
+            UNIQUE_Event_01_Day = (int)Random.Range(1, Day_Total);
         }
 
 
@@ -591,8 +631,6 @@ public class EventTest : MonoBehaviour
     }
    public void AddaDay()
     {
-        hour = 0;
-        Day = Day + 1;
-        print(Day);
+   
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ResourcesList : MonoBehaviour
 {
+    //Direct reference to the event system. This is used to edit the hour count
+    public EventTest eventTest;
+
     //RESOURCES
     public int Fish_Raw;
     public int Game_Raw;
@@ -38,8 +41,11 @@ public class ResourcesList : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        eventTest.hour = HourCount;
+
      if (HourCount >= 10)
         {
+            eventTest.Action();
             HourCount = 0;
             EndOfDayCalculate();
         }   
@@ -47,11 +53,11 @@ public class ResourcesList : MonoBehaviour
    public  void PrintInfo()
     {
         //print Information
-        print("Raw Fish : " + Fish_Raw + "," + "Cooked Fish : " + Fish_Cooked + "," + "Raw Game: " + Game_Raw + "," + "Cooked Game: " + Game_Cooked);
+     //   print("Raw Fish : " + Fish_Raw + "," + "Cooked Fish : " + Fish_Cooked + "," + "Raw Game: " + Game_Raw + "," + "Cooked Game: " + Game_Cooked);
         //If oven doesnt exist yet
         if (Oven.activeSelf == false)
         {
-            print ("You need to build an Oven! You can catch Fish but can't cook them!");
+      //      print ("You need to build an Oven! You can catch Fish but can't cook them!");
         }
     }
     void EndOfDayCalculate()
@@ -60,8 +66,8 @@ public class ResourcesList : MonoBehaviour
         FoodSupply = Fish_Cooked + Game_Cooked;
         //Each villager needs to eat. So this number goes down for each villager
         FoodSupply = FoodSupply - VillagerCount;
-        PrintInfo();
-        print("Food Supply Left: " + FoodSupply);
+        //PrintInfo();
+        //print("Food Supply Left: " + FoodSupply);
 
         //if Food has run out
         if (FoodSupply <0)

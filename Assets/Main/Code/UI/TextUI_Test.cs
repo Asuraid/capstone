@@ -8,7 +8,13 @@ public class TextUI_Test : MonoBehaviour
     public TextMeshPro Text_SeasonCount;
     public TextMeshPro Text_DayCount;
     public TextMeshPro Text_HourCount;
+
+    public TextMeshPro Text_RawGameCount;
+    public TextMeshPro Text_RawFishCount;
     public EventTest eventTest;
+    public ResourcesList resourcesList;
+
+    public TextMeshPro Text_FoodSupply;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +24,10 @@ public class TextUI_Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        /// TIME
+
         //DISPLAY SEASON
         switch (eventTest.SeasonNumber)
         {
@@ -36,9 +46,16 @@ public class TextUI_Test : MonoBehaviour
         }
         ////////////////////////////////////////////
         //DISPLAY DAY
-        Text_DayCount.text = eventTest.Day.ToString() + "/90";
+        Text_DayCount.text = eventTest.Day.ToString() + "/25";
         /////////////////////////////////////////////
         //DISPLAY HOUR
         Text_HourCount.text = eventTest.hour.ToString() + "/10";
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        /// Resources
+        Text_RawFishCount.text = "Raw Fish:"+ resourcesList.Fish_Raw.ToString();
+        Text_RawGameCount.text = "Raw Game:"+ resourcesList.Game_Raw.ToString();
+
+        Text_FoodSupply.text = resourcesList.FoodSupply.ToString();
     }
 }

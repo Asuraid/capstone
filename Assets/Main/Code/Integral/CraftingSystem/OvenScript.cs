@@ -22,13 +22,14 @@ public class OvenScript : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        //Add to the hour count
-        rL.HourCount = rL.HourCount + 2;
+      
 
         //FISH
         //is there enough raw fish to cook?
         if (rL.Fish_Raw > 0)
         {
+            //Add to the hour count
+            rL.HourCount = rL.HourCount + 2;
             //Add Cooked fish and delete Raw fish
             rL.Fish_Raw = rL.Fish_Raw - 1;
             rL.Fish_Cooked = rL.Fish_Cooked + 1;
@@ -44,6 +45,8 @@ public class OvenScript : MonoBehaviour
         //is there enough raw game to cook?
         if (rL.Game_Raw > 0)
         {
+            //Add to the hour count
+            rL.HourCount = rL.HourCount + 2;
             //Add Cooked fish and delete Raw game
             rL.Game_Raw = rL.Game_Raw - 1;
             rL.Game_Cooked = rL.Game_Cooked + 1;
