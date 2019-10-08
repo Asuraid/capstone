@@ -19,6 +19,12 @@ public class ForestScript : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        ////////////////
+        //THIS ALWAYS NEEDS TO BE CALLED ANY TIME THAT TIME PASSES IN GAME. COPY AND PASTE THIS INTO EVERY SINGLE ACTION
+        rL.VillagerWork();
+        //THIS ALWAYS NEEDS TO BE CALLED ANY TIME THAT TIME PASSES IN GAME. COPY AND PASTE THIS INTO EVERY SINGLE ACTION
+        ////////////////
+        
         //Add to the hour count
         rL.HourCount = rL.HourCount + 2;
         //Gather Game

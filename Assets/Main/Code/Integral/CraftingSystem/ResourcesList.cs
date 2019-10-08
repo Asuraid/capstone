@@ -31,6 +31,7 @@ public class ResourcesList : MonoBehaviour
     //Villagers Info
     //More villagers means that more resources will be taken
     int VillagerCount = 1;
+    public VillagerManager villagerManager;
 
     // Start is called before the first frame update
     void Start()
@@ -41,11 +42,15 @@ public class ResourcesList : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //calculate number of villagers
+        VillagerCount = villagerManager.villagerARRAY.Count;
+
         eventTest.hour = HourCount;
 
      if (HourCount >= 10)
         {
             eventTest.Action();
+
             HourCount = 0;
             EndOfDayCalculate();
         }   
@@ -74,5 +79,10 @@ public class ResourcesList : MonoBehaviour
         {
             print("You need to make more food! We have run out");
         }
+    }
+
+    public void VillagerWork()
+    {
+        print("VILLAGERS WORK TOO!");
     }
 }

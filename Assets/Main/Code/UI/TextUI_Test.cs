@@ -13,11 +13,15 @@ public class TextUI_Test : MonoBehaviour
     public TextMeshPro Text_RawFishCount;
     public EventTest eventTest;
     public ResourcesList resourcesList;
+    public VillagerManager villagerManager;
 
     public TextMeshPro Text_FoodSupply;
 
     public TextMeshPro Text_VillagerCount;
     public TextMeshPro Text_VillagerHappiness;
+    public TextMeshPro Text_HuntingProductivity;
+    public TextMeshPro Text_FishingProductivity;
+    public TextMeshPro Text_CookingProductivity;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +67,12 @@ public class TextUI_Test : MonoBehaviour
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         /// Villagers
-        Text_VillagerCount.text = "0"; 
-        
+        Text_VillagerCount.text = "Villagers: " + villagerManager.villagerARRAY.Count.ToString();
+        Text_VillagerHappiness.text = "Happiness: " + (villagerManager.happiness_avg / 2) * 100 + "%";
+        Text_HuntingProductivity.text = "HuntingAVG: " + villagerManager.hunting_productivity_avg.ToString();
+        Text_FishingProductivity.text = "FishingAVG: " + villagerManager.fishing_productivity_avg.ToString();
+        Text_CookingProductivity.text = "CookingAVG: " + villagerManager.cooking_productivity_avg.ToString();
+
+
     }
 }

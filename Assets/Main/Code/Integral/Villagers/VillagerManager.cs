@@ -25,10 +25,10 @@ public class VillagerManager : MonoBehaviour
     public int HOWMANY_cooks;
 
     //these numbers are purely for mathematics. please don't touch them
-    public  float happinessnumber;
-    public float huntingnumber;
-    public float fishingnumber;
-    public float cookingnumber;
+     float happinessnumber;
+    float huntingnumber;
+     float fishingnumber;
+     float cookingnumber;
     void Start()
     {
         //these numbers are purely for mathematics. please don't touch them
@@ -58,11 +58,16 @@ public class VillagerManager : MonoBehaviour
         //We get a number average of the efficiency of fishing in your town
         fishing_productivity_avg = fishingnumber / villagerARRAY.Count;
         //We get a number average of the efficiency of cooking in your town
-        cooking_productivity_avg = fishingnumber / villagerARRAY.Count;
-        
-        
+        cooking_productivity_avg = cookingnumber / villagerARRAY.Count;
+
+
+       
+
         //this resets the happiness number vairable
         happinessnumber = 0;
         huntingnumber = 0;
+        fishingnumber = 0;
+        cookingnumber = 0;
+
     }
 }
