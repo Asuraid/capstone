@@ -11,6 +11,8 @@ public class TextUI_Test : MonoBehaviour
 
     public TextMeshPro Text_RawGameCount;
     public TextMeshPro Text_RawFishCount;
+    public TextMeshPro Text_CookedGameCount;
+    public TextMeshPro Text_CookedFishCount;
     public EventTest eventTest;
     public ResourcesList resourcesList;
     public VillagerManager villagerManager;
@@ -62,6 +64,8 @@ public class TextUI_Test : MonoBehaviour
         /// Resources
         Text_RawFishCount.text = "Raw Fish:"+ resourcesList.Fish_Raw.ToString();
         Text_RawGameCount.text = "Raw Game:"+ resourcesList.Game_Raw.ToString();
+        Text_CookedFishCount.text = "Raw Fish:" + resourcesList.Fish_Cooked.ToString();
+        Text_CookedGameCount.text = "Raw Game:" + resourcesList.Game_Cooked.ToString();
 
         Text_FoodSupply.text = resourcesList.FoodSupply.ToString();
 
