@@ -81,6 +81,13 @@ public class Villager_Prefab : MonoBehaviour
                     break;
             }
         }
+        else
+        {
+            //if the villager is no longer assigned to a job they are good at, they remain average at that job
+            hunting_number = 1;
+            fishing_number = 1;
+            cooking_number = 1;
+        }
 
         //EVERYONE DOES BETTER IF THEY ARE HAPPY AND DOES WORSE IF THEY ARE NOT
         hunting_productivity_individual = hunting_number * happiness_individual;

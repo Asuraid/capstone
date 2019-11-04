@@ -33,6 +33,11 @@ public class ResourcesList : MonoBehaviour
     int VillagerCount = 1;
     public VillagerManager villagerManager;
 
+
+    //How many resources are gathered
+    int resources_gathered_fish = 0;
+    int resources_gathered_cook = 0;
+    int resources_gathered_hunter = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +88,39 @@ public class ResourcesList : MonoBehaviour
 
     public void VillagerWork()
     {
-        print("VILLAGERS WORK TOO!");
+
+        //THIS IS WHERE WE CALCULATE HOW MUCH VILLAGERS GET FOR RESOURCE GATHERING
+
+        //You take how many workers are assigned to that job.
+        //Multiply that number times average productivity for that job
+        //Multiply that final number times happiness amount
+        //That is how many resources are gathered by doing that action
+
+
+        //EXAMPLES NUMBERS:
+
+        //1 villager who is good at their job and is at max happiness should produce 8 resources. (2 x 2 x 2)
+        
+
+        //FISHERMAN
+        resources_gathered_fish = (int)(villagerManager.HOWMANY_fishers * villagerManager.fishing_productivity_avg * villagerManager.happiness_avg);
+        Fish_Raw = Fish_Raw + resources_gathered_fish;
+        //HUNTERS
+        resources_gathered_hunter = (int)(villagerManager.HOWMANY_hunters * villagerManager.hunting_productivity_avg * villagerManager.happiness_avg);
+        Game_Raw = Game_Raw + resources_gathered_hunter;
+        //COOKS
+        resources_gathered_cook = (int)(villagerManager.HOWMANY_cooks * villagerManager.cooking_productivity_avg * villagerManager.happiness_avg);
+        Fish_Cooked = Fish_Cooked + resources_gathered_cook;
+        Game_Cooked = Game_Cooked + resources_gathered_cook;
+
+        print(resources_gathered_fish);
+        print(resources_gathered_hunter);
+        print(resources_gathered_cook);
+        resources_gathered_fish = 0;
+        resources_gathered_cook = 0;
+        resources_gathered_hunter = 0;
+
+
+
     }
 }

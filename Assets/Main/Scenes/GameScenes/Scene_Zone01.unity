@@ -3080,9 +3080,9 @@ MonoBehaviour:
   Game_Raw: 0
   Fish_Cooked: 0
   Game_Cooked: 0
-  Pond: {fileID: 0}
-  Forest: {fileID: 0}
-  Oven: {fileID: 0}
+  Pond: {fileID: 410599484}
+  Forest: {fileID: 1875784436}
+  Oven: {fileID: 613564406}
   FoodSupply: 0
   HourCount: 0
   villagerManager: {fileID: 607147426}
@@ -6591,6 +6591,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 607147425}
   rL: {fileID: 607147427}
+--- !u!1 &1880145472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880145473}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1880145473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880145472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1252646, y: 0.50915134, z: -7.3378906}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919092658
 GameObject:
   m_ObjectHideFlags: 0
