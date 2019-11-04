@@ -71,7 +71,7 @@ public class TextUI_Test : MonoBehaviour
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         /// Villagers
-        Text_VillagerCount.text = "Villagers: " + villagerManager.villagerARRAY.Count.ToString();
+        Text_VillagerCount.text =  villagerManager.villagerARRAY.Count.ToString();
         Text_VillagerHappiness.text = "Happiness: " + (villagerManager.happiness_avg / 2) * 100 + "%";
         Text_HuntingProductivity.text = "HuntingAVG: " + villagerManager.hunting_productivity_avg.ToString();
         Text_FishingProductivity.text = "FishingAVG: " + villagerManager.fishing_productivity_avg.ToString();
