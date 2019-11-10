@@ -3161,9 +3161,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 607147425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35c09594d45f6d4b861d5ade8a5f17c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d993b47d4975cb478e1b15ebc8e2c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourcesList: {fileID: 607147427}
+  choicevariable: 0
 --- !u!1 &609745818
 GameObject:
   m_ObjectHideFlags: 0

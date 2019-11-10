@@ -179,6 +179,21 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 8
+    fields:
+    - title: Name
+      value: Quest_Minor_EventChosen
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: This is the number that determines what choice the player picked. This
+        will be used in code to determine the outcome
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -1919,16 +1934,27 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Quest_Minor_EventChosen"]= 1
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 0
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 120
+        x: 25
+        y: 118
         width: 160
         height: 30
     - id: 3
@@ -1986,7 +2012,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Quest_Minor_EventChosen"]= 3
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2053,7 +2079,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Quest_Minor_EventChosen"]= 3
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2065,7 +2091,7 @@ MonoBehaviour:
         y: 120
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 85.090805, y: 22.227242}
     canvasZoom: 1
   syncInfo:
     syncActors: 0
