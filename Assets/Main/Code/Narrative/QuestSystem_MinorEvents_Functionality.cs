@@ -59,10 +59,12 @@ public class QuestSystem_MinorEvents_Functionality : MonoBehaviour
         if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 2)
         {
             print("Event_Minor_Choice#2");
+            RunFunctions(rawFishAdd_temp, cookedGameAdd_temp, rawGameAdd_temp, cookedGameAdd_temp, foodSupply_temp);
         }
         if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 3)
         {
             print("Event_Minor_Choice#3");
+            RunFunctions(rawFishAdd_temp, cookedGameAdd_temp, rawGameAdd_temp, cookedGameAdd_temp, foodSupply_temp);
         }
 
         //When the player makes a choice, this resets their choice variable so that functions dont repeat multiple times
@@ -90,7 +92,13 @@ public class QuestSystem_MinorEvents_Functionality : MonoBehaviour
             SetFunctionValues(100000, 0, 0, 0, 0);
         ///////////////////////////////////////////////////////////////////
         DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "BUILDING COLLAPSE");
+        ///////////////////////////////////////////////////////////////////
+        SetFunctionValues(0, 90, 0, 0, 0);
+        ///////////////////////////////////////////////////////////////////
         DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "ELDRITCH HORROR");
+        ///////////////////////////////////////////////////////////////////
+        SetFunctionValues(0, 0, 10, 0, 0);
+        ///////////////////////////////////////////////////////////////////
     }
 
 
