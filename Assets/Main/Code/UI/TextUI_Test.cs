@@ -55,24 +55,24 @@ public class TextUI_Test : MonoBehaviour
         }
         ////////////////////////////////////////////
         //DISPLAY DAY
-        Text_DayCount.text = eventTest.Day.ToString() + "/25";
+        Text_DayCount.text = "Days: " + eventTest.Day.ToString() + "/25";
         /////////////////////////////////////////////
         //DISPLAY HOUR
-        Text_HourCount.text = eventTest.hour.ToString() + "/10";
+        Text_HourCount.text = "Hours: " + eventTest.hour.ToString() + "/10";
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         /// Resources
-        Text_RawFishCount.text = "Raw Fish:"+ resourcesList.Fish_Raw.ToString();
-        Text_RawGameCount.text = "Raw Game:"+ resourcesList.Game_Raw.ToString();
-        Text_CookedFishCount.text = "Raw Fish:" + resourcesList.Fish_Cooked.ToString();
-        Text_CookedGameCount.text = "Raw Game:" + resourcesList.Game_Cooked.ToString();
+        Text_RawFishCount.text = resourcesList.Fish_Raw.ToString();
+        Text_RawGameCount.text = resourcesList.Game_Raw.ToString();
+        Text_CookedFishCount.text = resourcesList.Fish_Cooked.ToString();
+        Text_CookedGameCount.text = resourcesList.Game_Cooked.ToString();
 
         Text_FoodSupply.text = resourcesList.FoodSupply.ToString();
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         /// Villagers
         Text_VillagerCount.text =  villagerManager.villagerARRAY.Count.ToString();
-        Text_VillagerHappiness.text = "Happiness: " + (villagerManager.happiness_avg / 2) * 100 + "%";
+        Text_VillagerHappiness.text = (villagerManager.happiness_avg / 2) * 100 + "%";
         Text_HuntingProductivity.text = "HuntingAVG: " + villagerManager.hunting_productivity_avg.ToString();
         Text_FishingProductivity.text = "FishingAVG: " + villagerManager.fishing_productivity_avg.ToString();
         Text_CookingProductivity.text = "CookingAVG: " + villagerManager.cooking_productivity_avg.ToString();
