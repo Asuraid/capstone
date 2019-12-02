@@ -12,6 +12,26 @@ public class Villager_Prefab : MonoBehaviour
     //A productivity number.0 = none. 1 = avg. 2= best
     //A job that they are assigned
 
+    // Dropdown menu for selecting jobs they are good at
+    public enum WhatJobAreTheyGoodAt // your custom enumeration
+    {
+        None,
+        Hunting,
+        Fishing,
+        Cooking
+    };
+    public WhatJobAreTheyGoodAt jobProfession = WhatJobAreTheyGoodAt.None;  // this public var should appear as a drop down
+
+    // Dropdown menu for selecting jobs
+    public enum WhatJobDoTheyHave // your custom enumeration
+    {
+        None,
+        Hunting,
+        Fishing,
+        Cooking
+    };
+    public WhatJobDoTheyHave currentJob = WhatJobDoTheyHave.None;  // this public var should appear as a drop down
+
     public VillagerManager VM;
     //1 = hunter. 2 = fisher. 3 = cook
     public int WHATJOBAMIGOODAT;
@@ -22,7 +42,7 @@ public class Villager_Prefab : MonoBehaviour
     public float happiness_individual;
 
     //THESE ARE PURELY FOR MATHEMATICS. PLEASE DONT TOUCH
-     float hunting_number;
+    float hunting_number;
      float fishing_number;
      float cooking_number;
 
@@ -35,6 +55,7 @@ public class Villager_Prefab : MonoBehaviour
 
 
     //UI. THIS CAN PROBABLY BE DELETED LATER
+    public GameObject UIBox;
     public TextMeshPro profession;
     public TextMeshPro assignedjob;
 
@@ -53,6 +74,10 @@ public class Villager_Prefab : MonoBehaviour
         hunting_productivity_individual = 1;
        fishing_productivity_individual = 1;
        cooking_productivity_individual = 1;
+
+        //Check for jobs
+        AdjustProfession();
+        AdjustJob();
 
 }
 
@@ -122,5 +147,59 @@ public class Villager_Prefab : MonoBehaviour
                 assignedjob.text = "Job: Cook";
                 break;
         }
+    }
+
+    void AdjustProfession()
+    {
+        switch (jobProfession)
+        {
+            case WhatJobAreTheyGoodAt.None:
+                WHATJOBAMIGOODAT = 0;
+                break;
+            case WhatJobAreTheyGoodAt.Hunting:
+                WHATJOBAMIGOODAT = 1;
+                break;
+            case WhatJobAreTheyGoodAt.Fishing:
+                WHATJOBAMIGOODAT = 2;
+                break;
+            case WhatJobAreTheyGoodAt.Cooking:
+                WHATJOBAMIGOODAT = 3;
+                break;
+            default:
+                print("Something went wrong that it arrived to the default case.");
+                break;
+        }
+    }
+
+    void AdjustJob()
+    {
+        switch (currentJob)
+        {
+            case WhatJobDoTheyHave.None:
+                WHATJOBDOIHAVE = 0;
+                break;
+            case WhatJobDoTheyHave.Hunting:
+                WHATJOBDOIHAVE = 1;
+                break;
+            case WhatJobDoTheyHave.Fishing:
+                WHATJOBDOIHAVE = 2;
+                break;
+            case WhatJobDoTheyHave.Cooking:
+                WHATJOBDOIHAVE = 3;
+                break;
+            default:
+                print("Something went wrong that it arrived to the default case.");
+                break;
+        }
+    }
+
+    void OnMouseEnter()
+    {
+        UIBox.SetActive(true);
+    }
+
+    void OnMouseExit()
+    {
+        UIBox.SetActive(false);
     }
 }
