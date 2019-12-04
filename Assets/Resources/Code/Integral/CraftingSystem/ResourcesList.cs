@@ -4,30 +4,41 @@ using UnityEngine;
 
 public class ResourcesList : MonoBehaviour
 {
+    [Header("Event Tester")]
     //Direct reference to the event system. This is used to edit the hour count
     public EventTest eventTest;
 
+    [Header("Temp")]
+    // Very temporary location for fish raw text location.
+    public GameObject rawFishText;
+
     //RESOURCES
+    [Header("Raw Goods")]
     public int Fish_Raw;
     public int Game_Raw;
 
     //CRAFTED GOODS
+    [Header("Crafted Goods")]
     public int Fish_Cooked;
     public int Game_Cooked;
 
     //Buildings
     //FOOD
+    [Header("Locations")]
     public GameObject Pond;
     public GameObject Forest;
     public GameObject Oven;
 
+    [Header("Categories")]
     //Categories
     public int FoodSupply = 0;
 
+    [Header("Hours")]
     //Hour Counter
     //As of now, each event takes 2 hours. There are 10 hours in a day. At the end of the day, different values will be calculated
     public int HourCount = 0;
 
+    [Header("Villagers")]
     //Villagers Info
     //More villagers means that more resources will be taken
     int VillagerCount = 1;
@@ -41,7 +52,7 @@ public class ResourcesList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -60,6 +71,7 @@ public class ResourcesList : MonoBehaviour
             EndOfDayCalculate();
         }   
     }
+
    public  void PrintInfo()
     {
         //print Information
@@ -70,6 +82,7 @@ public class ResourcesList : MonoBehaviour
       //      print ("You need to build an Oven! You can catch Fish but can't cook them!");
         }
     }
+
     void EndOfDayCalculate()
     {
         //Add up all sources of Food
@@ -122,5 +135,11 @@ public class ResourcesList : MonoBehaviour
 
 
 
+    }
+
+    public virtual void AddRawFishResource(int amount)
+    {
+        Fish_Raw += amount;
+        TextUI_Test.CreateFloatingTextPositive(amount.ToString(), rawFishText.transform);
     }
 }

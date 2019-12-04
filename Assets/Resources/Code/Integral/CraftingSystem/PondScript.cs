@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class PondScript : MonoBehaviour
 {
+
+    // Maybe need a central script that has connections to all scripts.
     public GameObject GameManager;
- public ResourcesList rL;
+    public ResourcesList rL;
+    TextUI_Test uiTester;
+
+
     // Start is called before the first frame update
     void Start()
     {
         rL = GameManager.GetComponent<ResourcesList>();
+        uiTester = GameManager.GetComponent<TextUI_Test>();
+
     }
 
     // Update is called once per frame
@@ -28,7 +35,7 @@ public class PondScript : MonoBehaviour
         //Add to the hour count
         rL.HourCount = rL.HourCount + 2;
         //Gather fish
-        rL.Fish_Raw = rL.Fish_Raw + 1;
+        rL.AddRawFishResource(1);
         rL.PrintInfo();
     }
 

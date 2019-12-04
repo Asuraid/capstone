@@ -11,7 +11,13 @@ public class EventTest : MonoBehaviour
     ///NONseason events_days are what day the non season minor events will happen.
     ///EventTitle_Minor_Name is the name that is assigned to the event
     /// </summary>
+    [Header("Season Attributes")]
     public bool isSeason = true;
+
+    //Seasons go in order. Start with Summer (1), then Autumn (2) then Winter (3) then Spring (4).
+    public int SeasonNumber = 1;
+
+    [Header("Day Attributes")]
     public int Day = 1;
     public int hour = 0;
     public int Day_Total = 25;
@@ -21,42 +27,41 @@ public class EventTest : MonoBehaviour
     /// NON SEASON RELATED
     /////////////////////////////////
     
-    //THESE ARE ALL NON SEASON RELATED MINOR EVENTS VARIABLES
-    string NONSEASON_EventTitle_Minor_Name;
+    [Header("Non-seasonal Events")]
     //Sets up array for non season related minor events
     public int howmanyNONSEASON_MinorEvents = 0;
     int[] NONSEASON_Event_day = new int[4] { 0, 0, 0, 0 };
     //THESE ARE ALL NON SEASON RELATED MAJOR EVENTS VARIABLES
     public int NONSEASON_Event_01_MAJOR_Day;
     string NONSEASON_EventTitle_Major_Name;
+    //THESE ARE ALL NON SEASON RELATED MINOR EVENTS VARIABLES
+    string NONSEASON_EventTitle_Minor_Name;
 
     /////////////////////////////////
     /// SEASON RELATED
     /////////////////////////////////
 
-    //THESE ARE ALL SEASON RELATED MINOR EVENTS VARIABLES
-    string SEASON_EventTitle_Minor_Name;
+    [Header("Seasonal Events")]
     //Sets up array for season related minor events
     public int howmanySEASON_MinorEvents = 0;
     int[] SEASON_Event_day = new int[4] { 0, 0, 0, 0 };
     //THESE ARE ALL SEASON RELATED MAJOR EVENTS VARIABLES
     public int SEASON_Event_01_MAJOR_Day;
     string SEASON_EventTitle_Major_Name;
-
-
-    //Seasons go in order. Start with Summer (1), then Autumn (2) then Winter (3) then Spring (4).
-    public int SeasonNumber = 1;
+    //THESE ARE ALL SEASON RELATED MINOR EVENTS VARIABLES
+    string SEASON_EventTitle_Minor_Name;
 
 
     /////////////////////////////////
     /// Unique/NPC Events
     /////////////////////////////////
-    
-    //THESE ARE ALL Unique  MINOR EVENTS VARIABLES
-    string UNIQUE_EventTitle_Name;
+
+    [Header("Unique Events")]
     //Sets up array for unique  minor events
     public int howmanyUNIQUE_MinorEvents = 0;
     public int UNIQUE_Event_01_Day;
+    //THESE ARE ALL Unique  MINOR EVENTS VARIABLES
+    string UNIQUE_EventTitle_Name;
 
     // Start is called before the first frame update
     void Start()
