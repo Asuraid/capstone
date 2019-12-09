@@ -115,9 +115,9 @@ public class QuestSystem_MinorEvents_Functionality : MonoBehaviour
 
 
 
-        resourcesList.Fish_Raw += rawFishAdd;
+        resourcesList.rawFish += rawFishAdd;
         resourcesList.Fish_Cooked += cookedFishAdd;
-        resourcesList.Game_Raw += rawGameAdd;
+        resourcesList.rawGame += rawGameAdd;
         resourcesList.Game_Cooked += cookedGameAdd;
         resourcesList.FoodSupply += foodSupply;
 

@@ -2810,13 +2810,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   villagerARRAY: []
-  happiness_avg: 0
-  hunting_productivity_avg: 0
-  fishing_productivity_avg: 0
-  cooking_productivity_avg: 0
-  HOWMANY_hunters: 0
-  HOWMANY_fishers: 0
-  HOWMANY_cooks: 0
+  averageHappiness: 0
+  huntingAverage: 0
+  fishingAverage: 0
+  cookingAverage: 0
+  activeHunters: 0
+  activeFishers: 0
+  activeCooks: 0
 --- !u!114 &607147427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2830,9 +2830,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventTest: {fileID: 607147428}
+  villagerManager: {fileID: 607147426}
   rawFishText: {fileID: 2115634790}
-  Fish_Raw: 0
-  Game_Raw: 0
+  rawFish: 0
+  rawGame: 0
   Fish_Cooked: 0
   Game_Cooked: 0
   Pond: {fileID: 410599484}
@@ -2840,7 +2841,6 @@ MonoBehaviour:
   Oven: {fileID: 613564406}
   FoodSupply: 0
   HourCount: 0
-  villagerManager: {fileID: 607147426}
 --- !u!114 &607147428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13142,21 +13142,6 @@ PrefabInstance:
       propertyPath: VM
       value: 
       objectReference: {fileID: 607147426}
-    - target: {fileID: 6271505936929487857, guid: a468032e8d088c74698b1bf2f274dec8,
-        type: 3}
-      propertyPath: WHATJOBAMIGOODAT
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6271505936929487857, guid: a468032e8d088c74698b1bf2f274dec8,
-        type: 3}
-      propertyPath: jobProfession
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6271505936929487857, guid: a468032e8d088c74698b1bf2f274dec8,
-        type: 3}
-      propertyPath: currentJob
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5943620241780779981, guid: a468032e8d088c74698b1bf2f274dec8,
         type: 3}
       propertyPath: m_Mesh

@@ -8,14 +8,19 @@ public class ResourcesList : MonoBehaviour
     //Direct reference to the event system. This is used to edit the hour count
     public EventTest eventTest;
 
+    [Header("Villager Manager")]
+    public VillagerManager villagerManager;
+    //More villagers means that more resources will be taken
+    int VillagerCount = 1;
+
     [Header("Temp")]
     // Very temporary location for fish raw text location.
     public GameObject rawFishText;
 
     //RESOURCES
     [Header("Raw Goods")]
-    public int Fish_Raw;
-    public int Game_Raw;
+    public int rawFish;
+    public int rawGame;
 
     //CRAFTED GOODS
     [Header("Crafted Goods")]
@@ -38,17 +43,11 @@ public class ResourcesList : MonoBehaviour
     //As of now, each event takes 2 hours. There are 10 hours in a day. At the end of the day, different values will be calculated
     public int HourCount = 0;
 
-    [Header("Villagers")]
-    //Villagers Info
-    //More villagers means that more resources will be taken
-    int VillagerCount = 1;
-    public VillagerManager villagerManager;
-
-
     //How many resources are gathered
     int resources_gathered_fish = 0;
     int resources_gathered_cook = 0;
     int resources_gathered_hunter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +74,7 @@ public class ResourcesList : MonoBehaviour
    public  void PrintInfo()
     {
         //print Information
-     //   print("Raw Fish : " + Fish_Raw + "," + "Cooked Fish : " + Fish_Cooked + "," + "Raw Game: " + Game_Raw + "," + "Cooked Game: " + Game_Cooked);
+     //   print("Raw Fish : " + rawFish + "," + "Cooked Fish : " + Fish_Cooked + "," + "Raw Game: " + rawGame + "," + "Cooked Game: " + Game_Cooked);
         //If oven doesnt exist yet
         if (Oven.activeSelf == false)
         {
@@ -116,13 +115,13 @@ public class ResourcesList : MonoBehaviour
         
 
         //FISHERMAN
-        resources_gathered_fish = (int)(villagerManager.HOWMANY_fishers * villagerManager.fishing_productivity_avg * villagerManager.happiness_avg);
-        Fish_Raw = Fish_Raw + resources_gathered_fish;
+        resources_gathered_fish = (int)(villagerManager.activeFishers * villagerManager.fishingAverage * villagerManager.averageHappiness);
+        rawFish = rawFish + resources_gathered_fish;
         //HUNTERS
-        resources_gathered_hunter = (int)(villagerManager.HOWMANY_hunters * villagerManager.hunting_productivity_avg * villagerManager.happiness_avg);
-        Game_Raw = Game_Raw + resources_gathered_hunter;
+        resources_gathered_hunter = (int)(villagerManager.activeHunters * villagerManager.huntingAverage * villagerManager.averageHappiness);
+        rawGame = rawGame + resources_gathered_hunter;
         //COOKS
-        resources_gathered_cook = (int)(villagerManager.HOWMANY_cooks * villagerManager.cooking_productivity_avg * villagerManager.happiness_avg);
+        resources_gathered_cook = (int)(villagerManager.activeCooks * villagerManager.cookingAverage * villagerManager.averageHappiness);
         Fish_Cooked = Fish_Cooked + resources_gathered_cook;
         Game_Cooked = Game_Cooked + resources_gathered_cook;
 
@@ -139,7 +138,7 @@ public class ResourcesList : MonoBehaviour
 
     public virtual void AddRawFishResource(int amount)
     {
-        Fish_Raw += amount;
+        rawFish += amount;
         TextUI_Test.CreateFloatingTextPositive(amount.ToString(), rawFishText.transform);
     }
 }

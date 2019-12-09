@@ -538,18 +538,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db2f5f237e5dbf4bb3983703c19106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jobProfession: 0
-  currentJob: 0
   VM: {fileID: 0}
+  jobProfession: 2
+  currentJob: 2
+  individualHappiness: 1
   WHATJOBAMIGOODAT: 0
   WHATJOBDOIHAVE: 0
-  happiness_individual: 0
   hunting_productivity_individual: 0
   fishing_productivity_individual: 0
   cooking_productivity_individual: 0
   UIBox: {fileID: 7796103185768823857}
   profession: {fileID: 2440194372830981231}
-  assignedjob: {fileID: 4336629761203082156}
+  assignedJob: {fileID: 4336629761203082156}
 --- !u!61 &7159960275030077843
 BoxCollider2D:
   m_ObjectHideFlags: 0

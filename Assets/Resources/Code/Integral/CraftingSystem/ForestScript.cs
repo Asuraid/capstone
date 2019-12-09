@@ -28,7 +28,7 @@ public class ForestScript : MonoBehaviour
         //Add to the hour count
         rL.HourCount = rL.HourCount + 2;
         //Gather Game
-        rL.Game_Raw = rL.Game_Raw + 1;
+        rL.rawGame = rL.rawGame + 1;
         rL.PrintInfo();
     }
 

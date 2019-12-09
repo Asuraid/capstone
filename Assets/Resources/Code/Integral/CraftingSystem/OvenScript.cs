@@ -26,7 +26,7 @@ public class OvenScript : MonoBehaviour
 
         //FISH
         //is there enough raw fish to cook?
-        if (rL.Fish_Raw > 0)
+        if (rL.rawFish > 0)
         {
             ////////////////
             //THIS ALWAYS NEEDS TO BE CALLED ANY TIME THAT TIME PASSES IN GAME. COPY AND PASTE THIS INTO EVERY SINGLE ACTION
@@ -37,7 +37,7 @@ public class OvenScript : MonoBehaviour
             //Add to the hour count
             rL.HourCount = rL.HourCount + 2;
             //Add Cooked fish and delete Raw fish
-            rL.Fish_Raw = rL.Fish_Raw - 1;
+            rL.rawFish = rL.rawFish - 1;
             rL.Fish_Cooked = rL.Fish_Cooked + 1;
             rL.PrintInfo();
         }
@@ -49,7 +49,7 @@ public class OvenScript : MonoBehaviour
 
         //Game
         //is there enough raw game to cook?
-        if (rL.Game_Raw > 0)
+        if (rL.rawGame > 0)
         {
             ////////////////
             //THIS ALWAYS NEEDS TO BE CALLED ANY TIME THAT TIME PASSES IN GAME. COPY AND PASTE THIS INTO EVERY SINGLE ACTION
@@ -60,7 +60,7 @@ public class OvenScript : MonoBehaviour
             //Add to the hour count
             rL.HourCount = rL.HourCount + 2;
             //Add Cooked fish and delete Raw game
-            rL.Game_Raw = rL.Game_Raw - 1;
+            rL.rawGame = rL.rawGame - 1;
             rL.Game_Cooked = rL.Game_Cooked + 1;
             rL.PrintInfo();
         }

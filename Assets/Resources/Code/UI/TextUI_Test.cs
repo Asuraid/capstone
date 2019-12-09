@@ -72,8 +72,8 @@ public class TextUI_Test : MonoBehaviour
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         /// Resources
-        Text_RawFishCount.text = resourcesList.Fish_Raw.ToString();
-        Text_RawGameCount.text = resourcesList.Game_Raw.ToString();
+        Text_RawFishCount.text = resourcesList.rawFish.ToString();
+        Text_RawGameCount.text = resourcesList.rawGame.ToString();
         Text_CookedFishCount.text = resourcesList.Fish_Cooked.ToString();
         Text_CookedGameCount.text = resourcesList.Game_Cooked.ToString();
 
@@ -82,10 +82,10 @@ public class TextUI_Test : MonoBehaviour
         ////////////////////////////////////////////////////////////////////////////////////////////
         /// Villagers
         Text_VillagerCount.text =  villagerManager.villagerARRAY.Count.ToString();
-        Text_VillagerHappiness.text = (villagerManager.happiness_avg / 2) * 100 + "%";
-        Text_HuntingProductivity.text = "HuntingAVG: " + villagerManager.hunting_productivity_avg.ToString();
-        Text_FishingProductivity.text = "FishingAVG: " + villagerManager.fishing_productivity_avg.ToString();
-        Text_CookingProductivity.text = "CookingAVG: " + villagerManager.cooking_productivity_avg.ToString();
+        Text_VillagerHappiness.text = (villagerManager.averageHappiness / 2) * 100 + "%";
+        Text_HuntingProductivity.text = "HuntingAVG: " + villagerManager.huntingAverage.ToString();
+        Text_FishingProductivity.text = "FishingAVG: " + villagerManager.fishingAverage.ToString();
+        Text_CookingProductivity.text = "CookingAVG: " + villagerManager.cookingAverage.ToString();
 
 
     }
