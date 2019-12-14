@@ -125,9 +125,9 @@ public class ResourcesList : MonoBehaviour
         Fish_Cooked = Fish_Cooked + resources_gathered_cook;
         Game_Cooked = Game_Cooked + resources_gathered_cook;
 
-        print(resources_gathered_fish);
-        print(resources_gathered_hunter);
-        print(resources_gathered_cook);
+        //print(resources_gathered_fish);
+        //print(resources_gathered_hunter);
+        //print(resources_gathered_cook);
         resources_gathered_fish = 0;
         resources_gathered_cook = 0;
         resources_gathered_hunter = 0;

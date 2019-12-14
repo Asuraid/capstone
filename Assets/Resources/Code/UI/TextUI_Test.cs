@@ -106,9 +106,9 @@ public class TextUI_Test : MonoBehaviour
     /// <param name="location">Location to tbe initiated.</param>
     public static void CreateFloatingTextPositive(string text, Transform location)
     {
-        Floating_Text instance = Instantiate(popupTextPositivePrefab);
+        //Floating_Text instance = Instantiate(popupTextPositivePrefab);
 
-        instance.transform.SetParent(popupCanvas.transform, false);
-        instance.SetText(text);
+        //instance.transform.SetParent(popupCanvas.transform, false);
+        //instance.SetText(text);
     }
 }
