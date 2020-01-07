@@ -20,7 +20,7 @@ namespace TeamMars.Capstone.Manager
         public int maxDay;
 
         int hours;
-        int currentDay;
+        int currentDay = 1;
         int seasons = 1;
 
         [Header("Time TextMeshPro")]
@@ -58,6 +58,7 @@ namespace TeamMars.Capstone.Manager
             if (currentDay >= maxDay)
             {
                 seasons++;
+                currentDay = 1;
                 Mathf.Clamp(seasons, 0, 4);
             }
 

@@ -3155,6 +3155,7 @@ GameObject:
   - component: {fileID: 613564407}
   - component: {fileID: 613564409}
   - component: {fileID: 613564408}
+  - component: {fileID: 613564410}
   m_Layer: 0
   m_Name: Oven_ICON
   m_TagString: Untagged
@@ -3220,6 +3221,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 607147425}
   rL: {fileID: 607147427}
+--- !u!114 &613564410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613564406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2133849b029344fa0d82e185283cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gatheredResource: 1
+  hasAnOutput: 1
+  gatheredAmount: 1
 --- !u!1 &668659733
 GameObject:
   m_ObjectHideFlags: 0
@@ -10390,7 +10406,7 @@ MonoBehaviour:
   cookedFish: 0
   wood: 0
   maxHours: 10
-  maxDay: 25
+  maxDay: 5
   textHours: {fileID: 1923903406}
   textDays: {fileID: 1919092660}
   textSeasons: {fileID: 544454580}
