@@ -3,38 +3,38 @@ using TeamMars.Capstone.Manager.Resources;
 
 public class UseResources : MonoBehaviour
 {
-    public enum GatheredResource // your custom enumeration
+    public enum UsedResources // your custom enumeration
     {
         None,
         RawGame,
         RawFish,
         Wood,
     };
-    [Header("Gathered Resource")]
-    [Tooltip("What resource will be gathered from this area.")]
-    public GatheredResource gatheredResource = GatheredResource.None;  // this public var should appear as a drop down
+    [Header("Used Resources")]
+    [Tooltip("What resource will be used from this area; can be multiple.")]
+    public bool usingRawFish;
+    public bool usingCookedFish;
 
+    public bool usingRawMeat;
+    public bool usingCookedMeat;
+
+    public int usedAmount;
+
+    [Header("Resource Output")]
+    [Tooltip("What resource will be gained from this area; can be multiple.")]
     public bool hasAnOutput;
 
-    public int gatheredAmount;
+    public bool gainRawFish;
+    public bool gainCookedFish;
+
+    public bool gainRawMeat;
+    public bool gainCookedMeat;
+
+    public int gainedAmount;
 
     private void OnMouseDown()
     {
-        switch (gatheredResource)
-        {
-            case GatheredResource.None:
-                print("There are no resources to gather here.");
-                break;
-            case GatheredResource.RawGame:
-                ResourceManager.Instance.AddRawGame(gatheredAmount);
-                break;
-            case GatheredResource.RawFish:
-                ResourceManager.Instance.AddRawFish(gatheredAmount);
-                break;
-            default:
-                print("Something went wrong to trigger a default state.");
-                break;
-        }
+        print("do thing here");
 
     }
 }
