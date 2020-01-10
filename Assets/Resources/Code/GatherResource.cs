@@ -3,38 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using TeamMars.Capstone.Manager.Resources;
 
-public class GatherResource : MonoBehaviour
+namespace TeamMars.Capstone.Manager.Resources
 {
-    public enum GatheredResource // your custom enumeration
+    public class GatherResource : MonoBehaviour
     {
-        None,
-        RawGame,
-        RawFish,
-        Wood,
-    };
-    [Header("Gathered Resource")]
-    [Tooltip("What resource will be gathered from this area.")]
-    public GatheredResource gatheredResource = GatheredResource.None;  // this public var should appear as a drop down
+        [Header("Resource Output")]
+        [Tooltip("What resource will be gained from this area; can be multiple.")]
+        public bool gainRawFish;
 
-    public int gatheredAmount;
+        public bool gainRawMeat;
 
-    private void OnMouseDown()
-    {
-        switch (gatheredResource)
+        public int gainedAmount;
+
+        private void OnMouseDown()
         {
-            case GatheredResource.None:
-                print("There are no resources to gather here.");
-                break;
-            case GatheredResource.RawGame:
-                ResourceManager.Instance.AddRawGame(gatheredAmount);
-                break;
-            case GatheredResource.RawFish:
-                ResourceManager.Instance.AddRawFish(gatheredAmount);
-                break;
-            default:
-                print("Something went wrong to trigger a default state.");
-                break;
+            // Advance time.
+            GameManager.Instance.AddHours();
+
+            if (gainRawFish)
+            {
+                ResourceManager.Instance.AddRawFish(gainedAmount);
+            }
+
+            if (gainRawMeat)
+            {
+                ResourceManager.Instance.AddRawGame(gainedAmount);
+            }
+
         }
-        
     }
 }

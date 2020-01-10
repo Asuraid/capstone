@@ -37,58 +37,48 @@ namespace TeamMars.Capstone.Manager.Resources
         public void AddRawGame(int amount)
         {
             GameManager.Instance.rawGame += amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void AddRawFish(int amount)
         {
             GameManager.Instance.rawFish += amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void AddCookedGame(int amount)
         {
             GameManager.Instance.cookedGame += amount;
-            GameManager.Instance.rawGame -= amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void AddCookedFish(int amount)
         {
             GameManager.Instance.cookedFish += amount;
-            GameManager.Instance.rawFish -= amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void UseRawGame(int amount)
         {
             GameManager.Instance.rawGame -= amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void UseRawFish(int amount)
         {
             GameManager.Instance.rawFish -= amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void UseCookedGame(int amount)
         {
             GameManager.Instance.cookedGame -= amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 
         public void UseCookedFish(int amount)
         {
             GameManager.Instance.cookedFish -= amount;
-            GameManager.Instance.AddHours();
             UpdateResources();
         }
 

@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panSpeed: 5
   panBorderThickness: 10
-  panLimit: {x: 20, y: 20}
+  panLimit: {x: 5, y: 5}
   scrollSpeed: 2
   minScroll: 4.5
   maxScroll: 7
@@ -1868,7 +1868,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23474813, y: 0}
+  m_Offset: {x: 0.23474813, y: 0.28860283}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1879,7 +1879,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.973473, y: 1}
+  m_Size: {x: 3.973473, y: 1.5772057}
   m_EdgeRadius: 0
 --- !u!114 &410599487
 MonoBehaviour:
@@ -1907,8 +1907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2499720a6bcf1b942910bf20d1516128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatheredResource: 2
-  gatheredAmount: 1
+  gainRawFish: 1
+  gainRawMeat: 0
+  gainedAmount: 1
 --- !u!1 &414370010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,7 +3154,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 613564407}
-  - component: {fileID: 613564409}
   - component: {fileID: 613564408}
   - component: {fileID: 613564410}
   m_Layer: 0
@@ -3207,20 +3207,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1668496, y: 1.6664886}
   m_EdgeRadius: 0
---- !u!114 &613564409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613564406}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ecb5e81ec2c5a48be77e8eacd6adce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameManager: {fileID: 607147425}
-  rL: {fileID: 607147427}
 --- !u!114 &613564410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,9 +3219,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d2133849b029344fa0d82e185283cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatheredResource: 1
+  usingRawFish: 1
+  usingCookedFish: 0
+  usingRawMeat: 1
+  usingCookedMeat: 0
+  usedAmount: 1
   hasAnOutput: 1
-  gatheredAmount: 1
+  gainRawFish: 0
+  gainCookedFish: 1
+  gainRawMeat: 0
+  gainCookedMeat: 1
+  gainedAmount: 1
 --- !u!1 &668659733
 GameObject:
   m_ObjectHideFlags: 0
@@ -10407,6 +10401,9 @@ MonoBehaviour:
   wood: 0
   maxHours: 10
   maxDay: 5
+  hourIncrements: 2
+  villagerNumber: 2
+  eatingCount: 0
   textHours: {fileID: 1923903406}
   textDays: {fileID: 1919092660}
   textSeasons: {fileID: 544454580}
@@ -11553,8 +11550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2499720a6bcf1b942910bf20d1516128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatheredResource: 1
-  gatheredAmount: 1
+  gainRawFish: 0
+  gainRawMeat: 1
+  gainedAmount: 1
 --- !u!1 &1913020006
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,8 +34,12 @@ namespace TeamMars.Capstone.Manager.Resources
 
         public int gainedAmount;
 
+        bool advancedTime;
+
         private void OnMouseDown()
         {
+            advancedTime = true;
+
             // If the item outputs things.
             if (hasAnOutput)
             {
@@ -44,14 +48,10 @@ namespace TeamMars.Capstone.Manager.Resources
                     ResourceManager.Instance.AddRawFish(gainedAmount);
                 }
 
-                if (gainCookedFish && GameManager.Instance.rawFish > 0)
+                // If cooked fish is gained, check if there are more than the used amount before proceeding.
+                if (gainCookedFish && GameManager.Instance.rawFish >= usedAmount)
                 {
                     ResourceManager.Instance.AddCookedFish(gainedAmount);
-                }
-                else
-                {
-                    print(GameManager.Instance.rawFish);
-                    print("Not enough materials.");
                 }
 
                 if (gainRawMeat)
@@ -59,34 +59,46 @@ namespace TeamMars.Capstone.Manager.Resources
                     ResourceManager.Instance.AddRawGame(gainedAmount);
                 }
 
-                if (gainCookedMeat && GameManager.Instance.rawGame > 0)
+                if (gainCookedMeat && GameManager.Instance.rawGame >= usedAmount)
                 {
                     ResourceManager.Instance.AddCookedGame(gainedAmount);
                 }
-                else
-                {
-                    print("Not enough materials.");
-                }
             }
 
-            if (usingRawFish && GameManager.Instance.rawFish > 0)
+            if (usingRawFish && GameManager.Instance.rawFish >= usedAmount)
             {
                 ResourceManager.Instance.UseRawFish(usedAmount);
+                AdvanceTime();
             }
 
             if (usingCookedFish)
             {
                 ResourceManager.Instance.UseCookedFish(usedAmount);
+                AdvanceTime();
             }
 
-            if (usingRawMeat)
+            if (usingRawMeat && GameManager.Instance.rawGame >= usedAmount)
             {
                 ResourceManager.Instance.UseRawGame(usedAmount);
+                AdvanceTime();
             }
 
             if (usingCookedMeat)
             {
                 ResourceManager.Instance.UseCookedGame(usedAmount);
+                AdvanceTime();
+            }
+
+            // Check if time was advanced, if it was already, don't do it again.
+        }
+
+        void AdvanceTime()
+        {
+            // Advance time.
+            if (advancedTime)
+            {
+                GameManager.Instance.AddHours();
+                advancedTime = !advancedTime;
             }
         }
     }
