@@ -7,6 +7,7 @@ namespace TeamMars.Capstone.Manager
 {
     public class GameManager : MonoBehaviour
     {
+   
         public static GameManager Instance { get; private set; }
 
         [Header("Resources")]
@@ -23,7 +24,7 @@ namespace TeamMars.Capstone.Manager
         public int hourIncrements = 2;
 
         int hours;
-        int currentDay = 1;
+        public int currentDay = 1;
         int seasons = 1;
 
         [Header("Resources")]
@@ -45,7 +46,7 @@ namespace TeamMars.Capstone.Manager
                 DontDestroyOnLoad(gameObject);
             }
         }
-
+       
         private void Start()
         {
             UpdateText();

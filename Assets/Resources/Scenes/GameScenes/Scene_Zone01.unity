@@ -2741,6 +2741,7 @@ GameObject:
   - component: {fileID: 593063921}
   - component: {fileID: 593063920}
   - component: {fileID: 593063919}
+  - component: {fileID: 593063922}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2796,6 +2797,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &593063922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593063918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d993b47d4975cb478e1b15ebc8e2c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcesList: {fileID: 0}
+  gameManager: {fileID: 1530073454}
+  choicevariable: 0
 --- !u!1 &607147425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +2955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesList: {fileID: 607147427}
+  gameManager: {fileID: 0}
   choicevariable: 0
 --- !u!1 &609745818
 GameObject:
@@ -10402,8 +10419,8 @@ MonoBehaviour:
   maxHours: 10
   maxDay: 5
   hourIncrements: 2
+  currentDay: 1
   villagerNumber: 2
-  eatingCount: 0
   textHours: {fileID: 1923903406}
   textDays: {fileID: 1919092660}
   textSeasons: {fileID: 544454580}
