@@ -26,7 +26,7 @@ namespace TeamMars.Capstone.Manager
         int currentDay = 1;
         int seasons = 1;
 
-        [Header("Resources")]
+        [Header("Villagers")]
         public int villagerNumber = 1;
         int eatingCount;
 
@@ -35,6 +35,9 @@ namespace TeamMars.Capstone.Manager
         public TextMeshPro textDays;
         public TextMeshPro textSeasons;
 
+        /// <summary>
+        /// Set up instance of the game manager. Remove extra instances.
+        /// </summary>
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -46,13 +49,20 @@ namespace TeamMars.Capstone.Manager
             }
         }
 
+        /// <summary>
+        /// Update needed text for the game when it starts.
+        /// </summary>
         private void Start()
         {
             UpdateText();
         }
 
+        /// <summary>
+        /// Time management. Will work for days.
+        /// </summary>
         public void AddHours()
         {
+            // Add hours based off the increment.
             hours += hourIncrements;
 
             // Check if the days are more than the max amount of hours. Move onto next day if so. Use up food storage.
@@ -74,6 +84,7 @@ namespace TeamMars.Capstone.Manager
                 }
             }
 
+            // Change season if required.
             if (currentDay >= maxDay)
             {
                 seasons++;
@@ -81,14 +92,19 @@ namespace TeamMars.Capstone.Manager
                 Mathf.Clamp(seasons, 0, 4);
             }
 
+            // Update the needed texts.
             UpdateText();
         }
 
+        /// <summary>
+        /// Update all required text.
+        /// </summary>
         void UpdateText()
         {
             textHours.text = "Hours: " + hours + " / " + maxHours;
             textDays.text = "Days: " + currentDay + " / " + maxDay;
 
+            // Switch seasons if required, change text as well.
             switch (seasons)
             {
                 case 1:
@@ -109,8 +125,13 @@ namespace TeamMars.Capstone.Manager
             }
         }
 
+        /// <summary>
+        /// Reduce food numbers depending on the amount of villagers. Eating count rises up for each villager so the function only runs as many times as needed.
+        /// </summary>
+        /// <returns>null</returns>
         private IEnumerator FeedVillagers()
         {
+            // Eat cooked fish first before moving onto meat.
             while(eatingCount < villagerNumber)
             {
                 if (cookedFish > 0)
@@ -120,6 +141,7 @@ namespace TeamMars.Capstone.Manager
                 eatingCount++;
             }
 
+            // Reset eating count for next time the game requires food consumption.
             eatingCount = 0;
             yield return null;
         }
