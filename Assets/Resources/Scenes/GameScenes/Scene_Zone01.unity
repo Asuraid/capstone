@@ -10416,8 +10416,8 @@ MonoBehaviour:
   rawFish: 0
   cookedFish: 0
   wood: 0
-  maxHours: 10
-  maxDay: 5
+  maxHours: 5
+  maxDay: 20
   hourIncrements: 2
   currentDay: 1
   villagerNumber: 2

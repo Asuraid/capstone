@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using PixelCrushers.DialogueSystem;
+using TeamMars.Capstone.Manager.Resources;
 
 namespace TeamMars.Capstone.Manager
 {
@@ -57,6 +58,33 @@ namespace TeamMars.Capstone.Manager
 
             if (isEvent) {
                 QuestCall_Minor(1);
+                //Calls the correct functions based on player choice
+                if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 1)
+                {
+                    print("Event_Minor_Choice#1");
+                    RunFunctions(rawFishAdd_temp, cookedGameAdd_temp, rawGameAdd_temp, cookedGameAdd_temp, foodSupply_temp);
+                }
+                if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 2)
+                {
+                    print("Event_Minor_Choice#2");
+                    RunFunctions(rawFishAdd_temp, cookedGameAdd_temp, rawGameAdd_temp, cookedGameAdd_temp, foodSupply_temp);
+                }
+                if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 3)
+                {
+                    print("Event_Minor_Choice#3");
+                    RunFunctions(rawFishAdd_temp, cookedGameAdd_temp, rawGameAdd_temp, cookedGameAdd_temp, foodSupply_temp);
+                }
+
+                //When the player makes a choice, this resets their choice variable so that functions dont repeat multiple times
+                if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt != 0)
+                {
+                    DialogueLua.SetVariable(("Quest_Minor_EventChosen"), 0);
+                }
+   
+
+  
+
+                //Chooses a function based on the three choices
             }
         }
 
@@ -110,7 +138,9 @@ namespace TeamMars.Capstone.Manager
 
 
             switch (EventNumber) {
-            case 1:
+                #region //CASE 1
+                case 1:
+             
             DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
 
 
@@ -118,10 +148,12 @@ namespace TeamMars.Capstone.Manager
             DialogueLua.SetVariable("Quest_Minor_EventTitle", "WHAT HAPPENNED?");
 
             DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "EARTHQUAKE");
-            ///////////////////////////////////////////////////////////////////
+                    ///////////////////////////////////////////////////////////////////
+                    print("fdshfjs");
             SetFunctionValues(100000, 0, 0, 0, 0);
-            ///////////////////////////////////////////////////////////////////
-            DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "BUILDING COLLAPSE");
+             RunFunctions(rawFishAdd_temp, cookedGameAdd_temp, rawGameAdd_temp, cookedGameAdd_temp, foodSupply_temp);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "BUILDING COLLAPSE");
             ///////////////////////////////////////////////////////////////////
             SetFunctionValues(0, 90, 0, 0, 0);
             ///////////////////////////////////////////////////////////////////
@@ -130,6 +162,8 @@ namespace TeamMars.Capstone.Manager
             SetFunctionValues(0, 0, 10, 0, 0);
                     ///////////////////////////////////////////////////////////////////
             break;
+                #endregion
+                #region //CASE 2
                 case 2:
                     DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
 
@@ -150,6 +184,7 @@ namespace TeamMars.Capstone.Manager
                     SetFunctionValues(0, 0, 10, 0, 0);
                     ///////////////////////////////////////////////////////////////////
                     break;
+                    #endregion
             }
         }
 
@@ -165,13 +200,18 @@ namespace TeamMars.Capstone.Manager
             foodSupply = foodSupply_temp;
 
 
-
-
+      
+            ResourceManager.Instance.AddRawFish(rawFishAdd + 100);
+            ResourceManager.Instance.AddCookedFish(cookedFishAdd);
+            ResourceManager.Instance.AddRawGame(rawGameAdd);
+            ResourceManager.Instance.AddCookedGame(cookedGameAdd);
+            /*
             resourcesList.rawFish += rawFishAdd;
             resourcesList.Fish_Cooked += cookedFishAdd;
             resourcesList.rawGame += rawGameAdd;
             resourcesList.Game_Cooked += cookedGameAdd;
-            resourcesList.FoodSupply += foodSupply;
+    */     
+    //   resourcesList.FoodSupply += foodSupply;
 
 
 
