@@ -49,14 +49,14 @@ namespace TeamMars.Capstone.Manager
         // Start is called before the first frame update
         void Start()
         {
-            //Every Fifth day
+            //Every First day of the Month
             if ((gameManager.currentDay == 1))
             {
                 isEvent = true;
             }
 
             if (isEvent) {
-                QuestCall_Minor();
+                QuestCall_Minor(1);
             }
         }
 
@@ -76,7 +76,7 @@ namespace TeamMars.Capstone.Manager
 
             if (isEvent)
             {
-
+                QuestCall_Minor(2);
                 //Calls the correct functions based on player choice
                 if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 1)
                 {
@@ -105,9 +105,12 @@ namespace TeamMars.Capstone.Manager
 
         }
 
-        public void QuestCall_Minor()
+        public void QuestCall_Minor(int EventNumber)
         {
 
+
+            switch (EventNumber) {
+            case 1:
             DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
 
 
@@ -125,7 +128,29 @@ namespace TeamMars.Capstone.Manager
             DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "ELDRITCH HORROR");
             ///////////////////////////////////////////////////////////////////
             SetFunctionValues(0, 0, 10, 0, 0);
-            ///////////////////////////////////////////////////////////////////
+                    ///////////////////////////////////////////////////////////////////
+            break;
+                case 2:
+                    DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
+
+
+
+                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "A MYSTERIOUS FOG ROLLS IN");
+                    
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "SANTA COMES EARLY");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(100000, 0, 0, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "GIANT TENTACLE MONSTERS APPEAR");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(0, 90, 0, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "A SECOND MOON SHOWS UP IN THE SKY");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(0, 0, 10, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    break;
+            }
         }
 
 
