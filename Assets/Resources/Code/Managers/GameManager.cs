@@ -22,8 +22,8 @@ namespace TeamMars.Capstone.Manager
         public int maxDay;
         public int hourIncrements = 2;
 
-        int hours;
-        int currentDay = 1;
+        public int currentHours;
+        public int currentDay = 1;
         int seasons = 1;
 
         [Header("Villagers")]
@@ -63,13 +63,13 @@ namespace TeamMars.Capstone.Manager
         public void AddHours()
         {
             // Add hours based off the increment.
-            hours += hourIncrements;
+            currentHours += hourIncrements;
 
             // Check if the days are more than the max amount of hours. Move onto next day if so. Use up food storage.
-            if (hours > maxHours)
+            if (currentHours > maxHours)
             {
                 currentDay++;
-                hours = 0;
+                currentHours = 0;
                 eatingCount = 0;
 
                 print("New day.");
@@ -101,7 +101,7 @@ namespace TeamMars.Capstone.Manager
         /// </summary>
         void UpdateText()
         {
-            textHours.text = "Hours: " + hours + " / " + maxHours;
+            textHours.text = "Hours: " + currentHours + " / " + maxHours;
             textDays.text = "Days: " + currentDay + " / " + maxDay;
 
             // Switch seasons if required, change text as well.

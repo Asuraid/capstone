@@ -8,7 +8,11 @@ namespace TeamMars.Capstone.Manager.Quest
 {
     public class QuestSystem_MinorEvents_Functionality : MonoBehaviour
     {
+        [ConversationPopup]
+        public string conversation; // Shown without database selection field.
 
+        [ConversationPopup(true)]
+        public string conversation2; // Shown WITH database selection field.
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -21,35 +25,94 @@ namespace TeamMars.Capstone.Manager.Quest
         int cookedGameAdd_temp = 0;
         int foodSupply_temp = 0;
 
-
-
-
-
-
-
-
-
-
-
+        /// This chooses the day
+        public bool isEvent;
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-        ////This is important to show that selecting a choice in game can change a back end variable. By proving that I can do this, I can later call functions from options selected
+        //This is important to show that selecting a choice in game can change a back end variable. By proving that I can do this, I can later call functions from options selected
         public int choiceVariable = 0;
 
 
         // Start is called before the first frame update
         void Start()
         {
-            QuestCall_Minor();
+            //Every First day of the Month
+            if (GameManager.Instance.currentDay == 1 && GameManager.Instance.currentHours == 0 && isEvent == false)
+            {
+                isEvent = true;
+                QuestCall_Minor(1);
+                RunQuest();
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
+            //Every Fourth day, at the 0 hour, run the event and change the hour.
+            if ((GameManager.Instance.currentDay % 4) == 0 && GameManager.Instance.currentHours == 0 && isEvent == false)
+            {
+                isEvent = true;
+                QuestCall_Minor(2);
+                RunQuest();
+            }
+        }
+
+        public void QuestCall_Minor(int questVariable)
+        {
+            print("hello im running");
+            switch (questVariable)
+            {
+                case 1:
+                    DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
+
+                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "WHAT HAPPENED?");
+
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "EARTHQUAKE");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(100000, 0, 0, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "BUILDING COLLAPSE");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(0, 90, 0, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "ELDRITCH HORROR");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(0, 0, 10, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    break;
+
+                case 2:
+                    DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
+
+
+
+                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "A MYSTERIOUS FOG ROLLS IN");
+
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "SANTA COMES EARLY");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(100000, 0, 0, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "GIANT TENTACLE MONSTERS APPEAR");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(0, 90, 0, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "A SECOND MOON SHOWS UP IN THE SKY");
+                    ///////////////////////////////////////////////////////////////////
+                    SetFunctionValues(0, 0, 10, 0, 0);
+                    ///////////////////////////////////////////////////////////////////
+                    break;
+            }
+
+
+        }
+
+        void RunQuest()
+        {
+            print(DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt);
             //Calls the correct functions based on player choice
             if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 1)
             {
@@ -71,34 +134,11 @@ namespace TeamMars.Capstone.Manager.Quest
             if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt != 0)
             {
                 DialogueLua.SetVariable(("Quest_Minor_EventChosen"), 0);
+                print("sees as choice default");
             }
 
-            //Chooses a function based on the three choices
-
-
-        }
-
-        public void QuestCall_Minor()
-        {
-
-            DialogueManager.StartConversation("Quest_Minor_Prefab", gameObject.transform, gameObject.transform, 0);
-
-
-
-            DialogueLua.SetVariable("Quest_Minor_EventTitle", "WHAT HAPPENNED?");
-
-            DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "EARTHQUAKE");
-            ///////////////////////////////////////////////////////////////////
-            SetFunctionValues(100000, 0, 0, 0, 0);
-            ///////////////////////////////////////////////////////////////////
-            DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "BUILDING COLLAPSE");
-            ///////////////////////////////////////////////////////////////////
-            SetFunctionValues(0, 90, 0, 0, 0);
-            ///////////////////////////////////////////////////////////////////
-            DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "ELDRITCH HORROR");
-            ///////////////////////////////////////////////////////////////////
-            SetFunctionValues(0, 0, 10, 0, 0);
-            ///////////////////////////////////////////////////////////////////
+            //GameManager.Instance.AddHours();
+            isEvent = false;
         }
 
 
@@ -106,6 +146,7 @@ namespace TeamMars.Capstone.Manager.Quest
         //THIS IS WHERE VALUES ARE LOADED FROM THE SETFUNCTIONVALUES METHOD AND INTO HERE
         void RunFunctions(int rawFishAdd, int cookedFishAdd, int rawGameAdd, int cookedGameAdd, int foodSupply)
         {
+            print("fuckkkk");
             // Maybe check if they're not equal to 0?
             ResourceManager.Instance.AddRawFish(rawFishAdd);
             ResourceManager.Instance.AddCookedFish(cookedFishAdd);
@@ -119,6 +160,7 @@ namespace TeamMars.Capstone.Manager.Quest
         //THIS GETS CALLED EVERY TIME THAT A CHOICE IS MADE. HERE IS WHERE DEVELOPERS CAN INPUT CHANGE VALUES
         void SetFunctionValues(int rawFishAdd, int cookedFishAdd, int rawGameAdd, int cookedGameAdd, int foodSupply)
         {
+            print("it run bois");
             rawFishAdd_temp = rawFishAdd;
             cookedFishAdd_temp = cookedFishAdd;
             rawGameAdd_temp = rawGameAdd;
