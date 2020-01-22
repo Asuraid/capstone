@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Pathfinding;
 
 public class Villager_Prefab : MonoBehaviour
 {
@@ -69,6 +70,17 @@ public class Villager_Prefab : MonoBehaviour
     [HideInInspector]
     public float cooking_productivity_individual;
 
+    // Tied to animation, don't touch.
+    Animator animator;
+    AIDestinationSetter aiDestination;
+    CharacterController controller;
+    bool isMoving;
+
+    [Header("Location Targets")]
+    public Transform forestTarget;
+    public Transform fishTarget;
+    public Transform homeTarget;
+    public Transform cookingTarget;
 
     [Header("UI Attributes")]
     //UI. THIS CAN PROBABLY BE DELETED LATER
@@ -76,11 +88,29 @@ public class Villager_Prefab : MonoBehaviour
     public TextMeshPro profession;
     public TextMeshPro assignedJob;
 
+    private void Awake()
+    {
+        if (animator == null)
+            animator = GetComponent<Animator>();
+        else
+            print("There is no animator attached!");
+
+        if (controller == null)
+            controller = GetComponent<CharacterController>();
+        else
+            print("There is no controller attached!");
+
+        if (aiDestination == null)
+            aiDestination = GetComponent<AIDestinationSetter>();
+        else
+            print("There is no AI Destination attached!");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
 
-        VM.villagerARRAY.Add(gameObject);
+        //VM.villagerARRAY.Add(gameObject);
         //EVERYONE STARTS OUT AVERAGE HAPPY
         individualHappiness = 1;
         //ONLY FOR MATH. DONT TOUCH
@@ -95,13 +125,27 @@ public class Villager_Prefab : MonoBehaviour
         //Check for jobs
         AdjustProfession();
         AdjustJob();
-
-}
+    }
 
     // Update is called once per frame
     void Update()
     {
+        // Check if the villager is moving.
+        if (controller.velocity != Vector3.zero)
+        {
+            bool isMoving = true;
 
+            animator.SetBool("moving", isMoving);
+
+        }
+
+        if (controller.velocity == Vector3.zero)
+        {
+            bool isMoving = false;
+
+            animator.SetBool("moving", isMoving);
+
+        }
 
         //IF I AM ASSIGNED TO THE JOB I AM GOOD AT
         //I DO DOUBLE AS GOOD AS AVERAGE
@@ -194,15 +238,19 @@ public class Villager_Prefab : MonoBehaviour
         {
             case WhatJobDoTheyHave.None:
                 WHATJOBDOIHAVE = 0;
+                aiDestination.target = homeTarget;
                 break;
             case WhatJobDoTheyHave.Hunting:
                 WHATJOBDOIHAVE = 1;
+                aiDestination.target = forestTarget;
                 break;
             case WhatJobDoTheyHave.Fishing:
                 WHATJOBDOIHAVE = 2;
+                aiDestination.target = fishTarget;
                 break;
             case WhatJobDoTheyHave.Cooking:
                 WHATJOBDOIHAVE = 3;
+                aiDestination.target = cookingTarget;
                 break;
             default:
                 print("Something went wrong that it arrived to the default case.");
