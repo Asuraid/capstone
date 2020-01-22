@@ -2743,6 +2743,7 @@ GameObject:
   - component: {fileID: 593063919}
   - component: {fileID: 593063922}
   - component: {fileID: 593063923}
+  - component: {fileID: 593063924}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2811,7 +2812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEvent: 0
-  EventActions: 0000000000000000000000000000000000000000
+  EventChosen: 0
+  WhichMinorEvent: 0
 --- !u!114 &593063923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,7 +2826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 16
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -2857,7 +2859,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Quest_Minor_Prefab
+  conversation: Quest_Story_Prefab
   conversationConversant: {fileID: 765612175}
   conversationActor: {fileID: 56855069}
   startConversationEntryID: -1
@@ -2879,6 +2881,23 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: e5e656e457e518b449d59663d98ade69, type: 2}
+--- !u!114 &593063924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593063918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a2e13ddd6ab454fb560908e4071fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyDay: 0
+  DayScore_1: 0
+  isEvent: 0
+  EventChosen: 0
+  WhichStoryStep: 0
 --- !u!1 &607147425
 GameObject:
   m_ObjectHideFlags: 0

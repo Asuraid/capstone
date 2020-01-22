@@ -36,6 +36,7 @@ namespace TeamMars.Capstone.Manager
         public TextMeshPro textDays;
         public TextMeshPro textSeasons;
 
+
         private void Awake()
         {
             if (Instance != null && Instance != this)

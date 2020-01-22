@@ -82,7 +82,7 @@ namespace TeamMars.Capstone.Manager.Resources
             UpdateResources();
         }
 
-        void UpdateResources()
+        public void UpdateResources()
         {
             rawFish.text = GameManager.Instance.rawFish.ToString();
             cookedFish.text = GameManager.Instance.cookedFish.ToString();
