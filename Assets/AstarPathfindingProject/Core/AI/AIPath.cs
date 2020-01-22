@@ -162,6 +162,9 @@ namespace Pathfinding {
 		/// <summary>Helper which calculates points along the current path</summary>
 		protected PathInterpolator interpolator = new PathInterpolator();
 
+        Animator animator;
+        bool isMoving;
+
 		#region IAstarAI implementation
 
 		/// <summary>\copydoc Pathfinding::IAstarAI::Teleport</summary>
@@ -470,5 +473,5 @@ namespace Pathfinding {
 			if (version < 1) rotationSpeed *= 90;
 			return 2;
 		}
-	}
+    }
 }

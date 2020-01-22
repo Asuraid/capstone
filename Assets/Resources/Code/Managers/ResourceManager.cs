@@ -13,6 +13,9 @@ namespace TeamMars.Capstone.Manager.Resources
         public TextMeshPro rawGame;
         public TextMeshPro cookedGame;
 
+        /// <summary>
+        /// Set up instance of the game manager. Remove extra instances.
+        /// </summary>
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -24,7 +27,9 @@ namespace TeamMars.Capstone.Manager.Resources
             }
         }
 
-        // Start is called before the first frame update
+        /// <summary>
+        /// At the beginning, update all text.
+        /// </summary>
         void Start()
         {
             rawFish.text = GameManager.Instance.rawFish.ToString();
@@ -33,7 +38,7 @@ namespace TeamMars.Capstone.Manager.Resources
             cookedGame.text = GameManager.Instance.cookedGame.ToString();
         }
 
-        // !!! Perhaos move the add hours to elsewhere and just call if needed rather than directly in the function.
+        #region Adding resources
         public void AddRawGame(int amount)
         {
             GameManager.Instance.rawGame += amount;
@@ -57,7 +62,9 @@ namespace TeamMars.Capstone.Manager.Resources
             GameManager.Instance.cookedFish += amount;
             UpdateResources();
         }
+        #endregion
 
+        #region Using resources
         public void UseRawGame(int amount)
         {
             GameManager.Instance.rawGame -= amount;
@@ -81,6 +88,7 @@ namespace TeamMars.Capstone.Manager.Resources
             GameManager.Instance.cookedFish -= amount;
             UpdateResources();
         }
+        #endregion
 
         public void UpdateResources()
         {
