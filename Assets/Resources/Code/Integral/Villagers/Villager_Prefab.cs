@@ -54,6 +54,7 @@ public class Villager_Prefab : MonoBehaviour
     [HideInInspector]
     //1 = hunter. 2 = fisher. 3 = cook
     public int WHATJOBDOIHAVE;
+
     
 
     //THESE ARE PURELY FOR MATHEMATICS. PLEASE DONT TOUCH
@@ -70,11 +71,16 @@ public class Villager_Prefab : MonoBehaviour
     [HideInInspector]
     public float cooking_productivity_individual;
 
+    [Header("Animator")]
     // Tied to animation, don't touch.
     Animator animator;
     AIDestinationSetter aiDestination;
+    AIPath aiPath;
     CharacterController controller;
     bool isMoving;
+    public GameObject bodyContainer;
+    Vector3 ogScale;
+    Vector3 ogBoxScale;
 
     [Header("Location Targets")]
     public Transform forestTarget;
@@ -87,6 +93,9 @@ public class Villager_Prefab : MonoBehaviour
     public GameObject UIBox;
     public TextMeshPro profession;
     public TextMeshPro assignedJob;
+
+    bool UIBoxActive;
+    public TMP_Dropdown dropdown;
 
     private void Awake()
     {
@@ -104,6 +113,19 @@ public class Villager_Prefab : MonoBehaviour
             aiDestination = GetComponent<AIDestinationSetter>();
         else
             print("There is no AI Destination attached!");
+
+        if (aiPath == null)
+            aiPath = GetComponent<AIPath>();
+        else
+            print("There is no AI Path attached!");
+
+        if (dropdown == null)
+            dropdown = GetComponentInChildren<TMP_Dropdown>();
+        else
+            print("There is no dropdown attached!");
+
+        ogScale = transform.localScale;
+        ogBoxScale = UIBox.transform.localScale;
     }
 
     // Start is called before the first frame update
@@ -147,6 +169,18 @@ public class Villager_Prefab : MonoBehaviour
 
         }
 
+        if (controller.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(-ogScale.x, ogScale.y, ogScale.z);
+            UIBox.transform.localScale = new Vector3(-ogBoxScale.x, ogBoxScale.y, ogBoxScale.z);
+        }
+
+        if (controller.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(ogScale.x, ogScale.y, ogScale.z);
+            UIBox.transform.localScale = new Vector3(ogBoxScale.x, ogBoxScale.y, ogBoxScale.z);
+        }
+
         //IF I AM ASSIGNED TO THE JOB I AM GOOD AT
         //I DO DOUBLE AS GOOD AS AVERAGE
         if (WHATJOBAMIGOODAT == WHATJOBDOIHAVE)
@@ -181,6 +215,20 @@ public class Villager_Prefab : MonoBehaviour
         cooking_productivity_individual = cooking_number * individualHappiness;
 
 
+        // Temporary function to work with the dropdown. Try to add in into a separate function that'll trigger an event later.
+        if(dropdown.value == 0)
+        {
+            ChangeToHunter();
+        } else if(dropdown.value == 1)
+        {
+            ChangeToFisher();
+        } else if (dropdown.value == 2)
+        {
+            ChangeToCook();
+        } else
+        {
+            ChangeToNoJob();
+        }
 
 
         //UI. YOU CAN PROBABLY DELETE THIS AFTER
@@ -237,20 +285,16 @@ public class Villager_Prefab : MonoBehaviour
         switch (currentJob)
         {
             case WhatJobDoTheyHave.None:
-                WHATJOBDOIHAVE = 0;
-                aiDestination.target = homeTarget;
+                ChangeToNoJob();
                 break;
             case WhatJobDoTheyHave.Hunting:
-                WHATJOBDOIHAVE = 1;
-                aiDestination.target = forestTarget;
+                ChangeToHunter();
                 break;
             case WhatJobDoTheyHave.Fishing:
-                WHATJOBDOIHAVE = 2;
-                aiDestination.target = fishTarget;
+                ChangeToFisher();
                 break;
             case WhatJobDoTheyHave.Cooking:
-                WHATJOBDOIHAVE = 3;
-                aiDestination.target = cookingTarget;
+                ChangeToCook();
                 break;
             default:
                 print("Something went wrong that it arrived to the default case.");
@@ -258,13 +302,49 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-    void OnMouseEnter()
+    void ChangeToHunter()
     {
-        UIBox.SetActive(true);
+        WHATJOBDOIHAVE = 1;
+        aiDestination.target = forestTarget;
+    }
+
+    void ChangeToFisher()
+    {
+        WHATJOBDOIHAVE = 2;
+        aiDestination.target = fishTarget;
+    }
+    
+    void ChangeToCook()
+    {
+        WHATJOBDOIHAVE = 3;
+        aiDestination.target = cookingTarget;
+    }
+
+    void ChangeToNoJob()
+    {
+        WHATJOBDOIHAVE = 0;
+        aiDestination.target = homeTarget;
+    }
+
+    void OnMouseDown()
+    {
+        if(UIBoxActive == false)
+        {
+            UIBox.SetActive(true);
+            UIBoxActive = true;
+            aiPath.isStopped = true;
+            
+        } else
+        {
+            UIBox.SetActive(false);
+            UIBoxActive = false;
+            aiPath.isStopped = false;
+        }
+        
     }
 
     void OnMouseExit()
     {
-        UIBox.SetActive(false);
+        //UIBox.SetActive(false);
     }
 }
