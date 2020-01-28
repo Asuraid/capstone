@@ -16,7 +16,8 @@ namespace TeamMars.Capstone.Manager
         public int cookedGame;
         public int rawFish;
         public int cookedFish;
-        public int wood;
+        public int rawWood;
+        public int refinedWood;
 
         [Header("Time")]
         public int maxHours;

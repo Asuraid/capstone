@@ -20,6 +20,9 @@ namespace TeamMars.Capstone.Manager.Resources
         public bool usingRawMeat;
         public bool usingCookedMeat;
 
+        public bool usingRawWood;
+        public bool usingRefinedWood;
+
         public int usedAmount;
 
         [Header("Resource Output")]
@@ -31,6 +34,9 @@ namespace TeamMars.Capstone.Manager.Resources
 
         public bool gainRawMeat;
         public bool gainCookedMeat;
+
+        public bool gainRawWood;
+        public bool gainRefinedWood;
 
         public int gainedAmount;
 
@@ -63,6 +69,16 @@ namespace TeamMars.Capstone.Manager.Resources
                 {
                     ResourceManager.Instance.AddCookedGame(gainedAmount);
                 }
+
+                if (gainRawWood)
+                {
+                    ResourceManager.Instance.AddRawWood(gainedAmount);
+                }
+
+                if (gainRefinedWood && GameManager.Instance.rawWood >= usedAmount)
+                {
+                    ResourceManager.Instance.AddRefinedWood(gainedAmount);
+                }
             }
 
             if (usingRawFish && GameManager.Instance.rawFish >= usedAmount)
@@ -86,6 +102,18 @@ namespace TeamMars.Capstone.Manager.Resources
             if (usingCookedMeat)
             {
                 ResourceManager.Instance.UseCookedGame(usedAmount);
+                AdvanceTime();
+            }
+
+            if (usingRawWood && GameManager.Instance.rawWood >= usedAmount)
+            {
+                ResourceManager.Instance.UseRawWood(usedAmount);
+                AdvanceTime();
+            }
+
+            if (usingRefinedWood)
+            {
+                ResourceManager.Instance.UseRefinedWood(usedAmount);
                 AdvanceTime();
             }
 

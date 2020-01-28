@@ -164,7 +164,6 @@ namespace TeamMars.Capstone.Manager.Resources
         //EXECUTE THE DETAILS FROM THE STORED VALUES
         void ExecuteQuestEvent_Minor()
         {
-            print("Execute");
             // IF CHOICE #1 IS MADE
             if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 1)
             {

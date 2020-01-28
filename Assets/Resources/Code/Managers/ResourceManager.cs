@@ -12,6 +12,8 @@ namespace TeamMars.Capstone.Manager.Resources
         public TextMeshPro cookedFish;
         public TextMeshPro rawGame;
         public TextMeshPro cookedGame;
+        public TextMeshPro rawWood;
+        public TextMeshPro refinedWood;
 
         /// <summary>
         /// Set up instance of the game manager. Remove extra instances.
@@ -32,10 +34,7 @@ namespace TeamMars.Capstone.Manager.Resources
         /// </summary>
         void Start()
         {
-            rawFish.text = GameManager.Instance.rawFish.ToString();
-            cookedFish.text = GameManager.Instance.cookedFish.ToString();
-            rawGame.text = GameManager.Instance.rawGame.ToString();
-            cookedGame.text = GameManager.Instance.cookedGame.ToString();
+            UpdateResources();
         }
 
         #region Adding resources
@@ -60,6 +59,18 @@ namespace TeamMars.Capstone.Manager.Resources
         public void AddCookedFish(int amount)
         {
             GameManager.Instance.cookedFish += amount;
+            UpdateResources();
+        }
+
+        public void AddRawWood(int amount)
+        {
+            GameManager.Instance.rawWood += amount;
+            UpdateResources();
+        }
+
+        public void AddRefinedWood(int amount)
+        {
+            GameManager.Instance.refinedWood += amount;
             UpdateResources();
         }
         #endregion
@@ -88,14 +99,28 @@ namespace TeamMars.Capstone.Manager.Resources
             GameManager.Instance.cookedFish -= amount;
             UpdateResources();
         }
+
+        public void UseRawWood(int amount)
+        {
+            GameManager.Instance.rawWood -= amount;
+            UpdateResources();
+        }
+
+        public void UseRefinedWood(int amount)
+        {
+            GameManager.Instance.refinedWood -= amount;
+            UpdateResources();
+        }
         #endregion
 
         public void UpdateResources()
         {
             rawFish.text = GameManager.Instance.rawFish.ToString();
             cookedFish.text = GameManager.Instance.cookedFish.ToString();
-            rawGame.text = GameManager.Instance.rawGame.ToString();
-            cookedGame.text = GameManager.Instance.cookedGame.ToString();
+            //rawGame.text = GameManager.Instance.rawGame.ToString();
+            //cookedGame.text = GameManager.Instance.cookedGame.ToString();
+            rawWood.text = GameManager.Instance.rawWood.ToString();
+            refinedWood.text = GameManager.Instance.refinedWood.ToString();
         }
     }
 }

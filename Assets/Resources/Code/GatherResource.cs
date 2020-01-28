@@ -13,6 +13,8 @@ namespace TeamMars.Capstone.Manager.Resources
 
         public bool gainRawMeat;
 
+        public bool gainWood;
+
         public int gainedAmount;
 
         private void OnMouseDown()
@@ -28,6 +30,11 @@ namespace TeamMars.Capstone.Manager.Resources
             if (gainRawMeat)
             {
                 ResourceManager.Instance.AddRawGame(gainedAmount);
+            }
+
+            if (gainWood)
+            {
+                ResourceManager.Instance.AddRawWood(gainedAmount);
             }
 
         }
