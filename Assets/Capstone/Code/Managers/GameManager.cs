@@ -2,6 +2,8 @@
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using TeamMars.Capstone.Manager.Resources;
 
 namespace TeamMars.Capstone.Manager
 {
@@ -23,6 +25,7 @@ namespace TeamMars.Capstone.Manager
         public int maxHours;
         public int maxDay;
         public int hourIncrements = 2;
+        public int resetTimerForScene = 1;
 
         int hours;
         public int currentDay = 1;
@@ -36,6 +39,9 @@ namespace TeamMars.Capstone.Manager
         public TextMeshPro textHours;
         public TextMeshPro textDays;
         public TextMeshPro textSeasons;
+        public TextMeshPro foodWarning;
+
+        int temporaryStarvationMeter;
 
 
         private void Awake()
@@ -74,6 +80,19 @@ namespace TeamMars.Capstone.Manager
                 } else
                 {
                     print("The villager(s) starved.");
+                    temporaryStarvationMeter++;
+                    foodWarning.transform.gameObject.SetActive(true);
+
+                    if (temporaryStarvationMeter >= 2)
+                    {
+                        foodWarning.text = "Your villagers are very hungry ... it is unlikely they will last one more day.";
+                    }
+
+                    if (temporaryStarvationMeter >= 3)
+                    {
+                        foodWarning.text = "Unfortunately your villagers starved.";
+                        StartCoroutine(Countdown(resetTimerForScene));
+                    }
                 }
             }
 
@@ -117,14 +136,33 @@ namespace TeamMars.Capstone.Manager
             while(eatingCount < villagerNumber)
             {
                 if (cookedFish > 0)
+                {
                     cookedFish--;
+                }  
                 else
+                {
                     cookedGame--;
+                } 
                 eatingCount++;
             }
-
+            ResourceManager.Instance.cookedFish.GetComponent<Text_Bump>().Bump();
             eatingCount = 0;
             yield return null;
+        }
+
+        private IEnumerator Countdown(int countdown)
+        {
+            float duration = countdown; // 3 seconds you can change this 
+                                 //to whatever you want
+            float normalizedTime = 0;
+            while (normalizedTime <= 1f)
+            {
+                normalizedTime += Time.deltaTime / duration;
+                yield return null;
+            }
+
+            print("reset scene here");
+            SceneManager.LoadScene("Scene_Zone01");
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace TeamMars.Capstone
 {
@@ -30,6 +31,14 @@ namespace TeamMars.Capstone
         protected Image _delayedImage;
         protected bool _initialized;
 
+        protected TextMeshPro textMeshPro;
+
+        protected Color originalColor;
+        public Color positiveColor;
+        public Color negativeColor;
+
+        public bool colorChangingPositive;
+
         public static Text_Bump Instance;
 
         /// <summary>
@@ -42,6 +51,10 @@ namespace TeamMars.Capstone
             _initialized = true;
 
             if (Instance == null) Instance = this;
+
+            textMeshPro = GetComponent<TextMeshPro>();
+
+            originalColor = textMeshPro.color;
         }
 
         /// <summary>
@@ -75,9 +88,16 @@ namespace TeamMars.Capstone
                 float curvePercent = BumpAnimationCurve.Evaluate(percent);
                 transform.localScale = curvePercent * _initialScale;
 
+                if(colorChangingPositive == true)
+                    textMeshPro.color = Color.Lerp(positiveColor, originalColor, (journey / BumpDuration));
+                else
+                    textMeshPro.color = Color.Lerp(negativeColor, originalColor, (journey / BumpDuration));
+
+
                 yield return null;
             }
             Bumping = false;
+            colorChangingPositive = false;
             yield return null;
         }
     }

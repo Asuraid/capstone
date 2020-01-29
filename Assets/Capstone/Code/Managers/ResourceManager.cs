@@ -43,6 +43,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             GameManager.Instance.rawGame += amount;
             rawGame.GetComponent<Text_Bump>().Bump();
+            rawGame.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
         }
 
@@ -50,6 +51,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             GameManager.Instance.rawFish += amount;
             rawFish.GetComponent<Text_Bump>().Bump();
+            rawFish.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
         }
 
@@ -57,6 +59,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             GameManager.Instance.cookedGame += amount;
             cookedGame.GetComponent<Text_Bump>().Bump();
+            cookedGame.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
         }
 
@@ -64,6 +67,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             GameManager.Instance.cookedFish += amount;
             cookedFish.GetComponent<Text_Bump>().Bump();
+            cookedFish.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
         }
 
@@ -71,6 +75,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             GameManager.Instance.rawWood += amount;
             rawWood.GetComponent<Text_Bump>().Bump();
+            rawWood.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
         }
 
@@ -78,6 +83,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             GameManager.Instance.refinedWood += amount;
             refinedWood.GetComponent<Text_Bump>().Bump();
+            refinedWood.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
         }
         #endregion
@@ -162,6 +168,8 @@ namespace TeamMars.Capstone.Manager.Resources
             rawWood.text = GameManager.Instance.rawWood.ToString();
             refinedWood.text = GameManager.Instance.refinedWood.ToString();
         }
+
+
     }
 }
 
