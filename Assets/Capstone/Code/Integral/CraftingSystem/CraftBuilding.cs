@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TeamMars.Capstone.Manager;
+using TeamMars.Capstone.Manager.Resources;
 
 namespace TeamMars.Capstone
 {
@@ -22,6 +23,7 @@ namespace TeamMars.Capstone
             if(GameManager.Instance.rawWood >= neededAmount)
             {
                 builtObject.SetActive(true);
+                ResourceManager.Instance.UseRawWood(neededAmount);
                 transform.gameObject.SetActive(false);
             } else
             {
