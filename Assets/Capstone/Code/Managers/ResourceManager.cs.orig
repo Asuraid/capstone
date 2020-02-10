@@ -168,9 +168,14 @@ namespace TeamMars.Capstone.Manager.Resources
             //cookedGame.text = GameManager.Instance.cookedGame.ToString();
             rawWood.text = GameManager.Instance.rawWood.ToString();
             refinedWood.text = GameManager.Instance.refinedWood.ToString();
+<<<<<<< HEAD
+  
+    }
+=======
         }
 
 
+>>>>>>> Rachel_StoryAndUI
     }
 }
 

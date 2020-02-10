@@ -8,10 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Capstone/Scenes/Prototyping/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Capstone/Scenes/GameScenes/Scene_Entrance.unity
     guid: c11c7aecc2f82834bb8c5b3f92e87164
-  - enabled: 1
+  - enabled: 0
     path: Assets/Capstone/Scenes/GameScenes/Scene_Introduction.unity
     guid: e6aedacaa82e5bd4d9e334f7ddb361c6
+  - enabled: 1
+    path: Assets/Capstone/Scenes/GameScenes/Scene_SplashScreen.unity
+    guid: 4842070df70de3a49a01c9c62f39a36c
+  - enabled: 1
+    path: Assets/Capstone/Scenes/GameScenes/Scene_Zone01.unity
+    guid: cffdfe656e37bbe43815b9a5d82680f6
   m_configObjects: {}
