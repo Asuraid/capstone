@@ -5,18 +5,17 @@ using UnityEngine;
 public class PondScript : MonoBehaviour
 {
 
-    // Maybe need a central script that has connections to all scripts.
-    public GameObject GameManager;
-    public ResourcesList rL;
-    TextUI_Test uiTester;
+    // What UI to display when hover
+    public GameObject UI_Hover_text;
+    public GameObject UI_Click_text;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rL = GameManager.GetComponent<ResourcesList>();
-        uiTester = GameManager.GetComponent<TextUI_Test>();
-
+        UI_Hover_text.SetActive(false);
+        UI_Click_text.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,19 +23,22 @@ public class PondScript : MonoBehaviour
     {
         
     }
+    private void OnMouseEnter()
+    {
+        UI_Hover_text.SetActive(true);
+
+    }
+    private void OnMouseExit()
+    {
+        UI_Hover_text.SetActive(false);
+
+
+    }
     private void OnMouseDown()
     {
-        ////////////////
-        //THIS ALWAYS NEEDS TO BE CALLED ANY TIME THAT TIME PASSES IN GAME. COPY AND PASTE THIS INTO EVERY SINGLE ACTION
-        rL.VillagerWork();
-        //THIS ALWAYS NEEDS TO BE CALLED ANY TIME THAT TIME PASSES IN GAME. COPY AND PASTE THIS INTO EVERY SINGLE ACTION
-        ////////////////
-
-        //Add to the hour count
-        rL.HourCount = rL.HourCount + 2;
-        //Gather fish
-        rL.AddRawFishResource(1);
-        rL.PrintInfo();
+        UI_Click_text.SetActive(true);
+        //handled in a seperate script to close window
     }
+
 
 }

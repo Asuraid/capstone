@@ -115,13 +115,15 @@ namespace TeamMars.Capstone.Manager.Resources
 
         public void UpdateResources()
         {
+
             rawFish.text = GameManager.Instance.rawFish.ToString();
             cookedFish.text = GameManager.Instance.cookedFish.ToString();
             //rawGame.text = GameManager.Instance.rawGame.ToString();
             //cookedGame.text = GameManager.Instance.cookedGame.ToString();
             rawWood.text = GameManager.Instance.rawWood.ToString();
             refinedWood.text = GameManager.Instance.refinedWood.ToString();
-        }
+  
+    }
     }
 }
 

@@ -17,24 +17,26 @@ namespace TeamMars.Capstone.Manager.Resources
 
         public int gainedAmount;
 
-        private void OnMouseDown()
+
+        //Rather than pressing the mouse button down, I will make this function get called whenever the player chooses a minigame or lets a villager handle it
+        public  void AddResource(float howmuch)
         {
             // Advance time.
             GameManager.Instance.AddHours();
 
             if (gainRawFish)
             {
-                ResourceManager.Instance.AddRawFish(gainedAmount);
+                ResourceManager.Instance.AddRawFish((int)(gainedAmount * howmuch));
             }
 
             if (gainRawMeat)
             {
-                ResourceManager.Instance.AddRawGame(gainedAmount);
+                ResourceManager.Instance.AddRawGame((int)(gainedAmount * howmuch));
             }
 
             if (gainWood)
             {
-                ResourceManager.Instance.AddRawWood(gainedAmount);
+                ResourceManager.Instance.AddRawWood((int)(gainedAmount * howmuch));
             }
 
         }

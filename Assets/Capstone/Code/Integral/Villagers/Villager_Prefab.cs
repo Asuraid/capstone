@@ -280,7 +280,7 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-    void AdjustJob()
+    public void AdjustJob()
     {
         switch (currentJob)
         {
@@ -302,25 +302,25 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-    void ChangeToHunter()
+   public  void ChangeToHunter()
     {
         WHATJOBDOIHAVE = 1;
         aiDestination.target = forestTarget;
     }
 
-    void ChangeToFisher()
+    public void ChangeToFisher()
     {
         WHATJOBDOIHAVE = 2;
         aiDestination.target = fishTarget;
     }
     
-    void ChangeToCook()
+    public void ChangeToCook()
     {
         WHATJOBDOIHAVE = 3;
         aiDestination.target = cookingTarget;
     }
 
-    void ChangeToNoJob()
+    public void ChangeToNoJob()
     {
         WHATJOBDOIHAVE = 0;
         aiDestination.target = homeTarget;

@@ -89,10 +89,12 @@ namespace TeamMars.Capstone.Manager
 
         void UpdateText()
         {
+            /*
             textHours.text = "Hours: " + hours + " / " + maxHours;
             textDays.text = "Days: " + currentDay + " / " + maxDay;
 
-            switch (seasons)
+         
+   switch (seasons)
             {
                 case 1:
                     textSeasons.text = "Season: Spring";
@@ -110,6 +112,7 @@ namespace TeamMars.Capstone.Manager
                     print("Something happened to bring it to default.");
                     break;
             }
+            */
         }
 
         private IEnumerator FeedVillagers()
