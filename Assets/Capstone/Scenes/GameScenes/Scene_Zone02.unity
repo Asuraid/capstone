@@ -20688,11 +20688,13 @@ MonoBehaviour:
   maxHours: 10
   maxDay: 5
   hourIncrements: 2
+  resetTimerForScene: 1
   currentDay: 1
   villagerNumber: 2
   textHours: {fileID: 1923903406}
   textDays: {fileID: 1919092660}
   textSeasons: {fileID: 544454580}
+  foodWarning: {fileID: 0}
 --- !u!4 &1530073455
 Transform:
   m_ObjectHideFlags: 0
@@ -21229,7 +21231,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96ac516dc975f95459a0a690bb43309a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd63b9a482bea6e4bb266cf2048c3a3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27160,6 +27162,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6724769927458297118, guid: a468032e8d088c74698b1bf2f274dec8,
+        type: 3}
+      propertyPath: m_Name
+      value: Villager_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724769927458297118, guid: a468032e8d088c74698b1bf2f274dec8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2659507659122353734, guid: a468032e8d088c74698b1bf2f274dec8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27228,16 +27240,6 @@ PrefabInstance:
     - target: {fileID: 6271505936929487857, guid: a468032e8d088c74698b1bf2f274dec8,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6724769927458297118, guid: a468032e8d088c74698b1bf2f274dec8,
-        type: 3}
-      propertyPath: m_Name
-      value: Villager_Prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 6724769927458297118, guid: a468032e8d088c74698b1bf2f274dec8,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7159960275030077843, guid: a468032e8d088c74698b1bf2f274dec8,
