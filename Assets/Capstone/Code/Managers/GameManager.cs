@@ -27,7 +27,7 @@ namespace TeamMars.Capstone.Manager
         public int hourIncrements = 2;
         public int resetTimerForScene = 1;
 
-        int hours;
+        public int hours;
         public int currentDay = 1;
         int seasons = 1;
 
