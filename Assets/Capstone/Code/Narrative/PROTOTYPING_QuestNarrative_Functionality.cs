@@ -12,10 +12,27 @@ namespace TeamMars.Capstone.Manager.Resources
         public bool EventChosen = false;
         public int WhichMinorEvent = 0;
 
+
+
+        public bool isUsingStorySystemUI;
+        public GameObject[] StoryItems = new GameObject[3];
+        public GameObject StorySystem;
+
+
         void Start()
         {
             isEvent = false;
 
+
+
+            isUsingStorySystemUI = true;
+            if (isUsingStorySystemUI)
+            {
+                for (int i= 0; i < StoryItems.Length;i++)
+                {
+                    StoryItems[i] = StorySystem.transform.GetChild(i).gameObject;
+                }
+            }
         }
 
         // Update is called once per frame
@@ -25,17 +42,7 @@ namespace TeamMars.Capstone.Manager.Resources
             if (Input.GetKeyDown("i"))
             {
                 isEvent = true;
-                WhichMinorEvent = 1;
-            }
-            if (Input.GetKeyDown("o"))
-            {
-                isEvent = true;
-                WhichMinorEvent = 2;
-            }
-            if (Input.GetKeyDown("p"))
-            {
-                isEvent = true;
-                WhichMinorEvent = 3;
+                WhichMinorEvent++;
             }
 
 
@@ -49,6 +56,13 @@ namespace TeamMars.Capstone.Manager.Resources
             {
                 ExecuteQuestEvent_Minor();
             }
+
+
+
+
+
+
+
 
 
 
@@ -168,6 +182,21 @@ namespace TeamMars.Capstone.Manager.Resources
             if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 1)
             {
                 print("Choice #1");
+
+
+                if (isUsingStorySystemUI)
+                {
+                    print(StoryItems[WhichMinorEvent - 1].name);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).gameObject.SetActive(true);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(1).gameObject.SetActive(false);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(2).gameObject.SetActive(false);
+                }
+
+
+
+
+
                 ResourceManager.Instance.AddRawFish(DialogueLua.GetVariable(("Quest_Minor_EventChoice_1_Functionality_RawFishAdd")).asInt);
                 ResourceManager.Instance.AddCookedFish(DialogueLua.GetVariable(("Quest_Minor_EventChoice_1_Functionality_CookedFishAdd")).asInt);
                 ResourceManager.Instance.AddRawGame(DialogueLua.GetVariable(("Quest_Minor_EventChoice_1_Functionality_RawGameAdd")).asInt);
@@ -175,11 +204,26 @@ namespace TeamMars.Capstone.Manager.Resources
                 DialogueLua.SetVariable(("Quest_Minor_EventChosen"), 0);
                 EventChosen = true;
                 isEvent = false;
+                
             }
             // IF CHOICE #2 IS MADE
             if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 2)
             {
                 print("Choice #2");
+
+
+
+                if (isUsingStorySystemUI)
+                {
+                    print(StoryItems[WhichMinorEvent - 1].name);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).gameObject.SetActive(true);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(1).gameObject.SetActive(true);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(2).gameObject.SetActive(false);
+                }
+
+
+
                 ResourceManager.Instance.AddRawFish(DialogueLua.GetVariable(("Quest_Minor_EventChoice_2_Functionality_RawFishAdd")).asInt);
                 ResourceManager.Instance.AddCookedFish(DialogueLua.GetVariable(("Quest_Minor_EventChoice_2_Functionality_CookedFishAdd")).asInt);
                 ResourceManager.Instance.AddRawGame(DialogueLua.GetVariable(("Quest_Minor_EventChoice_2_Functionality_RawGameAdd")).asInt);
@@ -192,6 +236,18 @@ namespace TeamMars.Capstone.Manager.Resources
             if (DialogueLua.GetVariable(("Quest_Minor_EventChosen")).asInt == 3)
             {
                 print("Choice #3");
+
+
+                if (isUsingStorySystemUI)
+                {
+                    print(StoryItems[WhichMinorEvent - 1].name);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).gameObject.SetActive(true);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(1).gameObject.SetActive(false);
+                    StoryItems[WhichMinorEvent - 1].transform.GetChild(1).GetChild(2).gameObject.SetActive(true);
+                }
+
+
                 ResourceManager.Instance.AddRawFish(DialogueLua.GetVariable(("Quest_Minor_EventChoice_3_Functionality_RawFishAdd")).asInt);
                 ResourceManager.Instance.AddCookedFish(DialogueLua.GetVariable(("Quest_Minor_EventChoice_3_Functionality_CookedFishAdd")).asInt);
                 ResourceManager.Instance.AddRawGame(DialogueLua.GetVariable(("Quest_Minor_EventChoice_3_Functionality_RawGameAdd")).asInt);

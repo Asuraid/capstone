@@ -1209,7 +1209,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 1
+        value: Example Dialogue
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2411,7 +2411,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.35294
+        x: 213.52942
         y: 120
         width: 160
         height: 30
@@ -2476,7 +2476,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 384.82352
+        x: 386
         y: 120.352936
         width: 160
         height: 30
@@ -2552,7 +2552,7 @@ MonoBehaviour:
     - title: Title
       value: Quest_Story_Prefab
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -2560,7 +2560,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Actor
       value: 1
       type: 5
@@ -2740,7 +2740,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 69
+        y: 70
         width: 160
         height: 30
     - id: 2
@@ -2804,8 +2804,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31
-        y: 121
+        x: 16
+        y: 143
         width: 160
         height: 30
     - id: 3
@@ -2869,8 +2869,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 120
+        x: 214
+        y: 142
         width: 160
         height: 30
     - id: 4
@@ -2934,8 +2934,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 120
+        x: 392
+        y: 119
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}

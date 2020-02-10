@@ -40,7 +40,6 @@ namespace TeamMars.Capstone.Manager.Resources
             
             if (isOven)
             {
-                print((GameManager.Instance.rawFish + GameManager.Instance.rawGame));
                 if ((GameManager.Instance.rawFish + GameManager.Instance.rawGame) > 0)
                 {
                     isAccess = true;
