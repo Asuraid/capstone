@@ -2,31 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button_OpenWindow : MonoBehaviour
+
+namespace TeamMars.Capstone.Manager.Resources
 {
-
-    public GameObject Window;
-    public GameObject Window2;
-    public GameObject WindowtoClose;
-    // Start is called before the first frame update
-    void Start()
+    public class Button_OpenWindow : MonoBehaviour
     {
 
-    }
+        public GameObject Window;
+        public GameObject Window2;
+        public GameObject WindowtoClose;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnMouseDown()
-    {
-
-        Window.SetActive(true);
-        if (Window2 != null)
+        public bool isOven;
+        public bool isAccess;
+         GameObject noAccessCross;
+        // Start is called before the first frame update
+        void Start()
         {
-            Window2.SetActive(true);
+            isAccess = true;
+            if (transform.parent.parent.name == "Oven_ICON")
+            {
+                isOven = true;
+                if (transform.GetChild(0).gameObject.name == "MinigameButton_NoAccess")
+                {
+                    noAccessCross = transform.GetChild(0).gameObject;
+                }
+                else
+                {
+                    noAccessCross = null;
+                }
+            }
         }
-        WindowtoClose.SetActive(false);
+
+        // Update is called once per frame
+        void Update()
+        {
+            
+            
+            if (isOven)
+            {
+                print((GameManager.Instance.rawFish + GameManager.Instance.rawGame));
+                if ((GameManager.Instance.rawFish + GameManager.Instance.rawGame) > 0)
+                {
+                    isAccess = true;
+                    if (noAccessCross != null)
+                    {
+                        noAccessCross.SetActive(false);
+                    }
+                }
+                else
+                {
+                    isAccess = false;
+                    if (noAccessCross != null)
+                    {
+                        noAccessCross.SetActive(true);
+                    }
+                }
+            }
+        }
+        private void OnMouseDown()
+        {
+            if (isAccess == true)
+            {
+                Window.SetActive(true);
+                if (Window2 != null)
+                {
+                    Window2.SetActive(true);
+                }
+                WindowtoClose.SetActive(false);
+            }
+        }
     }
 }
