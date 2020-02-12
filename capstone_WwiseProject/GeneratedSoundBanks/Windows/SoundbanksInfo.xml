@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>D:\KravenArk\Documents\GitHub\capstone\capstone_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\KravenArk\Documents\GitHub\capstone\capstone_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\KravenArk\Documents\GitHub\capstone\capstone_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\KravenArk\Documents\GitHub\capstone\capstone_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="534561221" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainSoundbank</ObjectPath>
+			<ShortName>MainSoundbank</ShortName>
+			<Path>MainSoundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="519907788" Name="SoundEvent_BushRustle" ObjectPath="\Events\Default Work Unit\SoundEvent_BushRustle" DurationType="OneShot" DurationMin="1.451247" DurationMax="1.451247"/>
+				<Event Id="202183744" Name="SoundEvent_Splash" ObjectPath="\Events\Default Work Unit\SoundEvent_Splash" DurationType="OneShot" DurationMin="2.739955" DurationMax="2.739955"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="561688528" Language="SFX">
+					<ShortName>EnvironmentSounds\Forest\SoundEffect_Bush.wav</ShortName>
+					<Path>SFX\EnvironmentSounds\Forest\SoundEffect_Bush_10C4C929.wem</Path>
+				</File>
+				<File Id="756413935" Language="SFX">
+					<ShortName>EnvironmentSounds\Pond\SoundEffect_Splash.wav</ShortName>
+					<Path>SFX\EnvironmentSounds\Pond\SoundEffect_Splash_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3FBE1ADF-D9CC-41B5-9D49-A2B64855B9FC}" SchemaVersion="94">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{3FBE1ADF-D9CC-41B5-9D49-A2B64855B9FC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="SoundEffect_Bush" ID="{FEB2CD09-A264-47C3-AA0B-A8AE56EF2B32}" ShortID="1029747720">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{474D95A7-9106-4726-BA9D-8431152D2748}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EF1A4DEA-C211-47DA-BEB9-96DF0A512FA2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SoundEffect_Bush" ID="{C754E7D3-8366-4B04-BC90-8E1578C2F23F}" ShortID="561688528">
+							<Language>SFX</Language>
+							<AudioFile>EnvironmentSounds\Forest\SoundEffect_Bush.wav</AudioFile>
+						</AudioFileSource>
+						<AudioFileSource Name="SoundEffect_Splash" ID="{A96B3582-FE1D-4030-BE9A-93F99990C0AC}" ShortID="756413935">
+							<Language>SFX</Language>
+							<AudioFile>EnvironmentSounds\Pond\SoundEffect_Splash.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SoundEffect_Bush" ID="{C754E7D3-8366-4B04-BC90-8E1578C2F23F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SoundEffect_Splash" ID="{BC2A0113-E909-42EC-B6D8-3107ED95EC4D}" ShortID="8772957">
+					<PropertyList>
+						<Property Name="OutputBusHighpass" Type="int16">
+							<ValueList>
+								<Value>26</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OutputBusLowpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OutputBusVolume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{474D95A7-9106-4726-BA9D-8431152D2748}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EF1A4DEA-C211-47DA-BEB9-96DF0A512FA2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SoundEffect_Splash" ID="{B4208893-DDF3-4CA9-B8D0-79A2F7F75056}" ShortID="1065449722">
+							<Language>SFX</Language>
+							<AudioFile>EnvironmentSounds\Pond\SoundEffect_Splash.wav</AudioFile>
+							<ConvertedFileIDList>
+								<File ID="756413935"/>
+							</ConvertedFileIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SoundEffect_Splash" ID="{B4208893-DDF3-4CA9-B8D0-79A2F7F75056}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

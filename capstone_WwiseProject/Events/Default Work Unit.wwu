@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8EBFA791-92A3-4C5F-9D53-42C612D367EA}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{8EBFA791-92A3-4C5F-9D53-42C612D367EA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="SoundEvent_BushRustle" ID="{5204D54F-05B9-4868-92CC-48A8D531C2D8}">
+					<ChildrenList>
+						<Action Name="" ID="{3A701FDE-0BA9-4DC4-ACDC-8C31B41147CE}" ShortID="270196461">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoundEffect_Bush" ID="{FEB2CD09-A264-47C3-AA0B-A8AE56EF2B32}" WorkUnitID="{3FBE1ADF-D9CC-41B5-9D49-A2B64855B9FC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SoundEvent_Splash" ID="{00E2232C-0C02-4A2D-9A5C-4CCBD58CED72}">
+					<ChildrenList>
+						<Action Name="" ID="{1526E4C3-36FB-46FE-A222-C542E1B618A7}" ShortID="783633260">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoundEffect_Splash" ID="{BC2A0113-E909-42EC-B6D8-3107ED95EC4D}" WorkUnitID="{3FBE1ADF-D9CC-41B5-9D49-A2B64855B9FC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

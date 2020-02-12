@@ -19,12 +19,12 @@ public class Villager_UI_Windows : MonoBehaviour
         if (VillagerWindow_WorldSpace.activeSelf == true)
         {
             VillagerWindow_ScreenSpace.SetActive(true);
-            Time.timeScale = 0;
+
         }
         else
         {
             VillagerWindow_ScreenSpace.SetActive(false);
-            Time.timeScale = 1;
+
         }
         
     }

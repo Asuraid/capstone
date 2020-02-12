@@ -5,9 +5,13 @@ using PixelCrushers.DialogueSystem;
 
 namespace TeamMars.Capstone.Manager.Resources
 {
-
+   
     public class PROTOTYPING_QuestNarrative_Functionality : MonoBehaviour
     {
+
+        public Pause_UnpauseGame pauseScript;
+
+
         public bool isEvent = false;
         public bool EventChosen = false;
         public int WhichMinorEvent = 0;
@@ -23,7 +27,7 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             isEvent = false;
 
-
+            
 
             isUsingStorySystemUI = true;
             if (isUsingStorySystemUI)
@@ -38,9 +42,10 @@ namespace TeamMars.Capstone.Manager.Resources
         // Update is called once per frame
         void Update()
         {
-
+            print(Time.timeScale);
             if (Input.GetKeyDown("i"))
             {
+        
                 isEvent = true;
                 WhichMinorEvent++;
             }
@@ -48,6 +53,8 @@ namespace TeamMars.Capstone.Manager.Resources
 
             if (isEvent)
             {
+                pauseScript.PauseGame();
+                
                 EventChosen = false;
                 CallQuestEvent_Minor(WhichMinorEvent);
 
@@ -55,6 +62,10 @@ namespace TeamMars.Capstone.Manager.Resources
             if (EventChosen == false)
             {
                 ExecuteQuestEvent_Minor();
+            }
+            else
+            {
+     
             }
 
 
@@ -82,9 +93,9 @@ namespace TeamMars.Capstone.Manager.Resources
                 //Random Event #
                 case 1:
                     //Event title
-                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "WHAT HAPPENNED? #1");
+                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "A trader appears in your town; He asks for directions");
                     //Event Choice #1
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "German Robot from the future");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "Trade food for supplies");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_RawFishAdd", 10);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_CookedFishAdd", 10);
@@ -92,7 +103,7 @@ namespace TeamMars.Capstone.Manager.Resources
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_CookedGameAdd", 10);
                     #endregion
                     //Event Choice #2
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "Xenomorph Attack");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "Offer him directions");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_RawFishAdd", 20);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_CookedFishAdd", 20);
@@ -100,7 +111,7 @@ namespace TeamMars.Capstone.Manager.Resources
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_CookedGameAdd", 20);
                     #endregion
                     //Event Choice #3
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "Giant meatballs fall from the sky");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "Attack the trader and steal his stuff");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_3_Functionality_RawFishAdd", 30);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_3_Functionality_CookedFishAdd", 30);
@@ -113,9 +124,9 @@ namespace TeamMars.Capstone.Manager.Resources
 
                 case 2:
                     //Event title
-                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "WHAT HAPPENNED? #2");
+                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "The moon is full tonight, and some village folk are acting strange");
                     //Event Choice #1
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "Two Moons appear in the sky");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "Pray to the moon god");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_RawFishAdd", 10);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_CookedFishAdd", 10);
@@ -123,7 +134,7 @@ namespace TeamMars.Capstone.Manager.Resources
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_CookedGameAdd", 10);
                     #endregion
                     //Event Choice #2
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "A villager falls in love with a primordial shapeshifter");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "Ignore the situation");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_RawFishAdd", 20);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_CookedFishAdd", 20);
@@ -131,7 +142,7 @@ namespace TeamMars.Capstone.Manager.Resources
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_CookedGameAdd", 20);
                     #endregion
                     //Event Choice #3
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "Weird rock formations appear during a routine dig");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "Host a sacrifice");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_3_Functionality_RawFishAdd", 30);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_3_Functionality_CookedFishAdd", 30);
@@ -143,9 +154,9 @@ namespace TeamMars.Capstone.Manager.Resources
 
                 case 3:
                     //Event title
-                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "WHAT HAPPENNED? #3");
+                    DialogueLua.SetVariable("Quest_Minor_EventTitle", "The pond is becoming flooded, It is becoming difficult to fish");
                     //Event Choice #1
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "Giant worm monsters appear from the sand dunes");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_1", "Sell more fish to offset the costs");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_RawFishAdd", 10);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_CookedFishAdd", 10);
@@ -153,7 +164,7 @@ namespace TeamMars.Capstone.Manager.Resources
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_1_Functionality_CookedGameAdd", 10);
                     #endregion
                     //Event Choice #2
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "One of your villagers fall sick with an unknown illness");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_2", "Stop fishing and ration the remaining supplies");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_RawFishAdd", 20);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_CookedFishAdd", 20);
@@ -161,7 +172,7 @@ namespace TeamMars.Capstone.Manager.Resources
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_2_Functionality_CookedGameAdd", 20);
                     #endregion
                     //Event Choice #3
-                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "A trader with two different coloured eyes shows up");
+                    DialogueLua.SetVariable("Quest_Minor_EventChoice_3", "Force workers to build more fishing boats");
                     #region Functionality
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_3_Functionality_RawFishAdd", 30);
                     DialogueLua.SetVariable("Quest_Minor_EventChoice_3_Functionality_CookedFishAdd", 30);

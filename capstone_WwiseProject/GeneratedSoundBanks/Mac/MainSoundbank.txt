@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	202183744	SoundEvent_Splash			\Default Work Unit\SoundEvent_Splash	
+	519907788	SoundEvent_BushRustle			\Default Work Unit\SoundEvent_BushRustle	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	561688528	SoundEffect_Bush	D:\KravenArk\Documents\GitHub\capstone\capstone_WwiseProject\.cache\Mac\SFX\EnvironmentSounds\Forest\SoundEffect_Bush_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffect_Bush		256064
+	756413935	SoundEffect_Splash	D:\KravenArk\Documents\GitHub\capstone\capstone_WwiseProject\.cache\Mac\SFX\EnvironmentSounds\Pond\SoundEffect_Splash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffect_Splash		483392
+
