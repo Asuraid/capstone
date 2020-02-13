@@ -42,7 +42,7 @@ namespace TeamMars.Capstone.Manager.Resources
         // Update is called once per frame
         void Update()
         {
-            print(Time.timeScale);
+            //print(Time.timeScale);
             if (Input.GetKeyDown("i"))
             {
         

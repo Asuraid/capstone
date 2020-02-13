@@ -78,7 +78,8 @@ public class Villager_Prefab : MonoBehaviour
     AIPath aiPath;
     CharacterController controller;
     bool isMoving;
-    public GameObject bodyContainer;
+    bool isWorking;
+    public GameObject axeObject;
     Vector3 ogScale;
     Vector3 ogBoxScale;
 
@@ -124,6 +125,9 @@ public class Villager_Prefab : MonoBehaviour
         else
             print("There is no dropdown attached!");
 
+        if (axeObject == null)
+            print("There is no axe attached!");
+
         ogScale = transform.localScale;
         ogBoxScale = UIBox.transform.localScale;
     }
@@ -146,7 +150,9 @@ public class Villager_Prefab : MonoBehaviour
 
         //Check for jobs
         AdjustProfession();
-        AdjustJob();
+
+        //Set object to inactive.
+        axeObject.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -158,17 +164,31 @@ public class Villager_Prefab : MonoBehaviour
             bool isMoving = true;
 
             animator.SetBool("moving", isMoving);
-
         }
 
+        // If the villager is not moving, switch to idle animation.
         if (controller.velocity == Vector3.zero)
         {
             bool isMoving = false;
 
             animator.SetBool("moving", isMoving);
-
         }
 
+        if(aiPath.remainingDistance <= 0.2f)
+        {
+            bool isWorking = true;
+            axeObject.gameObject.SetActive(true);
+
+            animator.SetBool("working", isWorking);
+        } else
+        {
+            bool isWorking = false;
+            axeObject.gameObject.SetActive(false);
+
+            animator.SetBool("working", isWorking);
+        }
+
+        // These two functions control the direction the sprite is facing towards.
         if (controller.velocity.x > 0)
         {
             transform.localScale = new Vector3(-ogScale.x, ogScale.y, ogScale.z);
@@ -215,22 +235,6 @@ public class Villager_Prefab : MonoBehaviour
         cooking_productivity_individual = cooking_number * individualHappiness;
 
 
-        // Temporary function to work with the dropdown. Try to add in into a separate function that'll trigger an event later.
-        if(dropdown.value == 0)
-        {
-            ChangeToHunter();
-        } else if(dropdown.value == 1)
-        {
-            ChangeToFisher();
-        } else if (dropdown.value == 2)
-        {
-            ChangeToCook();
-        } else
-        {
-            ChangeToNoJob();
-        }
-
-
         //UI. YOU CAN PROBABLY DELETE THIS AFTER
         switch (WHATJOBAMIGOODAT)
         {
@@ -258,6 +262,26 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
+    public void AdjustDropdownJobs()
+    {
+        if (dropdown.value == 0)
+        {
+            ChangeToHunter();
+        }
+        else if (dropdown.value == 1)
+        {
+            ChangeToFisher();
+        }
+        else if (dropdown.value == 2)
+        {
+            ChangeToCook();
+        }
+        else
+        {
+            ChangeToNoJob();
+        }
+    }
+
     void AdjustProfession()
     {
         switch (jobProfession)
@@ -280,7 +304,8 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-    public void AdjustJob()
+
+    public void AdjustJob(WhatJobDoTheyHave jobs)
     {
         switch (currentJob)
         {
@@ -310,6 +335,7 @@ public class Villager_Prefab : MonoBehaviour
 
     public void ChangeToFisher()
     {
+        print("Switch to fisher.");
         WHATJOBDOIHAVE = 2;
         aiDestination.target = fishTarget;
     }
