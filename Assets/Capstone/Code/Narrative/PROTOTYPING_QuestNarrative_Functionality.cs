@@ -9,7 +9,6 @@ namespace TeamMars.Capstone.Manager.Resources
     public class PROTOTYPING_QuestNarrative_Functionality : MonoBehaviour
     {
 
-        public Pause_UnpauseGame pauseScript;
 
 
         public bool isEvent = false;
@@ -23,8 +22,14 @@ namespace TeamMars.Capstone.Manager.Resources
         public GameObject StorySystem;
 
 
+        public GameObject EventPopUp_Screen;
+
+
         void Start()
         {
+
+            EventPopUp_Screen.SetActive(false);
+
             isEvent = false;
 
             
@@ -42,7 +47,7 @@ namespace TeamMars.Capstone.Manager.Resources
         // Update is called once per frame
         void Update()
         {
-            print(Time.timeScale);
+
             if (Input.GetKeyDown("i"))
             {
         
@@ -53,7 +58,7 @@ namespace TeamMars.Capstone.Manager.Resources
 
             if (isEvent)
             {
-                pauseScript.PauseGame();
+               GameManager.Instance.gameObject.GetComponent<Pause_UnpauseGame>().PauseGame();
                 
                 EventChosen = false;
                 CallQuestEvent_Minor(WhichMinorEvent);
@@ -61,18 +66,23 @@ namespace TeamMars.Capstone.Manager.Resources
             }
             if (EventChosen == false)
             {
+ 
+
                 ExecuteQuestEvent_Minor();
             }
             else
             {
-     
+                EventPopUp_Screen.SetActive(true);
             }
 
 
+            //if event popup is open, the event has been chosen
 
 
-
-
+            if (EventPopUp_Screen.activeSelf == true)
+            {
+                EventChosen = false;
+            }
 
 
 

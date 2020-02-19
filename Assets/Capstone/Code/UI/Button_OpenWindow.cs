@@ -15,6 +15,9 @@ namespace TeamMars.Capstone.Manager.Resources
         public bool isOven;
         public bool isAccess;
          GameObject noAccessCross;
+
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -62,13 +65,19 @@ namespace TeamMars.Capstone.Manager.Resources
         {
             if (isAccess == true)
             {
-                Window.SetActive(true);
+                if (Window != null)
+                {
+                    Window.SetActive(true);
+                }
+                
                 if (Window2 != null)
                 {
                     Window2.SetActive(true);
                 }
                 WindowtoClose.SetActive(false);
             }
-        }
+
+            GameManager.Instance.gameObject.GetComponent<Pause_UnpauseGame>().UnPauseGame();
+            }
     }
 }
