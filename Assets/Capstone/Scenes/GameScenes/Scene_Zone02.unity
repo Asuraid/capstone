@@ -5166,7 +5166,7 @@ GameObject:
   - component: {fileID: 405251640}
   m_Layer: 5
   m_Name: Villager_Information_AssignedJob_DropDown (2)
-  m_TagString: Dropdown
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15687,7 +15687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &773592195
 Transform:
   m_ObjectHideFlags: 0
@@ -15719,7 +15719,7 @@ GameObject:
   - component: {fileID: 774227699}
   m_Layer: 5
   m_Name: Villager_Information_AssignedJob_DropDown (1)
-  m_TagString: Dropdown
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16048,6 +16048,7 @@ MonoBehaviour:
   - {fileID: 1015638290}
   - {fileID: 138689899}
   villagerPrefab: []
+  dropdowns: []
   dropdownArray: []
   dropdownObjects: []
   Dropdown_1: {fileID: 1520266848}
@@ -18061,7 +18062,7 @@ GameObject:
   - component: {fileID: 936359131}
   m_Layer: 5
   m_Name: Villager_Information_AssignedJob_DropDown (1)
-  m_TagString: Untagged
+  m_TagString: Dropdown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21946,7 +21947,7 @@ GameObject:
   - component: {fileID: 1162995836}
   m_Layer: 5
   m_Name: Villager_Information_AssignedJob_DropDown
-  m_TagString: Untagged
+  m_TagString: Dropdown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28340,7 +28341,7 @@ GameObject:
   - component: {fileID: 1520266850}
   m_Layer: 5
   m_Name: Villager_Information_AssignedJob_DropDown
-  m_TagString: Dropdown
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36957,7 +36958,7 @@ GameObject:
   - component: {fileID: 2127734461}
   m_Layer: 5
   m_Name: Villager_Information_AssignedJob_DropDown (2)
-  m_TagString: Untagged
+  m_TagString: Dropdown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
