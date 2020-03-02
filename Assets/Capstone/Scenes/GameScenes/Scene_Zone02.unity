@@ -16047,10 +16047,12 @@ MonoBehaviour:
   - {fileID: 929120051}
   - {fileID: 1015638290}
   - {fileID: 138689899}
+  villagerPrefab: []
   dropdownArray: []
-  Dropdown_1: {fileID: 1162995834}
-  Dropdown_2: {fileID: 936359129}
-  Dropdown_3: {fileID: 2127734460}
+  dropdownObjects: []
+  Dropdown_1: {fileID: 1520266848}
+  Dropdown_2: {fileID: 774227697}
+  Dropdown_3: {fileID: 405251638}
 --- !u!1 &821612401
 GameObject:
   m_ObjectHideFlags: 0
@@ -31962,6 +31964,11 @@ PrefabInstance:
       propertyPath: homeTarget
       value: 
       objectReference: {fileID: 1351378836}
+    - target: {fileID: 4022400437495371688, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: currentJob
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_textInfo.characterCount

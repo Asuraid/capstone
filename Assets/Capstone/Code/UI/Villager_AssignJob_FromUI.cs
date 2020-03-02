@@ -11,20 +11,25 @@ public class Villager_AssignJob_FromUI : MonoBehaviour
     public GameObject[] VillagersLists_UI_Array;
 
     public Villager_Prefab[] villagerPrefab;
+    public TMP_Dropdown[] dropdowns;
 
     [Header("Dropdown Information")]
     public GameObject[] dropdownArray;
-    public TMP_Dropdown[] dropdownObjects;
+    public GameObject[] dropdownObjects;
 
-    //public GameObject Dropdown_1;
-    //public GameObject Dropdown_2;
-    //public GameObject Dropdown_3;
+    public GameObject Dropdown_1;
+    public GameObject Dropdown_2;
+    public GameObject Dropdown_3;
 
     // Start is called before the first frame update
 
     private void Awake()
     {
+        //For this, add(int arg) for the change job, can't figure out how to make it work with the villager index.
+
         //Dropdown_1.GetComponent<TMP_Dropdown>().onValueChanged.AddListener(ChangeJob);
+        //Dropdown_2.GetComponent<TMP_Dropdown>().onValueChanged.AddListener(ChangeJob);
+        //Dropdown_3.GetComponent<TMP_Dropdown>().onValueChanged.AddListener(ChangeJob);
     }
 
     void Start()
@@ -32,13 +37,14 @@ public class Villager_AssignJob_FromUI : MonoBehaviour
         VillagersArray = GameObject.FindGameObjectsWithTag("Villager");
         villagerPrefab = new Villager_Prefab[VillagersArray.Length];
 
-        dropdownArray = GameObject.FindGameObjectsWithTag("Dropdown");
+        //dropdownArray = GameObject.FindGameObjectsWithTag("Dropdown");
+        //dropdowns = new TMP_Dropdown[dropdownArray.Length];
 
         SetVillagerList();
 
         SetUpVillagerPrefabs();
 
-        SetUpDropdowns();
+        //SetUpDropdowns();
     }
 
     void SetVillagerList()
@@ -59,12 +65,14 @@ public class Villager_AssignJob_FromUI : MonoBehaviour
 
     void SetUpDropdowns()
     {
-        dropdownObjects = new TMP_Dropdown[dropdownArray.Length];
+        //dropdownObjects = new TMP_Dropdown[dropdownArray.Length];
 
         for (int i = 0; i < dropdownArray.Length; i++)
         {
-            dropdownObjects[i] = dropdownArray[i].GetComponent<TMP_Dropdown>();
-            dropdownObjects[i].onValueChanged.AddListener(ChangeJob);
+            dropdowns[i] = dropdownArray[i].GetComponent<TMP_Dropdown>();
+            //dropdowns.onValueChanged.AddListener(delegate {
+            //    ChangeJob(i);
+            //});
         }
     }
 
@@ -72,16 +80,7 @@ public class Villager_AssignJob_FromUI : MonoBehaviour
     {
         for (int i = 0; i < dropdownArray.Length; i++)
         {
-            villagerPrefab[i].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
-        }
-    }
-
-    void RunThingToFisher()
-    {
-        for (int i = 0; i < dropdownArray.Length; i++)
-        {
-            villagerPrefab[i].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
-            print(villagerPrefab[i].WHATJOBDOIHAVE);
+            //villagerPrefab[i].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
         }
     }
 
@@ -90,72 +89,89 @@ public class Villager_AssignJob_FromUI : MonoBehaviour
     {
         if (VillagerInformation.activeSelf != true)
         {
-            DisplayJobName();
+            //DisplayJobName();
+            ChangeJob();
         }
     }
 
-    public void ChangeJob(int arg)
+    public void ChangeJob()
     {
-        print(arg);
+        print("function triggered");
 
-        if (arg == 0)
+        //if (arg == 0)
+        //{
+        //    print("change to hunter");
+        //    villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
+        //}
+        //else if (arg == 1)
+        //{
+        //    print("change to fisher");
+        //    villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
+        //}
+        //else if (arg == 2)
+        //{
+        //    print("change to cook");
+        //    villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
+        //}
+        //else
+        //{
+        //    //print("change to no job");
+        //    villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
+        //}
+
+        if (Dropdown_1.GetComponent<TMP_Dropdown>().value == 0)
         {
-            print("change to hunter");
-            RunThingToHunter();
+            print("hunting");
+            villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
         }
-        else if (arg == 1)
+        else if (Dropdown_1.GetComponent<TMP_Dropdown>().value == 1)
         {
-            print("change to fisher");
-            RunThingToFisher();
+            villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
         }
-        else if (arg == 2)
+        else if (Dropdown_1.GetComponent<TMP_Dropdown>().value == 2)
         {
-            //print("change to cook");
-            //villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
+            villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
         }
         else
         {
-            //print("change to no job");
-            //villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
+            villagerPrefab[0].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
+        }
+
+        if (Dropdown_2.GetComponent<TMP_Dropdown>().value == 0)
+        {
+            villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
+        }
+        else if (Dropdown_2.GetComponent<TMP_Dropdown>().value == 1)
+        {
+            villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
+        }
+        else if (Dropdown_2.GetComponent<TMP_Dropdown>().value == 2)
+        {
+            villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
+        }
+        else
+        {
+            villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
         }
 
 
 
-        //if (Dropdown_2.GetComponent<TMP_Dropdown>().value == 0)
-        //{
-        //    villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
-        //}
-        //else if (Dropdown_2.GetComponent<TMP_Dropdown>().value == 1)
-        //{
-        //    villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
-        //}
-        //else if (Dropdown_2.GetComponent<TMP_Dropdown>().value == 2)
-        //{
-        //    villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
-        //}
-        //else
-        //{
-        //    villagerPrefab[1].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
-        //}
-
-
-
-        //if (Dropdown_3.GetComponent<TMP_Dropdown>().value == 0)
-        //{
-        //    villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
-        //}
-        //else if (Dropdown_3.GetComponent<TMP_Dropdown>().value == 1)
-        //{
-        //    villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
-        //}
-        //else if (Dropdown_3.GetComponent<TMP_Dropdown>().value == 2)
-        //{
-        //    villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
-        //}
-        //else
-        //{
-        //    villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
-        //}
+        if (Dropdown_3.GetComponent<TMP_Dropdown>().value == 0)
+        {
+            villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Hunting);
+        }
+        else if (Dropdown_3.GetComponent<TMP_Dropdown>().value == 1)
+        {
+            villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Fishing);
+        }
+        else if (Dropdown_3.GetComponent<TMP_Dropdown>().value == 2)
+        {
+            villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.Cooking);
+        }
+        else
+        {
+            villagerPrefab[2].AdjustJob(Villager_Prefab.WhatJobDoTheyHave.None);
+        }
 
         //switch (Dropdown_1.GetComponent<TMP_Dropdown>().value)
         //{
@@ -236,50 +252,50 @@ public class Villager_AssignJob_FromUI : MonoBehaviour
     }
     public void DisplayJobName()
     {
-        //switch (VillagersArray[0].GetComponent<Villager_Prefab>().currentJob)
-        //{
-        //    case Villager_Prefab.WhatJobDoTheyHave.Hunting:
-        //        Dropdown_1.GetComponent<TMP_Dropdown>().value = 0;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.Fishing:
-        //        Dropdown_1.GetComponent<TMP_Dropdown>().value = 1;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.Cooking:
-        //        Dropdown_1.GetComponent<TMP_Dropdown>().value = 2;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.None:
-        //        Dropdown_1.GetComponent<TMP_Dropdown>().value = 3;
-        //        break;
-        //}
-        //switch (VillagersArray[1].GetComponent<Villager_Prefab>().currentJob)
-        //{
-        //    case Villager_Prefab.WhatJobDoTheyHave.Hunting:
-        //        Dropdown_2.GetComponent<TMP_Dropdown>().value = 0;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.Fishing:
-        //        Dropdown_2.GetComponent<TMP_Dropdown>().value = 1;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.Cooking:
-        //        Dropdown_2.GetComponent<TMP_Dropdown>().value = 2;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.None:
-        //        Dropdown_2.GetComponent<TMP_Dropdown>().value = 3;
-        //        break;
-        //}
-        //switch (VillagersArray[2].GetComponent<Villager_Prefab>().currentJob)
-        //{
-        //    case Villager_Prefab.WhatJobDoTheyHave.Hunting:
-        //        Dropdown_3.GetComponent<TMP_Dropdown>().value = 0;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.Fishing:
-        //        Dropdown_3.GetComponent<TMP_Dropdown>().value = 1;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.Cooking:
-        //        Dropdown_3.GetComponent<TMP_Dropdown>().value = 2;
-        //        break;
-        //    case Villager_Prefab.WhatJobDoTheyHave.None:
-        //        Dropdown_3.GetComponent<TMP_Dropdown>().value = 3;
-        //        break;
-        //}
+        switch (VillagersArray[0].GetComponent<Villager_Prefab>().currentJob)
+        {
+            case Villager_Prefab.WhatJobDoTheyHave.Hunting:
+                Dropdown_1.GetComponent<TMP_Dropdown>().value = 0;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.Fishing:
+                Dropdown_1.GetComponent<TMP_Dropdown>().value = 1;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.Cooking:
+                Dropdown_1.GetComponent<TMP_Dropdown>().value = 2;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.None:
+                Dropdown_1.GetComponent<TMP_Dropdown>().value = 3;
+                break;
+        }
+        switch (VillagersArray[1].GetComponent<Villager_Prefab>().currentJob)
+        {
+            case Villager_Prefab.WhatJobDoTheyHave.Hunting:
+                Dropdown_2.GetComponent<TMP_Dropdown>().value = 0;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.Fishing:
+                Dropdown_2.GetComponent<TMP_Dropdown>().value = 1;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.Cooking:
+                Dropdown_2.GetComponent<TMP_Dropdown>().value = 2;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.None:
+                Dropdown_2.GetComponent<TMP_Dropdown>().value = 3;
+                break;
+        }
+        switch (VillagersArray[2].GetComponent<Villager_Prefab>().currentJob)
+        {
+            case Villager_Prefab.WhatJobDoTheyHave.Hunting:
+                Dropdown_3.GetComponent<TMP_Dropdown>().value = 0;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.Fishing:
+                Dropdown_3.GetComponent<TMP_Dropdown>().value = 1;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.Cooking:
+                Dropdown_3.GetComponent<TMP_Dropdown>().value = 2;
+                break;
+            case Villager_Prefab.WhatJobDoTheyHave.None:
+                Dropdown_3.GetComponent<TMP_Dropdown>().value = 3;
+                break;
+        }
     }
 }

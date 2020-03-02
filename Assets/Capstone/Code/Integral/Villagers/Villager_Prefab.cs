@@ -307,6 +307,9 @@ public class Villager_Prefab : MonoBehaviour
 
     public void AdjustJob(WhatJobDoTheyHave jobs)
     {
+        print("the job being fed in is" + jobs);
+        currentJob = jobs;
+
         switch (currentJob)
         {
             case WhatJobDoTheyHave.None:
@@ -327,7 +330,7 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-   public  void ChangeToHunter()
+   public void ChangeToHunter()
     {
         WHATJOBDOIHAVE = 1;
         aiDestination.target = forestTarget;
@@ -354,18 +357,18 @@ public class Villager_Prefab : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(UIBoxActive == false)
-        {
-            UIBox.SetActive(true);
-            UIBoxActive = true;
-            aiPath.isStopped = true;
+        //if(UIBoxActive == false)
+        //{
+        //    UIBox.SetActive(true);
+        //    UIBoxActive = true;
+        //    aiPath.isStopped = true;
             
-        } else
-        {
-            UIBox.SetActive(false);
-            UIBoxActive = false;
-            aiPath.isStopped = false;
-        }
+        //} else
+        //{
+        //    UIBox.SetActive(false);
+        //    UIBoxActive = false;
+        //    aiPath.isStopped = false;
+        //}
         
     }
 
