@@ -2,30 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Minigame_TreeCutting_DotCollision : MonoBehaviour
+
+namespace TeamMars.Capstone.Manager.Resources
 {
-    public Minigame_TreeCutting_Manager manager;
 
-    public GameObject GameObject_Clicked;
-    // Start is called before the first frame update
-    void Start()
+    public class Minigame_TreeCutting_DotCollision : MonoBehaviour
     {
-        manager = transform.parent.parent.GetComponent<Minigame_TreeCutting_Manager>();
+        public Minigame_TreeCutting_Manager manager;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void OnMouseOver()
-    {
-        if (manager.isMouseClickedDown)
+        public GameObject GameObject_Clicked;
+        // Start is called before the first frame update
+        void Start()
         {
-            gameObject.SetActive(false);
-            GameObject_Clicked.SetActive(true);
-            manager.cuttingAddition++;
+            manager = transform.parent.parent.GetComponent<Minigame_TreeCutting_Manager>();
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+        void OnMouseOver()
+        {
+            if (manager.isMouseClickedDown)
+            {
+                gameObject.SetActive(false);
+                GameObject_Clicked.SetActive(true);
+                manager.cuttingAddition++;
+            }
         }
     }
 }

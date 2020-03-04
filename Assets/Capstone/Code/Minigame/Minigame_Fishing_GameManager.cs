@@ -34,8 +34,23 @@ namespace TeamMars.Capstone.Manager.Resources
         // Update is called once per frame
         void Update()
         {
+
+
+
+
+
+
             if (Timer > 0)
             {
+
+
+
+
+
+
+
+
+
                 SetCameraLocation();
 
                 if (Mathf.Abs(MovingTarget.transform.position.x - Catcher.transform.position.x) < DetectionRange)

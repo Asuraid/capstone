@@ -6,7 +6,8 @@ namespace TeamMars.Capstone.Manager.Resources
 {
     public class StartMinigame : MonoBehaviour
     {
-        public Minigame_Fishing_GameManager MinigameToPlay;
+        public Minigame_Fishing_GameManager MinigameToPlay_fish;
+        public Minigame_TreeCutting_Manager MinigameToPlay_tree;
         public GameObject WindowtoClose;
         public GameObject WindowtoOpen;
 
@@ -23,9 +24,19 @@ namespace TeamMars.Capstone.Manager.Resources
         }
         void OnMouseDown()
         {
-            MinigameToPlay.PlayGame();
-            WindowtoClose.SetActive(false);
-            WindowtoOpen.SetActive(true);
+
+            if (MinigameToPlay_tree != null)
+            {
+                MinigameToPlay_tree.timer = 10;
+                WindowtoClose.SetActive(false);
+                WindowtoOpen.SetActive(true);
+            }
+            if (MinigameToPlay_fish != null)
+            {
+                MinigameToPlay_fish.PlayGame();
+                WindowtoClose.SetActive(false);
+                WindowtoOpen.SetActive(true);
+            }
         }
     }
 }
