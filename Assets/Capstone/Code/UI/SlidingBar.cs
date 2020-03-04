@@ -62,7 +62,6 @@ public class SlidingBar : MonoBehaviour
 
     IEnumerator UpdateBarOutPosition(Vector3 source, Vector3 target, float overTime)
     {
-        print("wah");
         float startTime = Time.time;
         while (Time.time < startTime + overTime)
         {
