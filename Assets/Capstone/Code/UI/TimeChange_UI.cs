@@ -14,13 +14,15 @@ namespace TeamMars.Capstone.Manager
         // Start is called before the first frame update
         void Start()
         {
-            TimeImages = new Sprite[5];
+            TimeUI = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            TimeUI.sprite = TimeImages[GameManager.Instance.hours];
+            TimeUI.sprite = TimeImages[GameManager.Instance.hours/2 ];
+
+            print(GameManager.Instance.hours /2);
         }
     }
 }

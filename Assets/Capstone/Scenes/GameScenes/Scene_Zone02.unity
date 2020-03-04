@@ -257,8 +257,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -694,8 +692,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assign a Villager to work
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -979,8 +975,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Lorem Ipsum (Choice)
 
 
@@ -1375,8 +1369,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play Minigame
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2470,8 +2462,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Profession
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2675,8 +2665,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Status
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2914,8 +2902,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Option A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3183,8 +3169,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play Minigame (2x rewards)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3388,8 +3372,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assigned Job
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3676,8 +3658,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &324188185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3696,8 +3676,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3813,51 +3791,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Villager
       objectReference: {fileID: 0}
-    - target: {fileID: 211108423280024733, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 656459406550386639, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.009329147
-      objectReference: {fileID: 0}
-    - target: {fileID: 943085589858165782, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00495023
-      objectReference: {fileID: 0}
-    - target: {fileID: 1210366731062504170, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.010863659
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.030289603
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9995412
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.99854136
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.05399266
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572915589347710281, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3271786798748703561, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3913,26 +3846,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4022400436010888613, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000013262032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400436479691103, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.20606884
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.4626637
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437343511848, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000018104906
-      objectReference: {fileID: 0}
     - target: {fileID: 4022400437495371688, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: currentJob
@@ -3958,6 +3871,96 @@ PrefabInstance:
       propertyPath: homeTarget
       value: 
       objectReference: {fileID: 1351378836}
+    - target: {fileID: 4369802712373676897, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.030289603
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9995412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99854136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.05399266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400436479691103, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.20606884
+      objectReference: {fileID: 0}
+    - target: {fileID: 656459406550386639, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.009329147
+      objectReference: {fileID: 0}
+    - target: {fileID: 943085589858165782, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00495023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400436010888613, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000013262032
+      objectReference: {fileID: 0}
     - target: {fileID: 4277269722952901821, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -3968,15 +3971,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9975304
       objectReference: {fileID: 0}
-    - target: {fileID: 4344647709399648027, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 4022400437343511848, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369802712373676897, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_LocalRotation.z
+      value: 0.0000018104906
       objectReference: {fileID: 0}
     - target: {fileID: 4555278510883029717, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -3987,6 +3985,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9969807
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4626637
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210366731062504170, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.010863659
       objectReference: {fileID: 0}
     - target: {fileID: 4915751127415656801, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -4018,50 +4026,20 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 4344647709399648027, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 211108423280024733, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 2572915589347710281, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8328974074748038313, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -4257,8 +4235,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Status
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4462,8 +4438,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assign a Villager to work
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5238,8 +5212,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -5315,8 +5287,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Minigame Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5550,8 +5520,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &516106520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5570,8 +5538,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5647,8 +5613,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Event Title:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5852,8 +5816,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Profession
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6179,8 +6141,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Season:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6382,8 +6342,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -6504,6 +6462,36 @@ PrefabInstance:
       propertyPath: Building_Or_Structure
       value: 
       objectReference: {fileID: 1875784436}
+    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964300410952003479, guid: 8fae72c17f9507740889df2db5aaf772,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7964300409978055740, guid: 8fae72c17f9507740889df2db5aaf772,
         type: 3}
       propertyPath: m_Mesh
@@ -6530,36 +6518,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7964300409978055714, guid: 8fae72c17f9507740889df2db5aaf772,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964300410952003479, guid: 8fae72c17f9507740889df2db5aaf772,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964300410952003476, guid: 8fae72c17f9507740889df2db5aaf772,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
@@ -6621,8 +6579,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -7296,8 +7252,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assigned Job
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7499,8 +7453,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Hunt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7818,8 +7770,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Final Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8083,8 +8033,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
 --- !u!1 &695954331
 GameObject:
@@ -8125,8 +8073,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8457,8 +8403,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -8547,8 +8491,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Status
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8750,8 +8692,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -8825,8 +8765,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -8883,8 +8821,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9229,8 +9165,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Final Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9569,8 +9503,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &760086281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9589,8 +9521,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -14474,8 +14404,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14700,8 +14628,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -14777,8 +14703,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play Minigame (2x rewards)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15588,8 +15512,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
 --- !u!1 &914071168
 GameObject:
@@ -15648,8 +15570,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play Minigame (2x rewards)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15981,8 +15901,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Happiness
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16186,8 +16104,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16710,8 +16626,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_Dropdown+DropdownEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &936359132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16730,8 +16644,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -16887,8 +16799,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Happiness
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17092,8 +17002,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assigned Job
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17297,8 +17205,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Profession
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17500,8 +17406,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Hunt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17777,8 +17681,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Status
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18294,8 +18196,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Option A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18779,8 +18679,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Effects:
 
 
@@ -19020,8 +18918,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -19100,8 +18996,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Hunt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19527,8 +19421,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Villager Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19732,8 +19624,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Status
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20003,8 +19893,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -20176,8 +20064,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20406,8 +20292,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_Dropdown+DropdownEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1162995837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20426,8 +20310,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -20503,8 +20385,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Pond
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20744,8 +20624,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Minigame Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21101,8 +20979,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play Minigame
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21299,6 +21175,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
+        type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 714960712}
+    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
+        type: 3}
+      propertyPath: FinalScoreText
+      value: 
+      objectReference: {fileID: 747995402}
+    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
+        type: 3}
+      propertyPath: Building_or_Structure
+      value: 
+      objectReference: {fileID: 232717350}
     - target: {fileID: 2416663127089284689, guid: 4418a87b7d12638469da1268b2aac74f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21369,21 +21260,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.87247443
       objectReference: {fileID: 0}
-    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
-        type: 3}
-      propertyPath: WinScreen
-      value: 
-      objectReference: {fileID: 714960712}
-    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
-        type: 3}
-      propertyPath: FinalScoreText
-      value: 
-      objectReference: {fileID: 747995402}
-    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
-        type: 3}
-      propertyPath: Building_or_Structure
-      value: 
-      objectReference: {fileID: 232717350}
     - target: {fileID: 2416663127419009690, guid: 4418a87b7d12638469da1268b2aac74f,
         type: 3}
       propertyPath: m_Sprite
@@ -21467,8 +21343,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -21542,8 +21416,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -21619,8 +21491,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Happiness
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21905,8 +21775,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Oven
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22110,8 +21978,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Quest Event #3
 
 '
@@ -22277,6 +22143,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
+        type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 839155143}
+    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
+        type: 3}
+      propertyPath: FinalScoreText
+      value: 
+      objectReference: {fileID: 918676073}
+    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
+        type: 3}
+      propertyPath: Building_or_Structure
+      value: 
+      objectReference: {fileID: 613564406}
     - target: {fileID: 2416663127089284689, guid: 4418a87b7d12638469da1268b2aac74f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22347,21 +22228,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.87247443
       objectReference: {fileID: 0}
-    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
-        type: 3}
-      propertyPath: WinScreen
-      value: 
-      objectReference: {fileID: 839155143}
-    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
-        type: 3}
-      propertyPath: FinalScoreText
-      value: 
-      objectReference: {fileID: 918676073}
-    - target: {fileID: 2416663127089284688, guid: 4418a87b7d12638469da1268b2aac74f,
-        type: 3}
-      propertyPath: Building_or_Structure
-      value: 
-      objectReference: {fileID: 613564406}
     - target: {fileID: 2416663127419009690, guid: 4418a87b7d12638469da1268b2aac74f,
         type: 3}
       propertyPath: m_Sprite
@@ -22815,51 +22681,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Villager
       objectReference: {fileID: 0}
-    - target: {fileID: 211108423280024733, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 656459406550386639, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.009329118
-      objectReference: {fileID: 0}
-    - target: {fileID: 943085589858165782, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0049503115
-      objectReference: {fileID: 0}
-    - target: {fileID: 1210366731062504170, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.010863659
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.030288588
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9995412
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.99854136
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.05399266
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572915589347710281, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3271786798748703561, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22915,31 +22736,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4022400436010888613, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000013262032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400436479691103, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.2060689
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.46266362
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8865339
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437343511848, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000012591481
-      objectReference: {fileID: 0}
     - target: {fileID: 4022400437495371688, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: currentJob
@@ -22965,6 +22761,91 @@ PrefabInstance:
       propertyPath: homeTarget
       value: 
       objectReference: {fileID: 1351378836}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.030288588
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9995412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99854136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.05399266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400436479691103, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.2060689
+      objectReference: {fileID: 0}
+    - target: {fileID: 656459406550386639, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.009329118
+      objectReference: {fileID: 0}
+    - target: {fileID: 943085589858165782, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0049503115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400436010888613, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000013262032
+      objectReference: {fileID: 0}
     - target: {fileID: 4277269722952901821, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -22975,10 +22856,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9975304
       objectReference: {fileID: 0}
-    - target: {fileID: 4344647709399648027, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 4022400437343511848, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_LocalRotation.z
+      value: 0.0000012591481
       objectReference: {fileID: 0}
     - target: {fileID: 4555278510883029717, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -22989,6 +22870,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9969805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.46266362
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8865339
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210366731062504170, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.010863659
       objectReference: {fileID: 0}
     - target: {fileID: 4915751127415656801, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -23020,50 +22916,20 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 4344647709399648027, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 211108423280024733, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 2572915589347710281, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8328974074748038313, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -23452,8 +23318,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Happiness
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23657,8 +23521,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Profession
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24099,8 +23961,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assigned Job
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24887,8 +24747,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Profession
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25365,8 +25223,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Quest Event #1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25598,8 +25454,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
 --- !u!1 &1508587289
 GameObject:
@@ -25953,8 +25807,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Option A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26112,8 +25964,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -26233,8 +26083,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Final Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26628,8 +26476,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Happiness
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26833,8 +26679,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -27016,8 +26860,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1684187872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27036,8 +26878,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -27144,8 +26984,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Villager Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27349,8 +27187,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Forest
 
 '
@@ -27556,8 +27392,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Happiness
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27761,8 +27595,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Villagers List
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28064,8 +27896,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assigned Job
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28248,6 +28078,106 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1775698843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775698846}
+  - component: {fileID: 1775698845}
+  - component: {fileID: 1775698844}
+  m_Layer: 0
+  m_Name: Time_UI_Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1775698844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775698843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a483bae6049ac5d419113297a5866a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeImages:
+  - {fileID: 21300000, guid: 9473582a6ca60564a81a342eb9d5a10f, type: 3}
+  - {fileID: 21300000, guid: 6d007ff7ea5804a488faea62b57ae121, type: 3}
+  - {fileID: 21300000, guid: c702d457b67c6d24a806a4ff56b6ea73, type: 3}
+  - {fileID: 21300000, guid: 92608962b3e87fb41a86c9da3f292032, type: 3}
+  - {fileID: 21300000, guid: 9895205ef1d2b1f469402f367fc483fb, type: 3}
+  TimeUI: {fileID: 0}
+--- !u!212 &1775698845
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775698843}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1775698846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775698843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.49, y: 3.78, z: 10}
+  m_LocalScale: {x: 0.53124, y: 0.53124, z: 0.53124}
+  m_Children: []
+  m_Father: {fileID: 1945352839}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776533461
 GameObject:
   m_ObjectHideFlags: 0
@@ -28335,8 +28265,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1776533464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28355,8 +28283,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -28528,8 +28454,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28679,8 +28603,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Food Supply is Low
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28884,8 +28806,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Status
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29049,61 +28969,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Villager
       objectReference: {fileID: 0}
-    - target: {fileID: 211108423280024733, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 656459406550386639, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.009329118
-      objectReference: {fileID: 0}
-    - target: {fileID: 943085589858165782, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0049503115
-      objectReference: {fileID: 0}
-    - target: {fileID: 1091912773534012954, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 1091912773534012954, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1210366731062504170, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.010863659
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.03028927
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9995412
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.05399266
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.99854136
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572915589347710281, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3271786798748703561, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29159,26 +29024,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4022400436010888613, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000013262032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400436479691103, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.2060689
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.46266374
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022400437343511848, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000015869734
-      objectReference: {fileID: 0}
     - target: {fileID: 4022400437495371688, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: forestTarget
@@ -29199,6 +29044,96 @@ PrefabInstance:
       propertyPath: homeTarget
       value: 
       objectReference: {fileID: 1351378836}
+    - target: {fileID: 4369802712373676897, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.03028927
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648984237919693994, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9995412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.05399266
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735454216098784686, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99854136
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400436479691103, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.2060689
+      objectReference: {fileID: 0}
+    - target: {fileID: 656459406550386639, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.009329118
+      objectReference: {fileID: 0}
+    - target: {fileID: 943085589858165782, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0049503115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022400436010888613, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000013262032
+      objectReference: {fileID: 0}
     - target: {fileID: 4277269722952901821, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -29209,15 +29144,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9975304
       objectReference: {fileID: 0}
-    - target: {fileID: 4344647709399648027, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 4022400437343511848, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369802712373676897, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_LocalRotation.z
+      value: 0.0000015869734
       objectReference: {fileID: 0}
     - target: {fileID: 4555278510883029717, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -29229,55 +29159,35 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.99698067
       objectReference: {fileID: 0}
+    - target: {fileID: 4022400437306675654, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.46266374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210366731062504170, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.010863659
+      objectReference: {fileID: 0}
     - target: {fileID: 4915751127415656801, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.005376137
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 4344647709399648027, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 211108423280024733, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
+    - target: {fileID: 2572915589347710281, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7834916630327813372, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162973589128583999, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8328974074748038313, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -29303,11 +29213,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9031011562383991742, guid: 6cab1599722762842959b063c18859e7,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5598070892526598908, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
@@ -29419,6 +29324,21 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1091912773534012954, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091912773534012954, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031011562383991742, guid: 6cab1599722762842959b063c18859e7,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8526094573816681611, guid: 6cab1599722762842959b063c18859e7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -29523,8 +29443,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Quest Event #2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29925,8 +29843,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assign a Villager to work
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30128,8 +30044,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -30329,8 +30243,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Minigame Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30874,8 +30786,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31120,8 +31030,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Day:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31355,8 +31263,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Hour:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31666,6 +31572,7 @@ Transform:
   - {fileID: 812099854}
   - {fileID: 1461100275}
   - {fileID: 134994797}
+  - {fileID: 1775698846}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32063,8 +31970,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Profession
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32601,8 +32506,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2042708368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32621,8 +32524,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -32919,8 +32820,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play Minigame
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33204,8 +33103,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Assigned Job
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33440,8 +33337,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33684,8 +33579,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -33782,8 +33675,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_Dropdown+DropdownEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2127734462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33802,8 +33693,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -33936,8 +33825,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Villager Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34283,11 +34170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5943620241780779981, guid: a468032e8d088c74698b1bf2f274dec8,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6271505936929487857, guid: a468032e8d088c74698b1bf2f274dec8,
         type: 3}
       propertyPath: VM
@@ -34307,6 +34189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943620241780779981, guid: a468032e8d088c74698b1bf2f274dec8,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7844902155250298955, guid: a468032e8d088c74698b1bf2f274dec8,
         type: 3}
