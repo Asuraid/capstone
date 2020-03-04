@@ -9,12 +9,13 @@ namespace TeamMars.Capstone.Manager.Resources
         public static ResourceManager Instance { get; private set; }
 
         [Header("TextMeshPro References")]
-        public TextMeshPro rawFish;
-        public TextMeshPro cookedFish;
-        public TextMeshPro rawGame;
-        public TextMeshPro cookedGame;
-        public TextMeshPro rawWood;
-        public TextMeshPro refinedWood;
+        public TextMeshProUGUI rawFish;
+        public TextMeshProUGUI cookedFish;
+        public TextMeshProUGUI rawGame;
+        public TextMeshProUGUI cookedGame;
+        public TextMeshProUGUI rawWood;
+        public TextMeshProUGUI refinedWood;
+        public TextMeshProUGUI stone;
 
         /// <summary>
         /// Set up instance of the game manager. Remove extra instances.

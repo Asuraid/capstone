@@ -31,7 +31,7 @@ namespace TeamMars.Capstone.Manager
         public int currentDay = 1;
         int seasons = 1;
 
-        [Header("Resources")]
+        [Header("Villagers")]
         public int villagerNumber = 1;
         int eatingCount;
 
@@ -43,7 +43,9 @@ namespace TeamMars.Capstone.Manager
 
         int temporaryStarvationMeter;
 
+        bool isPrarie = false;
 
+        // Set game manager up to be persistent.
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -136,6 +138,7 @@ namespace TeamMars.Capstone.Manager
 
         private IEnumerator FeedVillagers()
         {
+            // If your amount of food is larger than the villagers, consume food.
             while(eatingCount < villagerNumber)
             {
                 if (cookedFish > 0)
@@ -144,6 +147,7 @@ namespace TeamMars.Capstone.Manager
                 }  
                 else
                 {
+                    // Use game if there is no fish.
                     cookedGame--;
                 } 
                 eatingCount++;
