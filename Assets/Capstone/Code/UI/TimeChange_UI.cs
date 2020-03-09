@@ -22,7 +22,7 @@ namespace TeamMars.Capstone.Manager
         {
             TimeUI.sprite = TimeImages[GameManager.Instance.hours/2 ];
 
-            print(GameManager.Instance.hours /2);
+            //print(GameManager.Instance.hours /2);
         }
     }
 }
