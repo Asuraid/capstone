@@ -9,29 +9,36 @@ namespace TeamMars.Capstone.Manager
 {
     public class GameManager : MonoBehaviour
     {
-   
+
         public static GameManager Instance { get; private set; }
 
         [Header("Resources")]
         // All persistent variables.
         public int rawGame;
         public int cookedGame;
+        [Space(10)]
         public int rawFish;
         public int cookedFish;
+        [Space(10)]
         public int rawWood;
         public int refinedWood;
+        [Space(10)]
+        public int rawStone;
+        public int refinedStone;
 
         [Header("Time")]
         public int maxHours;
         public int maxDay;
         public int hourIncrements = 2;
+        [Space(10)]
         public int resetTimerForScene = 1;
-
+        public int timeSkiperAmount;
+        [Space(10)]
         public int hours;
         public int currentDay = 1;
         int seasons = 1;
 
-        [Header("Resources")]
+        [Header("Villagers")]
         public int villagerNumber = 1;
         int eatingCount;
 
@@ -43,7 +50,9 @@ namespace TeamMars.Capstone.Manager
 
         int temporaryStarvationMeter;
 
+        bool isPrarie = false;
 
+        // Set game manager up to be persistent.
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -54,7 +63,7 @@ namespace TeamMars.Capstone.Manager
                 DontDestroyOnLoad(gameObject);
             }
         }
-       
+
         private void Start()
         {
             UpdateText();
@@ -77,20 +86,21 @@ namespace TeamMars.Capstone.Manager
                 if ((cookedFish + cookedGame) >= villagerNumber)
                 {
                     StartCoroutine(FeedVillagers());
-                } else
+                }
+                else
                 {
                     print("The villager(s) starved.");
                     temporaryStarvationMeter++;
-                    foodWarning.transform.gameObject.SetActive(true);
+                    //foodWarning.transform.gameObject.SetActive(true);
 
                     if (temporaryStarvationMeter >= 2)
                     {
-                        foodWarning.text = "Your villagers are very hungry ... it is unlikely they will last one more day.";
+                        //foodWarning.text = "Your villagers are very hungry ... it is unlikely they will last one more day.";
                     }
 
                     if (temporaryStarvationMeter >= 3)
                     {
-                        foodWarning.text = "Unfortunately your villagers starved.";
+                        //foodWarning.text = "Unfortunately your villagers starved.";
                         StartCoroutine(Countdown(resetTimerForScene));
                     }
                 }
@@ -108,12 +118,12 @@ namespace TeamMars.Capstone.Manager
 
         void UpdateText()
         {
-            /*
+
             textHours.text = "Hours: " + hours + " / " + maxHours;
             textDays.text = "Days: " + currentDay + " / " + maxDay;
 
-         
-   switch (seasons)
+
+            switch (seasons)
             {
                 case 1:
                     textSeasons.text = "Season: Spring";
@@ -131,21 +141,23 @@ namespace TeamMars.Capstone.Manager
                     print("Something happened to bring it to default.");
                     break;
             }
-            */
+
         }
 
         private IEnumerator FeedVillagers()
         {
-            while(eatingCount < villagerNumber)
+            // If your amount of food is larger than the villagers, consume food.
+            while (eatingCount < villagerNumber)
             {
                 if (cookedFish > 0)
                 {
                     cookedFish--;
-                }  
+                }
                 else
                 {
+                    // Use game if there is no fish.
                     cookedGame--;
-                } 
+                }
                 eatingCount++;
             }
             ResourceManager.Instance.cookedFish.GetComponent<Text_Bump>().Bump();
@@ -156,7 +168,7 @@ namespace TeamMars.Capstone.Manager
         private IEnumerator Countdown(int countdown)
         {
             float duration = countdown; // 3 seconds you can change this 
-                                 //to whatever you want
+                                        //to whatever you want
             float normalizedTime = 0;
             while (normalizedTime <= 1f)
             {

@@ -18,13 +18,12 @@ public class Villager_UI_Windows : MonoBehaviour
 
         if (VillagerWindow_WorldSpace.activeSelf == true)
         {
-            VillagerWindow_ScreenSpace.SetActive(true);
+            //VillagerWindow_ScreenSpace.SetActive(true);
 
         }
         else
         {
-            VillagerWindow_ScreenSpace.SetActive(false);
-
+            //VillagerWindow_ScreenSpace.SetActive(false);
         }
         
     }

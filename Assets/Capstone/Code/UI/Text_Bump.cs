@@ -31,7 +31,7 @@ namespace TeamMars.Capstone
         protected Image _delayedImage;
         protected bool _initialized;
 
-        protected TextMeshPro textMeshPro;
+        protected TextMeshProUGUI textMeshPro;
 
         protected Color originalColor;
         public Color positiveColor;
@@ -52,7 +52,7 @@ namespace TeamMars.Capstone
 
             if (Instance == null) Instance = this;
 
-            textMeshPro = GetComponent<TextMeshPro>();
+            textMeshPro = GetComponent<TextMeshProUGUI>();
 
             originalColor = textMeshPro.color;
         }

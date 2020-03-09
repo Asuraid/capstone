@@ -9,12 +9,16 @@ namespace TeamMars.Capstone.Manager.Resources
         public static ResourceManager Instance { get; private set; }
 
         [Header("TextMeshPro References")]
-        public TextMeshPro rawFish;
-        public TextMeshPro cookedFish;
-        public TextMeshPro rawGame;
-        public TextMeshPro cookedGame;
-        public TextMeshPro rawWood;
-        public TextMeshPro refinedWood;
+        public TextMeshProUGUI rawFish;
+        public TextMeshProUGUI cookedFish;
+        [Space(10)]
+        public TextMeshProUGUI rawGame;
+        public TextMeshProUGUI cookedGame;
+        [Space(10)]
+        public TextMeshProUGUI rawWood;
+        public TextMeshProUGUI refinedWood;
+        [Space(10)]
+        public TextMeshProUGUI stone;
 
         /// <summary>
         /// Set up instance of the game manager. Remove extra instances.
@@ -39,6 +43,11 @@ namespace TeamMars.Capstone.Manager.Resources
         }
 
         #region Adding resources
+
+        /// <summary>
+        /// Add a set amount of raw game.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
         public void AddRawGame(int amount)
         {
             GameManager.Instance.rawGame += amount;
@@ -47,6 +56,10 @@ namespace TeamMars.Capstone.Manager.Resources
             UpdateResources();
         }
 
+        /// <summary>
+        /// Add a set amount of raw fish.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
         public void AddRawFish(int amount)
         {
             GameManager.Instance.rawFish += amount;
@@ -55,6 +68,10 @@ namespace TeamMars.Capstone.Manager.Resources
             UpdateResources();
         }
 
+        /// <summary>
+        /// Add a set amount of cooked game.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
         public void AddCookedGame(int amount)
         {
             GameManager.Instance.cookedGame += amount;
@@ -63,6 +80,10 @@ namespace TeamMars.Capstone.Manager.Resources
             UpdateResources();
         }
 
+        /// <summary>
+        /// Add a set amount of cooked fish.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
         public void AddCookedFish(int amount)
         {
             GameManager.Instance.cookedFish += amount;
@@ -71,6 +92,10 @@ namespace TeamMars.Capstone.Manager.Resources
             UpdateResources();
         }
 
+        /// <summary>
+        /// Add a set amount of raw wood.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
         public void AddRawWood(int amount)
         {
             GameManager.Instance.rawWood += amount;
@@ -79,12 +104,40 @@ namespace TeamMars.Capstone.Manager.Resources
             UpdateResources();
         }
 
+        /// <summary>
+        /// Add a set amount of refined wood.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
         public void AddRefinedWood(int amount)
         {
             GameManager.Instance.refinedWood += amount;
             refinedWood.GetComponent<Text_Bump>().Bump();
             refinedWood.GetComponent<Text_Bump>().colorChangingPositive = true;
             UpdateResources();
+        }
+
+        /// <summary>
+        /// Add a set amount of raw stone.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
+        public void AddRawStone(int amount)
+        {
+            GameManager.Instance.rawStone += amount;
+            stone.GetComponent<Text_Bump>().Bump();
+            stone.GetComponent<Text_Bump>().colorChangingPositive = true;
+            UpdateResources();
+        }
+
+        /// <summary>
+        /// Add a set amount of refined stone. Disabled due to no UI yet.
+        /// </summary>
+        /// <param name="amount">Gained amount.</param>
+        public void AddRefinedStone(int amount)
+        {
+            //GameManager.Instance.refinedStone += amount;
+            //refinedWood.GetComponent<Text_Bump>().Bump();
+            //refinedWood.GetComponent<Text_Bump>().colorChangingPositive = true;
+            //UpdateResources();
         }
         #endregion
 
@@ -154,6 +207,17 @@ namespace TeamMars.Capstone.Manager.Resources
             refinedWood.GetComponent<Text_Bump>().Bump();
             UpdateResources();
         }
+
+        /// <summary>
+        /// Use a set amount of raw stone.
+        /// </summary>
+        /// <param name="amount">Amount of raw stone.</param>
+        public void UseRawStone(int amount)
+        {
+            GameManager.Instance.rawStone -= amount;
+            stone.GetComponent<Text_Bump>().Bump();
+            UpdateResources();
+        }
         #endregion
 
         /// <summary>
@@ -164,10 +228,14 @@ namespace TeamMars.Capstone.Manager.Resources
 
             rawFish.text = GameManager.Instance.rawFish.ToString();
             cookedFish.text = GameManager.Instance.cookedFish.ToString();
-            //rawGame.text = GameManager.Instance.rawGame.ToString();
-            //cookedGame.text = GameManager.Instance.cookedGame.ToString();
+
+            rawGame.text = GameManager.Instance.rawGame.ToString();
+            cookedGame.text = GameManager.Instance.cookedGame.ToString();
+
             rawWood.text = GameManager.Instance.rawWood.ToString();
             refinedWood.text = GameManager.Instance.refinedWood.ToString();
+
+            stone.text = GameManager.Instance.rawStone.ToString();
         }
 
 
