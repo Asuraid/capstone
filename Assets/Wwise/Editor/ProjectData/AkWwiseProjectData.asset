@@ -17,21 +17,21 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 074f373da4ff8d458dc4e364ce08c603
     GuidInternal: 
-    m_lastTime: -8586201549128407727
+    m_lastTime: -8586199887007789923
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: ea4d1aef11c2da47beb996df0a512fa2
     GuidInternal: 
-    m_lastTime: -8586201549128746826
+    m_lastTime: -8586199887007949502
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f06998442ef3ec499765c25f2ed19821
     GuidInternal: 
-    m_lastTime: -8586201521147437292
+    m_lastTime: -8586199887007809871
     List:
     - name: MainSoundbank
       guid: 3b79bb380aa44644aad328dcd6cbb93d
@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 91a7bf8ea3925f4c9d5342c612d367ea
     GuidInternal: 
-    m_lastTime: -8586201521147526836
+    m_lastTime: -8586199887008198837
     List:
     - name: SoundEvent_BushRustle
       guid: 4fd50452b905684892cc48a8d531c2d8
@@ -78,28 +78,28 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 6d9ba2cd8878194caf5d0ba0ff574d46
     GuidInternal: 
-    m_lastTime: -8586201549128657057
+    m_lastTime: -8586199887008188615
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f350d95a707b1642b4736a7324026e01
     GuidInternal: 
-    m_lastTime: -8586201549128776739
+    m_lastTime: -8586199887007809871
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 777bac88317eeb42a4c6b5efb8ffdc04
     GuidInternal: 
-    m_lastTime: -8586201549128806658
+    m_lastTime: -8586199887007799903
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 7075e36d61dcd0479efcdd9e9f24c68f
     GuidInternal: 
-    m_lastTime: -8586201549128307985
+    m_lastTime: -8586199887007799903
     List: []
   ExpandedItems:
   - /capstone_WwiseProject
@@ -108,4 +108,4 @@ MonoBehaviour:
   - /capstone_WwiseProject/SoundBanks
   - /capstone_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
-  CurrentPluginConfig: 
+  CurrentPluginConfig: Profile

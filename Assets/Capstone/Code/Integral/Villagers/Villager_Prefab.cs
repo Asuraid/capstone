@@ -55,7 +55,6 @@ public class Villager_Prefab : MonoBehaviour
     //1 = hunter. 2 = fisher. 3 = cook
     public int WHATJOBDOIHAVE;
 
-    
 
     //THESE ARE PURELY FOR MATHEMATICS. PLEASE DONT TOUCH
     float hunting_number;
@@ -73,14 +72,15 @@ public class Villager_Prefab : MonoBehaviour
 
     [Header("Animator")]
     // Tied to animation, don't touch.
+    public float animationActiveDistance;
     Animator animator;
     AIDestinationSetter aiDestination;
     AIPath aiPath;
     CharacterController controller;
     bool isMoving;
-    public GameObject bodyContainer;
+    bool isWorking;
+    public GameObject axeObject;
     Vector3 ogScale;
-    Vector3 ogBoxScale;
 
     [Header("Location Targets")]
     public Transform forestTarget;
@@ -88,17 +88,13 @@ public class Villager_Prefab : MonoBehaviour
     public Transform homeTarget;
     public Transform cookingTarget;
 
-    [Header("UI Attributes")]
-    //UI. THIS CAN PROBABLY BE DELETED LATER
-    public GameObject UIBox;
-    public TextMeshPro profession;
-    public TextMeshPro assignedJob;
-
-    bool UIBoxActive;
-    public TMP_Dropdown dropdown;
+    [Header("Bullshit rn")]
+    public GameObject infoContainer;
+    TMP_Dropdown dropdown;
 
     private void Awake()
     {
+        // Simple checks to see if certain things are not attached.
         if (animator == null)
             animator = GetComponent<Animator>();
         else
@@ -120,18 +116,26 @@ public class Villager_Prefab : MonoBehaviour
             print("There is no AI Path attached!");
 
         if (dropdown == null)
-            dropdown = GetComponentInChildren<TMP_Dropdown>();
+            dropdown = infoContainer.GetComponentInChildren<TMP_Dropdown>();
         else
             print("There is no dropdown attached!");
 
+        if (axeObject == null)
+            print("There is no axe attached!");
+
+        // Set listener to dropdown to allow value changing.
+        dropdown.onValueChanged.AddListener(AdjustDropdownJobs);
+
+        // Set the job to none.
+        dropdown.value = 3;
+
+        // Save original scale.
         ogScale = transform.localScale;
-        ogBoxScale = UIBox.transform.localScale;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
         //VM.villagerARRAY.Add(gameObject);
         //EVERYONE STARTS OUT AVERAGE HAPPY
         individualHappiness = 1;
@@ -146,7 +150,9 @@ public class Villager_Prefab : MonoBehaviour
 
         //Check for jobs
         AdjustProfession();
-        AdjustJob();
+
+        //Set object to inactive.
+        axeObject.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -158,27 +164,39 @@ public class Villager_Prefab : MonoBehaviour
             bool isMoving = true;
 
             animator.SetBool("moving", isMoving);
-
         }
 
+        // If the villager is not moving, switch to idle animation.
         if (controller.velocity == Vector3.zero)
         {
             bool isMoving = false;
 
             animator.SetBool("moving", isMoving);
-
         }
 
+        if(aiPath.remainingDistance <= animationActiveDistance)
+        {
+            bool isWorking = true;
+            axeObject.gameObject.SetActive(true);
+
+            animator.SetBool("working", isWorking);
+        } else
+        {
+            bool isWorking = false;
+            axeObject.gameObject.SetActive(false);
+
+            animator.SetBool("working", isWorking);
+        }
+
+        // These two functions control the direction the sprite is facing towards.
         if (controller.velocity.x > 0)
         {
             transform.localScale = new Vector3(-ogScale.x, ogScale.y, ogScale.z);
-            UIBox.transform.localScale = new Vector3(-ogBoxScale.x, ogBoxScale.y, ogBoxScale.z);
         }
 
         if (controller.velocity.x < 0)
         {
             transform.localScale = new Vector3(ogScale.x, ogScale.y, ogScale.z);
-            UIBox.transform.localScale = new Vector3(ogBoxScale.x, ogBoxScale.y, ogBoxScale.z);
         }
 
         //IF I AM ASSIGNED TO THE JOB I AM GOOD AT
@@ -213,48 +231,25 @@ public class Villager_Prefab : MonoBehaviour
         hunting_productivity_individual = hunting_number * individualHappiness;
         fishing_productivity_individual = fishing_number * individualHappiness;
         cooking_productivity_individual = cooking_number * individualHappiness;
+    }
 
-
-        // Temporary function to work with the dropdown. Try to add in into a separate function that'll trigger an event later.
-        if(dropdown.value == 0)
+    public void AdjustDropdownJobs(int arg)
+    {
+        if (arg == 0)
         {
             ChangeToHunter();
-        } else if(dropdown.value == 1)
+        }
+        else if (arg == 1)
         {
             ChangeToFisher();
-        } else if (dropdown.value == 2)
+        }
+        else if (arg == 2)
         {
             ChangeToCook();
-        } else
+        }
+        else
         {
             ChangeToNoJob();
-        }
-
-
-        //UI. YOU CAN PROBABLY DELETE THIS AFTER
-        switch (WHATJOBAMIGOODAT)
-        {
-            case 1:
-                profession.text = "Profession: Hunter"; 
-                break;
-            case 2:
-                profession.text = "Profession: Fisher";
-                break;
-            case 3:
-                profession.text = "Profession: Cook";
-                break;
-        }
-        switch (WHATJOBDOIHAVE)
-        {
-            case 1:
-                assignedJob.text = "Job: Hunter";
-                break;
-            case 2:
-                assignedJob.text = "Job: Fisher";
-                break;
-            case 3:
-                assignedJob.text = "Job: Cook";
-                break;
         }
     }
 
@@ -280,8 +275,12 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-    public void AdjustJob()
+
+    public void AdjustJob(WhatJobDoTheyHave jobs)
     {
+        print("the job being fed in is" + jobs);
+        currentJob = jobs;
+
         switch (currentJob)
         {
             case WhatJobDoTheyHave.None:
@@ -302,7 +301,7 @@ public class Villager_Prefab : MonoBehaviour
         }
     }
 
-   public  void ChangeToHunter()
+   public void ChangeToHunter()
     {
         WHATJOBDOIHAVE = 1;
         aiDestination.target = forestTarget;
@@ -324,27 +323,5 @@ public class Villager_Prefab : MonoBehaviour
     {
         WHATJOBDOIHAVE = 0;
         aiDestination.target = homeTarget;
-    }
-
-    void OnMouseDown()
-    {
-        if(UIBoxActive == false)
-        {
-            UIBox.SetActive(true);
-            UIBoxActive = true;
-            aiPath.isStopped = true;
-            
-        } else
-        {
-            UIBox.SetActive(false);
-            UIBoxActive = false;
-            aiPath.isStopped = false;
-        }
-        
-    }
-
-    void OnMouseExit()
-    {
-        //UIBox.SetActive(false);
     }
 }
