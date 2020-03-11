@@ -14,10 +14,6 @@ public class Villager_Prefab : MonoBehaviour
     //A job that they are assigned
 
 
-    // Dropdown menu for selecting jobs they are good at
-    [Header("Villager Manager")]
-    public VillagerManager VM;
-
     public enum WhatJobAreTheyGoodAt // your custom enumeration
     {
         None,
@@ -82,13 +78,15 @@ public class Villager_Prefab : MonoBehaviour
     public GameObject axeObject;
     Vector3 ogScale;
 
-    [Header("Location Targets")]
+    [Header("Location Targets & Movement")]
     public Transform forestTarget;
     public Transform fishTarget;
     public Transform homeTarget;
     public Transform cookingTarget;
+    [Space(10)]
+    public float movementSpeed = 1;
 
-    [Header("Bullshit rn")]
+    [Header("Job Changing")]
     public GameObject infoContainer;
     TMP_Dropdown dropdown;
 
@@ -131,6 +129,8 @@ public class Villager_Prefab : MonoBehaviour
 
         // Save original scale.
         ogScale = transform.localScale;
+
+        movementSpeed = aiPath.maxSpeed;
     }
 
     // Start is called before the first frame update
@@ -233,6 +233,17 @@ public class Villager_Prefab : MonoBehaviour
         cooking_productivity_individual = cooking_number * individualHappiness;
     }
 
+    public void PauseMovement()
+    {
+        aiPath.maxSpeed = 0;
+    }
+
+    public void ResumeMovement()
+    {
+        aiPath.maxSpeed = movementSpeed;
+    }
+
+    #region Job Adjustments
     public void AdjustDropdownJobs(int arg)
     {
         if (arg == 0)
@@ -274,7 +285,6 @@ public class Villager_Prefab : MonoBehaviour
                 break;
         }
     }
-
 
     public void AdjustJob(WhatJobDoTheyHave jobs)
     {
@@ -324,4 +334,5 @@ public class Villager_Prefab : MonoBehaviour
         WHATJOBDOIHAVE = 0;
         aiDestination.target = homeTarget;
     }
+    #endregion
 }

@@ -39,6 +39,9 @@ namespace TeamMars.Capstone.Manager
         int seasons = 1;
 
         [Header("Villagers")]
+        public List<GameObject> villagerList = new List<GameObject>();
+        bool paused;
+
         public int villagerNumber = 1;
         int eatingCount;
 
@@ -49,8 +52,6 @@ namespace TeamMars.Capstone.Manager
         public TextMeshPro foodWarning;
 
         int temporaryStarvationMeter;
-
-        bool isPrarie = false;
 
         // Set game manager up to be persistent.
         private void Awake()
@@ -66,7 +67,16 @@ namespace TeamMars.Capstone.Manager
 
         private void Start()
         {
+            // When the game starts, update all UI text.
             UpdateText();
+
+            // Add all villagers to list.
+            foreach (GameObject villagerObj in GameObject.FindGameObjectsWithTag("Villager"))
+            {
+                villagerList.Add(villagerObj);
+            }
+
+            villagerNumber = villagerList.Count;
         }
 
         public void AddHours()
@@ -89,6 +99,7 @@ namespace TeamMars.Capstone.Manager
                 }
                 else
                 {
+                    // Starvation function goes here.
                     print("The villager(s) starved.");
                     temporaryStarvationMeter++;
                     //foodWarning.transform.gameObject.SetActive(true);
@@ -106,6 +117,7 @@ namespace TeamMars.Capstone.Manager
                 }
             }
 
+            // Change seasons.
             if (currentDay >= maxDay)
             {
                 seasons++;
@@ -113,12 +125,76 @@ namespace TeamMars.Capstone.Manager
                 Mathf.Clamp(seasons, 0, 4);
             }
 
+            // Update needed UI text.
             UpdateText();
+        }
+
+        /// <summary>
+        /// Pause the villagers, putting their movement to zero.
+        /// </summary>
+        public void PauseVillagers()
+        {
+            // Don't run this function if the villagers are already paused.
+            if (paused)
+                return;
+            
+            foreach (GameObject villagerObj in villagerList)
+            {
+                Villager_Prefab villagerScript = null;
+
+                print("running pause");
+                if (villagerScript == null)
+                    villagerScript = villagerObj.GetComponent<Villager_Prefab>();
+
+                villagerScript.PauseMovement();
+            }
+
+            paused = true;
+        }
+
+        /// <summary>
+        /// Resume the villagers, putting their movement to their norm.
+        /// </summary>
+        public void ResumeVillagers()
+        {
+            // Don't run this function if the villagers aren't paused.
+            if (!paused)
+                return;
+
+            foreach (GameObject villagerObj in villagerList)
+            {
+                Villager_Prefab villagerScript = null;
+
+                print("running resume");
+                if (villagerScript == null)
+                    villagerScript = villagerObj.GetComponent<Villager_Prefab>();
+
+                villagerScript.ResumeMovement();
+            }
+
+            paused = false;
+        }
+
+        /// <summary>
+        /// Pause the entire game.
+        /// </summary>
+        public void PauseGame()
+        {
+            Time.timeScale = 0;
+            print("Game has been paused!");
+        }
+
+        /// <summary>
+        /// Unpause the entire game.
+        /// </summary>
+        public void UnPauseGame()
+        {
+            Time.timeScale = 1;
+            print("Game has been Unpaused!");
         }
 
         void UpdateText()
         {
-
             textHours.text = "Hours: " + hours + " / " + maxHours;
             textDays.text = "Days: " + currentDay + " / " + maxDay;
 
@@ -141,7 +217,6 @@ namespace TeamMars.Capstone.Manager
                     print("Something happened to bring it to default.");
                     break;
             }
-
         }
 
         private IEnumerator FeedVillagers()
