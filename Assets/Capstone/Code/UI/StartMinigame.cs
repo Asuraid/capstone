@@ -8,6 +8,7 @@ namespace TeamMars.Capstone.Manager.Resources
     {
         public Minigame_Fishing_GameManager MinigameToPlay_fish;
         public Minigame_TreeCutting_Manager MinigameToPlay_tree;
+        public Minigame_Hunting_Manager MinigameToPlay_hunting;
         public GameObject WindowtoClose;
         public GameObject WindowtoOpen;
 
@@ -34,6 +35,12 @@ namespace TeamMars.Capstone.Manager.Resources
             if (MinigameToPlay_fish != null)
             {
                 MinigameToPlay_fish.PlayGame();
+                WindowtoClose.SetActive(false);
+                WindowtoOpen.SetActive(true);
+            }
+            if (MinigameToPlay_hunting != null)
+            {
+                MinigameToPlay_hunting.PlayGame();
                 WindowtoClose.SetActive(false);
                 WindowtoOpen.SetActive(true);
             }

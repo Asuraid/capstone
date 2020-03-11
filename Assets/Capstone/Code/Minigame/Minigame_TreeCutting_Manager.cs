@@ -25,6 +25,8 @@ namespace TeamMars.Capstone.Manager.Resources
 
         public bool isMouseClickedDown;
 
+        public int score = 0;
+        public TextMeshPro finalscore;
         Vector3 mouseStartPos;
 
         //this is for math
@@ -46,7 +48,7 @@ namespace TeamMars.Capstone.Manager.Resources
         // Update is called once per frame
         void Update()
         {
-
+            finalscore.text = score.ToString();
 
 
 
@@ -54,7 +56,7 @@ namespace TeamMars.Capstone.Manager.Resources
             {
 
 
-
+                SetCameraLocation();
 
                 //turns off certain objects when mouse is unclicked
                 if (!isMouseClickedDown)
@@ -111,7 +113,7 @@ namespace TeamMars.Capstone.Manager.Resources
 
 
                 /////////////////////////////////////////////////////
-
+                GameManager.Instance.ResumeScrolling();
                 Building_Or_Structure.GetComponent<GatherResource>().AddResource((Score + 10) / 10);
                 print((Score + 10) / 10);
 
@@ -119,8 +121,9 @@ namespace TeamMars.Capstone.Manager.Resources
 
 
                 GamewinMenu.SetActive(true);
+                gameObject.SetActive(false);
                 Finalscoretext.text = Score.ToString();
-                windowtoclose.SetActive(false);
+                //windowtoclose.SetActive(false);
             }
         }
 
@@ -141,6 +144,12 @@ namespace TeamMars.Capstone.Manager.Resources
             LineRendererObject.SetPosition(1, new Vector3(-6, worldPoint.y, -worldPoint.x));
             LineRendererObject.transform.position = new Vector3(0, 0, 0);
             //  Debug.DrawLine(mouseStartPos, Camera.main.ScreenToWorldPoint(Input.mousePosition), Color.red);
+        }
+
+        public void SetCameraLocation()
+        {
+            Camera.main.transform.position = new Vector3(0, 0, Camera.main.transform.position.z);
+            GameManager.Instance.StopScrolling();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 namespace TeamMars.Capstone.Manager.Resources
 {
@@ -21,29 +21,55 @@ namespace TeamMars.Capstone.Manager.Resources
         public float timeuntilReset;
         public GameObject sliderbackground;
         public float TOTALGAME_Timer;
-        public bool isGame;
+        public bool isGame = true;
+        public GameObject Reticle;
+        public GameObject ScreenToOpen_EndGame;
+        public GameObject ScreenToClose_EndGame;
+        public int score;
+        public TextMeshPro FinalScore;
 
+        public GameObject[] TargetPossiblePositions;
+ 
         private void Start()
         {
-            isGame = true;
-            SetTargetInvisible();
-            CreateRandomTargetPosition();
-            SetTargetPosition();
+            ScreenToOpen_EndGame.SetActive(false);
+        }
+
+        public void PlayGame()
+        {
+                isGame = true;
+                SetTargetInvisible();
+                CreateRandomTargetPosition();
+                SetTargetPosition();
+            
         }
         // Update is called once per frame
         void Update()
         {
+            FinalScore.text = score.ToString();
             if (isGame)
             {
+                SetCameraLocation();
+                ScreenToOpen_EndGame.SetActive(false);
                 TOTALGAME_Timer -= Time.deltaTime;
                 if (TOTALGAME_Timer < 0)
                 {
                     isGame = false;
+                    ScreenToOpen_EndGame.SetActive(true);
+                    ScreenToClose_EndGame.SetActive(false);
+                    GameManager.Instance.ResumeScrolling();
                 }
                 BowStateBasedOnMouse();
+                ReticleAiming();
                 SwitchBowStates();
                 ClickAiming();
                 TimerCountdown();
+                //I dont know why but this works. please dont touch
+                Target_ParentGameObject.transform.position = new Vector3(Target_ParentGameObject.transform.position.x, Target_ParentGameObject.transform.position.y, -5);
+            }
+            else
+            {
+
             }
         }
         void BowStateBasedOnMouse()
@@ -171,16 +197,58 @@ namespace TeamMars.Capstone.Manager.Resources
         }
         void SetTargetPosition()
         {
+
+            if (TargetPosition_XY.x ==1 && TargetPosition_XY.y == 1)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[0].transform.position;
+            }
+            else if (TargetPosition_XY.x == 2 && TargetPosition_XY.y == 1)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[1].transform.position;
+            }
+            else if (TargetPosition_XY.x == 3 && TargetPosition_XY.y == 1)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[2].transform.position;
+            }
+            else if (TargetPosition_XY.x == 1 && TargetPosition_XY.y == 2)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[3].transform.position;
+            }
+            else if (TargetPosition_XY.x == 2 && TargetPosition_XY.y == 2)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[4].transform.position;
+            }
+            else if (TargetPosition_XY.x == 3 && TargetPosition_XY.y == 2)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[5].transform.position;
+            }
+            else if (TargetPosition_XY.x == 1 && TargetPosition_XY.y == 3)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[6].transform.position;
+            }
+            else if (TargetPosition_XY.x == 2 && TargetPosition_XY.y == 3)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[7].transform.position;
+            }
+            else if (TargetPosition_XY.x == 3 && TargetPosition_XY.y == 3)
+            {
+                Target_ParentGameObject.transform.position = TargetPossiblePositions[8].transform.position;
+            }
+            else
+            {
+
+            }
+            /*
                 switch (TargetPosition_XY.x)
                 {
                     case 1:
-                        Target_ParentGameObject.transform.position = new Vector3(-4, Target_ParentGameObject.transform.position.y, 0);
+                    // Target_ParentGameObject.transform.position = new Vector3(-10, Target_ParentGameObject.transform.position.y, 0);
                         break;
                     case 2:
                         Target_ParentGameObject.transform.position = new Vector3(0, Target_ParentGameObject.transform.position.y, 0);
                         break;
                     case 3:
-                        Target_ParentGameObject.transform.position = new Vector3(4, Target_ParentGameObject.transform.position.y, 0);
+                        Target_ParentGameObject.transform.position = new Vector3(10, Target_ParentGameObject.transform.position.y, 0);
                         break;
                 }
                 switch (TargetPosition_XY.y)
@@ -195,7 +263,9 @@ namespace TeamMars.Capstone.Manager.Resources
                         Target_ParentGameObject.transform.position = new Vector3(Target_ParentGameObject.transform.position.x, 4, 0);
                         break;
                 }
-            
+                */
+
+
         }
         void CheckIfTargetHit()
         {
@@ -204,7 +274,8 @@ namespace TeamMars.Capstone.Manager.Resources
                 Target_Image[0].SetActive(false);
                 Target_Image[1].SetActive(true);
                 print("HIT");
-                resettargettimer = 2;
+                score++;
+                resettargettimer = 0.25f;
             }
         }
         void SetTargetInvisible()
@@ -212,5 +283,57 @@ namespace TeamMars.Capstone.Manager.Resources
             Target_Image[0].SetActive(true);
             Target_Image[1].SetActive(false);
         }
+        void ReticleAiming()
+        {
+            if (Bow_Position_x == 1 && Bow_Position_y == 1)
+            {
+                Reticle.transform.position = TargetPossiblePositions[0].transform.position;
+            }
+            else if (Bow_Position_x == 2 && Bow_Position_y == 1)
+            {
+                Reticle.transform.position = TargetPossiblePositions[1].transform.position;
+            }
+            else if (Bow_Position_x == 3 && Bow_Position_y == 1)
+            {
+                Reticle.transform.position = TargetPossiblePositions[2].transform.position;
+            }
+            else if (Bow_Position_x == 1 && Bow_Position_y == 2)
+            {
+                Reticle.transform.position = TargetPossiblePositions[3].transform.position;
+            }
+            else if (Bow_Position_x == 2 && Bow_Position_y == 2)
+            {
+                Reticle.transform.position = TargetPossiblePositions[4].transform.position;
+            }
+            else if (Bow_Position_x == 3 && Bow_Position_y == 2)
+            {
+                Reticle.transform.position = TargetPossiblePositions[5].transform.position;
+            }
+            else if (Bow_Position_x == 1 && Bow_Position_y == 3)
+            {
+                Reticle.transform.position = TargetPossiblePositions[6].transform.position;
+            }
+            else if (Bow_Position_x == 2 && Bow_Position_y == 3)
+            {
+                Reticle.transform.position = TargetPossiblePositions[7].transform.position;
+            }
+            else if (Bow_Position_x == 3 && Bow_Position_y == 3)
+            {
+                Reticle.transform.position = TargetPossiblePositions[8].transform.position;
+            }
+            else
+            {
+
+            }
+            if (!isAiming)
+            {
+                Reticle.transform.position = new Vector3(Reticle.transform.position.x, TargetPossiblePositions[3].transform.position.y, Reticle.transform.position.z);
+            }
         }
+        public void SetCameraLocation()
+        {
+            Camera.main.transform.position = new Vector3(0, 0, Camera.main.transform.position.z);
+            GameManager.Instance.StopScrolling();
+        }
+    }
 }

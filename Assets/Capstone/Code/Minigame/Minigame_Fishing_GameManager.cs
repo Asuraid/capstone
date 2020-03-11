@@ -70,9 +70,11 @@ namespace TeamMars.Capstone.Manager.Resources
                 UpdateText();
                 UpdateVial();
             }
-            else
+            else 
             {
+                GameManager.Instance.ResumeScrolling();
                 StopGame();
+         
 
             }
         }
@@ -102,7 +104,7 @@ namespace TeamMars.Capstone.Manager.Resources
             print((Score + 10)/10);
 
             ////////////////////////////////////////////////////
-
+   
             Reset();
 
 
@@ -110,12 +112,13 @@ namespace TeamMars.Capstone.Manager.Resources
         public void SetCameraLocation()
         {
             Camera.main.transform.position = new Vector3(0, 0, Camera.main.transform.position.z);
-
+            GameManager.Instance.StopScrolling();
         }
         public void Reset()
         {
             Score = 0;
             meterCurrent = 0;
+       
 
         }
     }
