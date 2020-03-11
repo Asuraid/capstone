@@ -51,6 +51,9 @@ namespace TeamMars.Capstone.Manager
         public TextMeshPro textSeasons;
         public TextMeshPro foodWarning;
 
+        Camera mainCamera;
+        CameraScroller cameraScroller;
+
         int temporaryStarvationMeter;
 
         // Set game manager up to be persistent.
@@ -69,6 +72,11 @@ namespace TeamMars.Capstone.Manager
         {
             // When the game starts, update all UI text.
             UpdateText();
+
+            // Grab camera component.
+            mainCamera = Camera.main;
+
+            cameraScroller = mainCamera.GetComponent<CameraScroller>();
 
             // Add all villagers to list.
             foreach (GameObject villagerObj in GameObject.FindGameObjectsWithTag("Villager"))
@@ -191,6 +199,16 @@ namespace TeamMars.Capstone.Manager
         {
             Time.timeScale = 1;
             print("Game has been Unpaused!");
+        }
+
+        public void StopScrolling()
+        {
+            cameraScroller.enabled = false;
+        }
+
+        public void ResumeScrolling()
+        {
+            cameraScroller.enabled = true;
         }
 
         void UpdateText()
