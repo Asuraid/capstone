@@ -7,6 +7,7 @@ public class PlacingTent_firstTime : MonoBehaviour
 
     public GameObject TentGameobject;
     public GameObject UI_Background;
+    public GameObject tentPathWay;
     bool isDone = false;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class PlacingTent_firstTime : MonoBehaviour
         {
             TentGameobject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             TentGameobject.transform.position = new Vector3(TentGameobject.transform.position.x, TentGameobject.transform.position.y,transform.position.z);
+            tentPathWay.transform.position = TentGameobject.transform.position;
             TentGameobject.SetActive(true);
             UI_Background.SetActive(false);
             isDone = true;
