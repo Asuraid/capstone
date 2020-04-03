@@ -77,7 +77,7 @@ namespace TeamMars.Capstone.Manager.Resources
                 WindowtoClose.SetActive(false);
             }
 
-            GameManager.Instance.gameObject.GetComponent<Pause_UnpauseGame>().UnPauseGame();
+            GameManager.Instance.UnPauseGame();
             }
     }
 }

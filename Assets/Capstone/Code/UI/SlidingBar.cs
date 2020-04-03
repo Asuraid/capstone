@@ -120,9 +120,16 @@ public class SlidingBar : MonoBehaviour
         currentPosition = transform;
 
         if (pulledOutBar == true)
-            StartCoroutine(UpdateBarOutPosition(startMarker.position, endMarker.position, startTime));
+        {
+            transform.position = endMarker.position;
+            //StartCoroutine(UpdateBarOutPosition(startMarker.position, endMarker.position, startTime));
+        }
         else
-            StartCoroutine(UpdateBarInPosition(endMarker.position, startMarker.position, startTime));
+        {
+            transform.position = startMarker.position;
+            //StartCoroutine(UpdateBarInPosition(endMarker.position, startMarker.position, startTime));
+        }
+            
     }
 
     public void OnDrag(PointerEventData eventData)
