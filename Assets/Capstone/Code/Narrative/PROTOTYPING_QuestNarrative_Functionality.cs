@@ -28,7 +28,7 @@ namespace TeamMars.Capstone.Manager.Resources
         void Start()
         {
 
-            EventPopUp_Screen.SetActive(false);
+            //EventPopUp_Screen.SetActive(false);
 
             isEvent = false;
 
@@ -58,7 +58,7 @@ namespace TeamMars.Capstone.Manager.Resources
 
             if (isEvent)
             {
-               GameManager.Instance.gameObject.GetComponent<Pause_UnpauseGame>().PauseGame();
+               //GameManager.Instance.gameObject.GetComponent<Pause_UnpauseGame>().PauseGame();
                 
                 EventChosen = false;
                 CallQuestEvent_Minor(WhichMinorEvent);
@@ -72,17 +72,17 @@ namespace TeamMars.Capstone.Manager.Resources
             }
             else
             {
-                EventPopUp_Screen.SetActive(true);
+                //EventPopUp_Screen.SetActive(true);
             }
 
 
             //if event popup is open, the event has been chosen
 
 
-            if (EventPopUp_Screen.activeSelf == true)
-            {
-                EventChosen = false;
-            }
+            //if (EventPopUp_Screen.activeSelf == true)
+            //{
+            //    EventChosen = false;
+            //}
 
 
 

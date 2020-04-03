@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Capstone/Scenes/GameScenes/Scene_Zone01.unity
     guid: cffdfe656e37bbe43815b9a5d82680f6
+  - enabled: 1
+    path: Assets/Capstone/Scenes/GameScenes/Scene_Zone02.unity
+    guid: a7e8be49a74213a4dbe317d4d7c9ada4
   m_configObjects: {}

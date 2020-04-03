@@ -18,6 +18,8 @@ public class Villager_Prefab : MonoBehaviour
     {
         None,
         Hunting,
+        Woodcutting,
+        Mining,
         Fishing,
         Cooking
     };
@@ -30,6 +32,8 @@ public class Villager_Prefab : MonoBehaviour
     {
         None,
         Hunting,
+        Woodcutting,
+        Mining,
         Fishing,
         Cooking
     };
@@ -45,10 +49,10 @@ public class Villager_Prefab : MonoBehaviour
     public float individualHappiness = 1;
 
     [HideInInspector]
-    //1 = hunter. 2 = fisher. 3 = cook
+    //1 = hunter. 2 = fisher. 3 = woodcutter. 4 = miner. 5 = cook.
     public int WHATJOBAMIGOODAT;
     [HideInInspector]
-    //1 = hunter. 2 = fisher. 3 = cook
+    //1 = hunter. 2 = fisher. 3 = woodcutter. 4 = miner. 5 = cook.
     public int WHATJOBDOIHAVE;
 
 
@@ -76,11 +80,14 @@ public class Villager_Prefab : MonoBehaviour
     bool isMoving;
     bool isWorking;
     public GameObject axeObject;
+    public GameObject fishingObject;
     Vector3 ogScale;
 
     [Header("Location Targets & Movement")]
-    public Transform forestTarget;
+    public Transform huntingTarget;
     public Transform fishTarget;
+    public Transform woodTarget;
+    public Transform mineTarget;
     public Transform homeTarget;
     public Transform cookingTarget;
     [Space(10)]
@@ -119,6 +126,9 @@ public class Villager_Prefab : MonoBehaviour
             print("There is no dropdown attached!");
 
         if (axeObject == null)
+            print("There is no axe attached!");
+
+        if (fishingObject == null)
             print("There is no axe attached!");
 
         // Set listener to dropdown to allow value changing.
@@ -256,6 +266,18 @@ public class Villager_Prefab : MonoBehaviour
         }
         else if (arg == 2)
         {
+            ChangeToWoodcutter();
+        }
+        else if (arg == 3)
+        {
+            ChangeToMiner();
+        }
+        else if (arg == 4)
+        {
+            ChangeToCook();
+        }
+        else if (arg == 5)
+        {
             ChangeToCook();
         }
         else
@@ -314,7 +336,7 @@ public class Villager_Prefab : MonoBehaviour
    public void ChangeToHunter()
     {
         WHATJOBDOIHAVE = 1;
-        aiDestination.target = forestTarget;
+        aiDestination.target = huntingTarget;
     }
 
     public void ChangeToFisher()
@@ -322,10 +344,22 @@ public class Villager_Prefab : MonoBehaviour
         WHATJOBDOIHAVE = 2;
         aiDestination.target = fishTarget;
     }
-    
-    public void ChangeToCook()
+
+    public void ChangeToWoodcutter()
     {
         WHATJOBDOIHAVE = 3;
+        aiDestination.target = woodTarget;
+    }
+
+    public void ChangeToMiner()
+    {
+        WHATJOBDOIHAVE = 4;
+        aiDestination.target = mineTarget;
+    }
+
+    public void ChangeToCook()
+    {
+        WHATJOBDOIHAVE = 5;
         aiDestination.target = cookingTarget;
     }
 

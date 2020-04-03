@@ -46,10 +46,19 @@ namespace TeamMars.Capstone.Manager
         int eatingCount;
 
         [Header("Time TextMeshPro")]
+        public Sprite[] TimeImages = new Sprite[5];
+
+        public GameObject timeUI;
+        SpriteRenderer timeUIrenderer;
+        int frames = 0;
+        [Space(10)]
         public TextMeshPro textHours;
         public TextMeshPro textDays;
         public TextMeshPro textSeasons;
-        public TextMeshPro foodWarning;
+
+        [Header("Starvation Warning")]
+        public GameObject foodObjectWarning;
+        public TextMeshProUGUI foodWarning;
 
         Camera mainCamera;
         CameraScroller cameraScroller;
@@ -73,10 +82,16 @@ namespace TeamMars.Capstone.Manager
             // When the game starts, update all UI text.
             UpdateText();
 
+            // Make sure the frames are at zero.
+            frames = 0;
+
             // Grab camera component.
             mainCamera = Camera.main;
 
             cameraScroller = mainCamera.GetComponent<CameraScroller>();
+
+            // Grab sprite renderer for time.
+            timeUIrenderer = timeUI.GetComponent<SpriteRenderer>();
 
             // Add all villagers to list.
             foreach (GameObject villagerObj in GameObject.FindGameObjectsWithTag("Villager"))
@@ -87,9 +102,54 @@ namespace TeamMars.Capstone.Manager
             villagerNumber = villagerList.Count;
         }
 
+        public void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                AddHours();
+            }
+
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                ResourceManager.Instance.AddRawFish(10);
+            }
+
+            if (Input.GetKeyUp(KeyCode.T))
+            {
+                ResourceManager.Instance.AddCookedFish(10);
+            }
+
+            if (Input.GetKeyUp(KeyCode.Y))
+            {
+                ResourceManager.Instance.AddRawGame(10);
+            }
+
+            if (Input.GetKeyUp(KeyCode.U))
+            {
+                ResourceManager.Instance.AddCookedGame(10);
+            }
+
+            if (Input.GetKeyUp(KeyCode.F))
+            {
+                ResourceManager.Instance.AddRawWood(10);
+            }
+
+            if (Input.GetKeyUp(KeyCode.G))
+            {
+                ResourceManager.Instance.AddRefinedWood(10);
+            }
+
+            if (Input.GetKeyUp(KeyCode.H))
+            {
+                ResourceManager.Instance.AddRawStone(10);
+            }
+        }
+
         public void AddHours()
         {
             hours += hourIncrements;
+
+            frames++;
 
             // Check if the days are more than the max amount of hours. Move onto next day if so. Use up food storage.
             if (hours > maxHours)
@@ -97,6 +157,8 @@ namespace TeamMars.Capstone.Manager
                 currentDay++;
                 hours = 0;
                 eatingCount = 0;
+
+                frames = 0;
 
                 print("New day.");
 
@@ -110,16 +172,16 @@ namespace TeamMars.Capstone.Manager
                     // Starvation function goes here.
                     print("The villager(s) starved.");
                     temporaryStarvationMeter++;
-                    //foodWarning.transform.gameObject.SetActive(true);
+                    foodObjectWarning.SetActive(true);
 
                     if (temporaryStarvationMeter >= 2)
                     {
-                        //foodWarning.text = "Your villagers are very hungry ... it is unlikely they will last one more day.";
+                        foodWarning.text = "Your villagers are very hungry ... it is unlikely they will last one more day.";
                     }
 
                     if (temporaryStarvationMeter >= 3)
                     {
-                        //foodWarning.text = "Unfortunately your villagers starved.";
+                        foodWarning.text = "Unfortunately your villagers starved.";
                         StartCoroutine(Countdown(resetTimerForScene));
                     }
                 }
@@ -135,6 +197,9 @@ namespace TeamMars.Capstone.Manager
 
             // Update needed UI text.
             UpdateText();
+
+            // Update clock.
+            timeUIrenderer.sprite = TimeImages[frames];
         }
 
         /// <summary>
@@ -270,7 +335,7 @@ namespace TeamMars.Capstone.Manager
             }
 
             print("reset scene here");
-            SceneManager.LoadScene("Scene_Zone01");
+            SceneManager.LoadScene("Scene_Zone02");
         }
     }
 }
